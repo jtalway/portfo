@@ -1,0 +1,7 @@
+body {
+    height: 100%;
+    overflow:  auto;
+    background-color: green;
+    margin: 0;
+    padding:  0;
+}
