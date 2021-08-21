@@ -1,5 +1,6 @@
 from flask import Flask, render_template, url_for, request, redirect
 import csv
+from critical import *
 
 app = Flask(__name__)
 
@@ -8,6 +9,10 @@ app = Flask(__name__)
 @app.route('/')
 def my_home():
 	return render_template('index.html')
+
+@app.route('/critical')
+def critical():
+    return render_template('critical.html')
 
 @app.route('/<string:page_name>')
 def html_page(page_name):
@@ -37,5 +42,20 @@ def submit_form():
             return redirect('thankyou.html')
         except:
             return '[-] Did not save to database'
+    else:
+        return 'something went wrong, try again!'
+
+# CRITICALS
+@app.route('/generate_critical', methods=['POST', 'GET'])
+def generate_critical():
+    if request.method == 'POST':
+        weaponDmg = request.form['weaponDmg']
+        selected = request.form.getlist('severity')
+        severity = selected.count('1')
+        total_severity = int(weaponDmg) + severity
+        crit_array = severity_gen(total_severity)
+        critical_effects = crit_gen(crit_array)
+        # check for duplicate results and add/multiply numeric values
+        return render_template('critical.html', critical_effects = critical_effects)
     else:
         return 'something went wrong, try again!'

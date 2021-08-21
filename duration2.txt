@@ -1,0 +1,4 @@
+1, 1, {1d10} minute(s)
+2, 2, {1d6} hour(s)
+3, 3, {1d4} day(s)
+4, 4, permanent

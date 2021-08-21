@@ -1,0 +1,23 @@
+1, 50, +{1d4} damage
+51, 100, x2 Weapon damage
+101, 110, Minor Bleeding (lose 1hp/round)
+111, 112, 1 Strength damage
+113, 114, 1 Dexterity damage
+115, 115, 1 Constitution damage
+116, 116, 1 Intelligence damage
+117, 117, 1 Wisdom damage
+118, 118, 1 Charisma damage
+119, 119, Instant Kill (Save vs. Death) - if save take 1/4 max hit points in damage
+120, 129, -{1d4} Attack penalty - duration: <duration>
+130, 139, -{1d4} AC penalty - duration: <duration>
+140, 144, 1/2 Move - duration: <duration2>
+145, 145, Blinded - duration: <duration2>
+146, 146, Deafened - duration: <duration2>
+147, 156, Disarmed {1d2} squares away in <direction> direction
+157, 161, Fatigued
+162, 171, Flat-footed
+172, 181, Knocked Back 5' (you can follow if you have sufficient movement remaining)
+182, 186, Knocked Down (prone)
+187, 188, Knocked Out (Save vs. Paralysis)
+189, 189, Paralyzed (Save vs. Paralysis)
+190, 191, Stunned - duration: <duration>

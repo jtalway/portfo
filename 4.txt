@@ -1,0 +1,18 @@
+1, 50, +{1d10} damage
+51, 100, x2 Weapon damage
+101, 110, Severe Bleeding (lose {2d3} hp/round)
+111, 112, {1d6} Strength damage
+113, 114, {1d6} Dexterity damage
+115, 115, {1d6} Constitution damage
+116, 116, {1d6} Intelligence damage
+117, 117, {1d6} Wisdom damage
+118, 118, {1d6} Charisma damage
+119, 128, Sunder Weapon (Save vs. Paralysis at -{1d8})
+129, 138, Sunder Shield (Save vs. Paralysis at -{1d8})
+139, 143, (melee): Enemies in front arc take {1d8} damage  (ranged): Enemy directly behind or adjacent to target takes {1d8} damage
+144, 148, (melee): Enemies you threaten take {1d8} damage  (ranged): Enemies directly behind or adjacent to target take {1d8} damage
+149, 149, Instant Kill (Save vs. Death at -{1d8}) - if save take 1/4 max hit points in damage
+150, 154, (melee): Enemies in front arc knocked back 5' (you can follow if you have sufficient movement remaining)  (ranged): Target and up to {1d4} enemies directly behind or adjacent to target are knocked back 5'
+155, 159, (melee): Enemies in front arc knocked down (prone)  (ranged): Target and up to {1d4} enemies directly behind or adjacent to target are knocked down (prone)
+160, 169, Knocked Out (Save vs. Paralysis at -{1d8})
+170, 170, Paralyzed (Save vs. Paralysis at -{1d8})

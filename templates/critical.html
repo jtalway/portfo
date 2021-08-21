@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <meta content="description" name="description">
+    <meta name="google" content="notranslate" />
+    <!-- Disable tap highlight on IE -->
+    <meta name="msapplication-tap-highlight" content="no">    
+    <link rel="apple-touch-icon" sizes="180x180" href="./static/assets/apple-icon-180x180.png">
+    <link href="./static/assets/favicon.ico" rel="icon">
+    <title>Critical Hits</title>
+    <link href="./static/main.3f6952e4.css" rel="stylesheet">
+  </head>
+  <body class="">
+    <div id="site-border-left"></div>
+    <div id="site-border-right"></div>
+    <div id="site-border-top"></div>
+    <div id="site-border-bottom"></div>
+    <!-- Add your content of header -->
+    <header>
+      <nav class="navbar  navbar-fixed-top navbar-inverse">
+        <div class="container">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+          <div class="collapse navbar-collapse" id="navbar-collapse">
+            <ul class="nav navbar-nav ">
+              <li><a href="./index.html" title="">01 : Home</a></li>
+              <li><a href="./works.html" title="">02 : Works</a></li>
+              <li><a href="./about.html" title="">03 : About me</a></li>
+              <li><a href="./contact.html" title="">04 : Contact</a></li>
+            </ul>
+
+
+          </div> 
+        </div>
+      </nav>
+    </header>
+    <div class="hero-full-container background-image-container white-text-container">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="hero-full-wrapper">
+            <div class="text-content">
+              <form action="generate_critical" method="post" class="reveal-content">
+              <h4>Fantasy RPG Critical Hit Generator:</h4>
+
+              <p><i>Base weapon damage or which weapon is the character using?</i><br>
+              <input type="radio" name="weaponDmg" id="weaponDmg" value="1" checked="true"> d4 damage (club/dagger/darts/sling/sap/whip) <br>
+              <input type="radio" name="weaponDmg" id="weaponDmg" value="2"> d6 damage (hand axe/crossbow/shortbow/javelin/short sword/staff) <br>
+              <input type="radio" name="weaponDmg" id="weaponDmg" value="3"> d8 damage (battle axe/longbow/mace/warhammer/spear/sword)<br>
+              <input type="radio" name="weaponDmg" id="weaponDmg" value="4"> d10+ damage (great axe/lance/pole arm/two-handed sword) <br>
+              <input type="radio" name="weaponDmg" id="weaponDmg" value="5"> 3d6 damage / seige (catapult/ballista) <br>
+              <input type="radio" name="weaponDmg" id="weaponDmg" value="6"> 4d6+ damage / heavy seige (heavy catapult/trebuchet)<br> 
+              <br>
+
+              <p><i>Check all that apply:</i><br>
+              <!-- each one below increases severity by 1 -->
+              <input type="checkbox" name="severity" id="severity1" value="1"> Possesses a relevant Proficiency
+              or Feat<br>
+              <input type="checkbox" name="severity" id="severity2" value="1"> Possesses multiple relevant Powers <br>
+              <input type="checkbox" name="severity" id="severity3" value="1"> Is in berserker rage or backstabbing <br>
+              <input type="checkbox" name="severity" id="severity4" value="1"> Using a magic weapon <br>
+              <button type="submit" class="btn btn-default btn-lg">Generate Critical Effect(s)</button>
+              </form>
+              
+            
+              <ul><b>Critical Hit Effects:</b>
+              {% for critical_effects_element in critical_effects %}
+                <li> {{ critical_effects_element }}</li>
+              {% endfor %}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <footer class="footer-container text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <p>© Jason Alway | Website created with Flask framework using <a href="http://www.mashup-template.com/" title="Create website with free html template" target="_blank">Mashup Template</a>/<a href="https://www.unsplash.com/" title="Beautiful Free Images" target="_blank">Unsplash</a></p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    
+    
+  </body>
+</html>
