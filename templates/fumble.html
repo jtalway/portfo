@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <meta content="description" name="description">
+    <meta name="google" content="notranslate" />
+    <!-- Disable tap highlight on IE -->
+    <meta name="msapplication-tap-highlight" content="no">    
+    <link rel="apple-touch-icon" sizes="180x180" href="./static/assets/apple-icon-180x180.png">
+    <link href="./static/assets/favicon.ico" rel="icon">
+    <title>Fumbles</title>
+    <link href="./static/main.3f6952e4.css" rel="stylesheet">
+  </head>
+  <body class="">
+    <div id="site-border-left"></div>
+    <div id="site-border-right"></div>
+    <div id="site-border-top"></div>
+    <div id="site-border-bottom"></div>
+    <!-- Add your content of header -->
+    
+   
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+              <a href='critical.html'>
+                <button type="button" class="btn btn-default btn-sm">Critical Generator</button>
+              </a>
+              <h4>Fantasy RPG Fumble Generator:</h4>
+              <form action="generate_fumble" method="post" class="reveal-content">
+              <p><i>Wielder is proficient with weapon?</i><br>
+              <input type="radio" name="proficient" id="proficient" value="1" checked="true"> Yes<br>
+              <input type="radio" name="proficient" id="proficient" value="0"> No <br>
+              <p>
+
+              <p><i>Check all that apply:</i><br>
+              <!-- each one below increases severity by 1 -->
+              <input type="checkbox" name="fsev" id="fseverity1" value="1"> Fighter Attack Progression<br>
+              <input type="checkbox" name="fsev" id="fseverity2" value="1"> Possesses Combat-related proficiencies<br>
+              <input type="checkbox" name="fsev" id="fseverity3" value="1"> Possesses Combat-related Power/Feats<br>
+              <input type="checkbox" name="fsev" id="fseverity4" value="1"> Using a magic weapon <br>
+              <p>
+              <button type="submit" class="btn btn-danger btn-lg">Generate Fumble Effect(s)</button>
+              </form>
+              
+            
+              <ul><b>Fumble Effects:</b>
+              {% for fumble_effects_element in fumble_effects %}
+                <li> {{ fumble_effects_element }}</li>
+              {% endfor %}
+              </ul>
+      
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer-container text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <p>© <a href="http://jtalway.pythonanywhere.com">Jason Alway</a> | Generators built using Python and Flask | <a href="https://github.com/jtalway/portfo" title="GitHub | jtalway portfolio" target="_blank">Source Code</a></p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+  document.addEventListener("DOMContentLoaded", function (event) {
+     navActivePage();
+  });
+</script>
+    
+    
+  </body>
+</html>

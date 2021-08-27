@@ -1,6 +1,8 @@
 from flask import Flask, render_template, url_for, request, redirect
 import csv
 from critical import *
+from fumble import *
+import random
 
 app = Flask(__name__)
 
@@ -13,6 +15,10 @@ def my_home():
 @app.route('/critical')
 def critical():
     return render_template('critical.html')
+
+@app.route('/fumble')
+def fumble():
+    return render_template('fumble.html')
 
 @app.route('/<string:page_name>')
 def html_page(page_name):
@@ -57,5 +63,34 @@ def generate_critical():
         critical_effects = crit_gen(crit_array)
         # check for duplicate results and add/multiply numeric values
         return render_template('critical.html', critical_effects = critical_effects)
+    else:
+        return 'something went wrong, try again!'
+
+# FUMBLES
+@app.route('/generate_fumble', methods=['POST', 'GET'])
+def generate_fumble():
+    if request.method == 'POST':
+        proficient = request.form['proficient']
+        # if non-proficient there MUST be a result
+        # get list of deductions from fsev criteria on form
+        selected = request.form.getlist('fsev')
+        # calculate number of reductions
+        fseverity = selected.count('1')
+        # get number of fumble severity from file by random roll
+        fsev_result = fseverity_gen()
+        # convert result into a list 
+        convert_fsev = int(fsev_result) * ['fumble']
+        prelim_fumble_effects = fsev_gen(convert_fsev)
+        reduce_fumble_effects = int(proficient) + fseverity
+        if reduce_fumble_effects >= len(prelim_fumble_effects):
+            fumble_effects = ['No Results']
+        elif reduce_fumble_effects < len(prelim_fumble_effects):
+            x = len(prelim_fumble_effects) - reduce_fumble_effects
+            fumble_effects = random.choices(prelim_fumble_effects, k=x)
+        else:
+            return 'something is amiss'
+
+        # check for duplicate results and add/multiply numeric values
+        return render_template('fumble.html', fumble_effects = fumble_effects)
     else:
         return 'something went wrong, try again!'
