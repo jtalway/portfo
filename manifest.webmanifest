@@ -1,0 +1,21 @@
+{
+  "short_name": "RPG Gen",
+  "name": "Role-Playing Game Generators",
+  "description": "Random generators for role-playing games",
+  "icons":[
+    {
+      "src":"images/android-chrome-192x192.png",
+      "sizes":"192x192",
+      "type":"image/png"
+    },
+    {
+      "src":"images/android-chrome-512x512.png",
+      "sizes":"512x512",
+      "type":"image/png"
+    }
+  ],
+  "display":"standalone",
+  "start_url": "https://jtalway.pythonanywhere.com/critical.html",
+  "background_color": "#181A1B",
+  "theme_color": "black"
+}

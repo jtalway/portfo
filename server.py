@@ -6,17 +6,21 @@ import random
 
 app = Flask(__name__)
 
-
-
 @app.route('/')
+@app.route('/home')
+@app.route('/index')
+@app.route('/index.html')
 def my_home():
 	return render_template('index.html')
 
 @app.route('/critical')
+@app.route('/criticals')
+@app.route('/criticalhit')
 def critical():
     return render_template('critical.html')
 
 @app.route('/fumble')
+@app.route('/fumbles')
 def fumble():
     return render_template('fumble.html')
 
@@ -94,3 +98,29 @@ def generate_fumble():
         return render_template('fumble.html', fumble_effects = fumble_effects)
     else:
         return 'something went wrong, try again!'
+
+# @app.errorhandler(404)
+# def not_found():
+#     """Page not found."""
+#     return make_response(
+#         render_template("404.html"),
+#         404
+#      )
+
+
+# @app.errorhandler(400)
+# def bad_request():
+#     """Bad request."""
+#     return make_response(
+#         render_template("400.html"),
+#         400
+#     )
+
+
+# @app.errorhandler(500)
+# def server_error():
+#     """Internal server error."""
+#     return make_response(
+#         render_template("500.html"),
+#         500
+#     )

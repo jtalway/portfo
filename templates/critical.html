@@ -1,27 +1,7 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta charset="UTF-8">
-    <meta content="IE=edge" http-equiv="X-UA-Compatible">
-    <meta content="width=device-width,initial-scale=1" name="viewport">
-    <meta content="description" name="description">
-    <meta name="google" content="notranslate" />
-    <!-- Disable tap highlight on IE -->
-    <meta name="msapplication-tap-highlight" content="no">    
-    <link rel="apple-touch-icon" sizes="180x180" href="./static/assets/apple-icon-180x180.png">
-    <link href="./static/assets/favicon.ico" rel="icon">
-    <title>Critical Hits</title>
-    <link href="./static/main.3f6952e4.css" rel="stylesheet">
-  </head>
-  <body class="">
-    <div id="site-border-left"></div>
-    <div id="site-border-right"></div>
-    <div id="site-border-top"></div>
-    <div id="site-border-bottom"></div>
-    <!-- Add your content of header -->
-    
-   
+{% include "header-top.html" %}
+<title>Critical Hits</title> 
+{% include "header-bottom.html" %}
+  <div class="section-container">
     <div class="container">
       <div class="row">
         <div class="col-xs-12">
@@ -31,13 +11,13 @@
               <h4>Fantasy RPG Critical Hit Generator:</h4>
               <form action="generate_critical" method="post" class="reveal-content">
               <p><i>Base weapon damage or which weapon is the character using?</i><br>
-              <input type="radio" name="weaponDmg" id="weaponDmg" value="1" checked="true"> d4 damage (club/dagger/darts/sling/sap/whip) <br>
-              <input type="radio" name="weaponDmg" id="weaponDmg" value="2"> d6 damage (hand axe/crossbow/shortbow/short sword/staff) <br>
-              <input type="radio" name="weaponDmg" id="weaponDmg" value="3"> d8 damage (battle axe/longbow/warhammer/spear/sword)<br>
-              <input type="radio" name="weaponDmg" id="weaponDmg" value="4"> d10+ damage (great axe/lance/pole arm/two-handed sword) <br>
+              <input type="radio" name="weaponDmg" id="weaponDmg" value="1" checked="true"> d4 damage (club/dagger/dart/sling) <br>
+              <input type="radio" name="weaponDmg" id="weaponDmg" value="2"> d6 damage (hand axe/shortbow/short sword/staff) <br>
+              <input type="radio" name="weaponDmg" id="weaponDmg" value="3"> d8 damage (battle axe/warhammer/spear/sword)<br>
+              <input type="radio" name="weaponDmg" id="weaponDmg" value="4"> d10+ damage (great axe/pole arm/two-handed sword) <br>
               <input type="radio" name="weaponDmg" id="weaponDmg" value="5"> 3d6 damage / seige (catapult/ballista) <br>
-              <input type="radio" name="weaponDmg" id="weaponDmg" value="6"> 4d6+ damage / heavy seige (heavy catapult/trebuchet)<br> 
-              <p>
+              <input type="radio" name="weaponDmg" id="weaponDmg" value="6"> 4d6+ damage / heavy seige (trebuchet)<br> 
+              <p></p>
 
               <p><i>Check all that apply:</i><br>
               <!-- each one below increases severity by 1 -->
@@ -46,7 +26,7 @@
               <input type="checkbox" name="severity" id="severity2" value="1"> Possesses multiple relevant Powers <br>
               <input type="checkbox" name="severity" id="severity3" value="1"> Is in berserker rage or backstabbing <br>
               <input type="checkbox" name="severity" id="severity4" value="1"> Using a magic weapon <br>
-              <p>
+              <p></p>
               <button type="submit" class="btn btn-danger btn-lg">Generate Critical Effect(s)</button>
               </form>
               
@@ -56,26 +36,8 @@
                 <li> {{ critical_effects_element }}</li>
               {% endfor %}
               </ul>
-      
         </div>
       </div>
     </div>
-
-    <footer class="footer-container text-center">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12">
-        <p>© <a href="http://jtalway.pythonanywhere.com">Jason Alway</a> | Generators built using Python and Flask | <a href="https://github.com/jtalway/portfo" title="GitHub | jtalway portfolio" target="_blank">Source Code</a></p>
-      </div>
-    </div>
   </div>
-</footer>
-<script>
-  document.addEventListener("DOMContentLoaded", function (event) {
-     navActivePage();
-  });
-</script>
-    
-    
-  </body>
-</html>
+{% include "footer.html" %}
