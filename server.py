@@ -2,9 +2,11 @@ from flask import Flask, render_template, url_for, request, redirect
 import csv
 from critical import *
 from fumble import *
+from abilityscore import *
 import random
 
 app = Flask(__name__)
+
 
 @app.route('/')
 @app.route('/home')
@@ -23,10 +25,6 @@ def critical():
 @app.route('/fumbles')
 def fumble():
     return render_template('fumble.html')
-
-@app.route('/<string:page_name>')
-def html_page(page_name):
-    return render_template(page_name)
 
 def write_to_file(data):
     with open('database.txt', mode='a') as database:
@@ -99,6 +97,16 @@ def generate_fumble():
     else:
         return 'something went wrong, try again!'
 
+# ABILITY SCORES
+@app.route('/generate_abilityscore', methods=['POST', 'GET'])
+def generate_abilityscore():
+    if request.method == 'POST':
+        method = request.form['abilityscoremethod']
+        ability_scores = abilityscore_gen(method)
+        return render_template('abilityscore.html', ability_scores = ability_scores)
+    else:
+        return 'something went wrong, try again!'
+
 # @app.errorhandler(404)
 # def not_found():
 #     """Page not found."""
@@ -124,3 +132,11 @@ def generate_fumble():
 #         render_template("500.html"),
 #         500
 #     )
+
+@app.route('/abilityscore')
+def abilityscore():
+     return generate_abilityscore()
+
+@app.route('/<string:page_name>')
+def html_page(page_name):
+    return render_template(page_name)

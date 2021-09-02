@@ -1,0 +1,38 @@
+{% include "header-top.html" %}
+<title>Ability Scores</title> 
+{% include "header-bottom.html" %}
+  <div class="section-container">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+              {% include 'generator.html' %}
+              
+              <h4>RPG Ability Score Generator:</h4>
+              <form action="generate_abilityscore" method="post" class="reveal-content">
+              <p><i>Which ability score generation method are you using?</i><br>
+              <input type="radio" name="abilityscoremethod" id="standard" value="1"> 3d6<br>
+              <input type="radio" name="abilityscoremethod" id="droplow" value="2" checked="true"> 4d6, drop low<br>
+              <p>
+              <button type="submit" class="btn btn-danger btn-lg">Generate Ability Scores</button>
+              </form>
+
+              <table>
+                <th>Ability Scores</th>
+                  {% if ability_scores %}
+                  {% for ability, score in ability_scores.items() %}
+                  <tr>
+                    <td>{{ ability }}: </td>
+                    <td>&nbsp;</td>
+                    <td style="text-align:right">{{ score }}</td>
+                  </tr>
+                  {% else %}
+                    <tr><td>None yet</td></tr>
+                  {% endfor %}
+                  {% endif %}
+              </table>
+
+        </div>
+      </div>
+    </div>
+  </div>
+{% include "footer.html" %}

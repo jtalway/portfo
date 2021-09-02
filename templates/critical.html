@@ -5,10 +5,8 @@
     <div class="container">
       <div class="row">
         <div class="col-xs-12">
-              <a href='fumble.html'>
-                <button type="button" class="btn btn-default btn-sm">Fumble Generator</button>
-              </a>
-              <h4>Fantasy RPG Critical Hit Generator:</h4>
+              {% include 'generator.html' %}
+              <h4>RPG Critical Hit Generator:</h4>
               <form action="generate_critical" method="post" class="reveal-content">
               <p><i>Base weapon damage or which weapon is the character using?</i><br>
               <input type="radio" name="weaponDmg" id="weaponDmg" value="1" checked="true"> d4 damage (club/dagger/dart/sling) <br>
