@@ -1,30 +1,30 @@
-1, 50, +{1d6} damage
-51, 100, x2 Weapon damage
-101, 110, Bleeding (lose {1d2}hp/round)
-111, 112, 1 Strength damage
-113, 114, 1 Dexterity damage
-115, 115, 1 Constitution damage
-116, 116, 1 Intelligence damage
-117, 117, 1 Wisdom damage
-118, 118, 1 Charisma damage
-119, 123, Sunder Weapon (Save vs. Paralysis at -{1d4})
-124, 128, Sunder Shield (Save vs. Paralysis at -{1d4})
-129, 134, (melee): Enemies in front arc take {1d4} damage  (ranged): Enemy directly behind or adjacent to target take(s) {1d4} damage
-135, 136, (melee): Enemies you threaten take {1d4} damage  (ranged): Up to {1d3} enemies directly behind or adjacent to target take(s) {1d4} damage
-137, 137, Instant Kill (Save vs. Death at -{1d4}) - if save take 1/4 max hit points in damage
-138, 147, -{1d6} Attack penalty - duration: <duration>
-148, 157, -{1d6} AC penalty - duration: <duration>
-158, 162, 1/2 Move - duration: <duration2>
-163, 167, 1/3 Move - duration: <duration2>
-168, 168, Blinded - duration: <duration2>
-169, 169, Deafened - duration: <duration2>
-170, 179, Disarmed {1d3} squaress away in <direction> direction
-180, 184, Fatigued
-185, 194, Flat-footed
-195, 204, Knocked Back 5' (you can follow if you have sufficient movement remaining)
-205, 206, (melee): Enemies in front arc knocked back 5'  (you can follow if you have sufficient movement remaining)  (ranged): Target and up to {1d3} enemies directly behind or adjacent to target are knocked back 5'
-207, 216, Knocked Down (prone)
-217, 218, (melee): Enemies in front arc knocked down (prone)  (ranged): Target and up to {1d3} enemies directly behind or adjacent to target are knocked down (prone)
-219, 220, Knocked Out (Save vs. Paralysis at -{1d4})
-221, 221, Paralyzed (Save vs. Paralysis at -{1d4})
-222, 223, Stunned - duration: <duration>
+1, 1, (DC 10 Con save) Instant Kill - if save take 1/4 max hit points in damage
+2, 2, (DC 12 Con save) Unconscious for <duration>
+3, 3, (DC 12 Con save) Paralyzed for <duration>
+4, 5, {1d2} Strength damage - until long rest 
+6, 7, {1d2} Dexterity damage - until long rest 
+8, 9, {1d2} Constitution damage - until long rest 
+10, 11, {1d2} Intelligence damage - until long rest 
+12, 13, {1d2} Wisdom damage - until long rest 
+14, 15, {1d2} Charisma damage - until long rest 
+16, 17, (DC 12 Con save) Stunned for <duration>
+18, 19, Exhaustion +1 level
+20, 22, Blinded for <duration>
+23, 25, Deafened for <duration>
+26, 30, 1/2 Move for <duration>
+31, 40, Prone
+41, 50, Bleeding (lose {1d2} hp/round)
+51, 55, -{1d6} Attack penalty for <duration>
+56, 56, (melee): Enemies in front arc take {1d4} damage  (ranged): Enemy directly behind or adjacent to target take(s) {1d4} damage
+57, 58, (melee): Enemies adjacent to you take {1d4} damage  (ranged): Up to {1d3} enemies directly behind or adjacent to target take(s) {1d4} damage
+59, 59, (melee): Enemies in front arc knocked back 5'  (ranged): Target and up to {1d3} enemies directly behind or adjacent to target are knocked back 5'
+60, 60, (melee): Enemies in front arc knocked prone  (ranged): Target and up to {1d3} enemies directly behind or adjacent to target are knocked prone
+61, 65, -{1d6} AC penalty for <duration>
+66, 68, (DC 10 check) Sunder Shield
+69, 70, (DC 10 check) Sunder Weapon
+71, 80, Disarmed {1d3} square(s) away in <direction> direction
+81, 90, (DC 12 Con save) Incapactitated for <duration>
+91, 98, Move target up to one square
+99, 100, Move target up to {1d2} square(s)
+101, 150, +{1d6} damage
+151, 200, x2 weapon damage

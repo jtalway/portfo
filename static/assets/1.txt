@@ -1,23 +1,23 @@
-1, 50, +{1d4} damage
-51, 100, x2 Weapon damage
-101, 110, Minor Bleeding (lose 1hp/round)
-111, 112, 1 Strength damage
-113, 114, 1 Dexterity damage
-115, 115, 1 Constitution damage
-116, 116, 1 Intelligence damage
-117, 117, 1 Wisdom damage
-118, 118, 1 Charisma damage
-119, 119, Instant Kill (Save vs. Death) - if save take 1/4 max hit points in damage
-120, 129, -{1d4} Attack penalty - duration: <duration>
-130, 139, -{1d4} AC penalty - duration: <duration>
-140, 144, 1/2 Move - duration: <duration2>
-145, 145, Blinded - duration: <duration2>
-146, 146, Deafened - duration: <duration2>
-147, 156, Disarmed {1d2} squares away in <direction> direction
-157, 161, Fatigued
-162, 171, Flat-footed
-172, 181, Knocked Back 5' (you can follow if you have sufficient movement remaining)
-182, 186, Knocked Down (prone)
-187, 188, Knocked Out (Save vs. Paralysis)
-189, 189, Paralyzed (Save vs. Paralysis)
-190, 191, Stunned - duration: <duration>
+1, 1, (DC 8 Con save) Instant Kill - if save take 1/4 max hit points in damage
+2, 2, (DC 10 Con save) Unconscious for <duration>
+3, 3, (DC 10 Con save) Paralyzed for <duration>
+4, 5, 1 Strength damage - until long rest 
+6, 7, 1 Dexterity damage - until long rest 
+8, 9, 1 Constitution damage - until long rest 
+10, 11, 1 Intelligence damage - until long rest 
+12, 13, 1 Wisdom damage - until long rest 
+14, 15, 1 Charisma damage - until long rest 
+16, 17, (DC 10 Con save) Stunned for <duration>
+18, 19, +{1d10} damage
+20, 22, Blinded for <duration>
+23, 25, Deafened for <duration>
+26, 30, 1/2 Move for <duration>
+31, 40, Prone
+41, 50, Bleeding (lose 1hp/round)
+51, 60, -{1d4} Attack penalty for <duration>
+61, 70, -{1d4} AC penalty for <duration>
+71, 80, Disarmed {1d2} square(s) away in <direction> direction
+81, 90, (DC 10 Con save) Incapactitated for <duration>
+91, 100, Move target up to one square
+101, 150, +{1d4} damage
+151, 200, x2 weapon damage

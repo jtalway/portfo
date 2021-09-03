@@ -1,3 +1,4 @@
 1, 10, 1 round
-11, 15, {1d4} round(s)
-16, 16, {1d10} minute(s)
+11, 15, {1d3} round(s)
+16, 19, {1d6} round(s)
+20, 20, {1d4} minute(s)
