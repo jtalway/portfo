@@ -6,30 +6,28 @@
       <div class="row">
         <div class="col-xs-12">
               {% include 'generator.html' %}
-              <h4>RPG Critical Hit Generator:</h4>
+              <h4>RPG Weapon Critical Hit Generator</h4>
               <form action="generate_critical" method="post" class="reveal-content">
-              <p><i>Base weapon damage or which weapon is the character using?</i><br>
-              <input type="radio" name="weaponDmg" id="weaponDmg" value="1" checked="true"> d4 damage (club/dagger/dart/sling) <br>
-              <input type="radio" name="weaponDmg" id="weaponDmg" value="2"> d6 damage (hand axe/shortbow/short sword/staff) <br>
-              <input type="radio" name="weaponDmg" id="weaponDmg" value="3"> d8 damage (battle axe/warhammer/spear/sword)<br>
-              <input type="radio" name="weaponDmg" id="weaponDmg" value="4"> d10+ damage (great axe/pole arm/two-handed sword) <br>
-              <input type="radio" name="weaponDmg" id="weaponDmg" value="5"> 3d6 damage / seige (catapult/ballista) <br>
-              <input type="radio" name="weaponDmg" id="weaponDmg" value="6"> 4d6+ damage / heavy seige (trebuchet)<br> 
-              <p></p>
-
+              <p><i>Base weapon damage (hover for weapon list)</i><br>
+              <input type="radio" name="weaponDmg" id="weaponDmg" value="1"><span title="club, dagger, light hammer, sickle, dart, sling, whip, Monk 1-4"> 1d4 </span><br>
+              <input type="radio" name="weaponDmg" id="weaponDmg" value="2" checked="true"><span title="handaxe, javelin, mace, quarterstaff, spear, shortbow, scimitar, shortsword, trident, hand crossbow, Monk 5-10"> 1d6 </span><br>
+              <input type="radio" name="weaponDmg" id="weaponDmg" value="3"><span title="greatclub, light crossbow, battleaxe, flail, longsword, morningstar, rapier, war pick, warhammer, longbow, Monk 11-16"> 1d8 </span><br>
+              <input type="radio" name="weaponDmg" id="weaponDmg" value="4"><span title="glaive, halberd, pike, heavy crossbow, Monk 17-20"> 1d10 </span><br>
+              <input type="radio" name="weaponDmg" id="weaponDmg" value="5"><span title="greataxe, greatsword, lance, maul"> 1d12 / 2d6 </span><br>
+              <input type="radio" name="weaponDmg" id="weaponDmg" value="6"><span title="ballista, catapult"> 3d10 (siege) </span><br>
+              <input type="radio" name="weaponDmg" id="weaponDmg" value="7"><span title="trebuchet"> 8d10 (heavy siege) </span><br> 
+             
               <p><i>Check all that apply:</i><br>
               <!-- each one below increases severity by 1 -->
-              <input type="checkbox" name="severity" id="severity1" value="1"> Possesses a relevant Proficiency
-              or Feat<br>
-              <input type="checkbox" name="severity" id="severity2" value="1"> Possesses multiple relevant Powers <br>
-              <input type="checkbox" name="severity" id="severity3" value="1"> Is in berserker rage or backstabbing <br>
-              <input type="checkbox" name="severity" id="severity4" value="1"> Using a magic weapon <br>
+              <input type="checkbox" name="severity" id="severity1" value="1"><span title="combat Feats, Brutal Critical, Dwarven Combat Training, Elf Weapon Training, (Half-Orc) Savage Attacks, etc."> Relevant Feat/Trait/Feature</span> <br>
+              <input type="checkbox" name="severity" id="severity2" value="1"><span title="Rage, Reckless Attack, Sneak Attack, etc."> Using relevant Class Feature</span><br>
+              <input type="checkbox" name="severity" id="severity3" value="1"><span title="Monk 6+"> Using a magic weapon</span><br>
               <p></p>
               <button type="submit" class="btn btn-danger btn-lg">Generate Critical Effect(s)</button>
               </form>
               
             
-              <ul><b>Critical Hit Effects:</b>
+              <ul><b>Critical Hit Effects</b>
               {% for critical_effects_element in critical_effects %}
                 <li> {{ critical_effects_element }}</li>
               {% endfor %}
