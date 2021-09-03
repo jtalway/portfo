@@ -21,6 +21,6 @@
 66, 70, (DC 14 check) Sunder Shield
 71, 75, (DC 14 check) Sunder Weapon
 76, 80, +{2d12} damage
-81, 100, (DC 16 Con save) Incapactitated for <duration>
+81, 100, (DC 16 Con save) Incapacitated for <duration>
 101, 150, +{1d10} damage
 151, 200, x2 weapon damage

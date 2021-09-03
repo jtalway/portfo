@@ -1,17 +1,18 @@
-1, 75, ~no result~
-76, 85, -{1d4} AC penalty - <duration>
-86, 95, -{1d6} Attack penalty - <duration>
-96, 105, Flat-footed (turn ends)
-106, 115, Stumble 1 square in <direction> direction
-116, 125, Turn ends
-126, 130, Opponent(s) get AoO
-131, 140, Disarmed {1d3} squares away in <direction> direction
-141, 145, Sunder Weapon (Save vs. Paralysis)
-146, 150, Knocked Down (Save vs. Paralysis)
-151, 152, Knocked Out (Save vs. Paralysis)
-153, 153, Hit self for base weapon damage
-154, 154, Hit self for normal damage
-155, 155, Hit creature in <direction> direction for nonlethal damage
-156, 156, Hit creature in <direction> direction for base weapon damage
-157, 157, Hit creature in <direction> direction for normal damage
-158, 159, Stunned <duration>
+1, 1, Hit self for base weapon damage
+2, 2, Hit self for normal damage
+3, 3, Hit creature in <direction> direction for nonlethal damage
+4, 4, Hit creature in <direction> direction for base weapon damage
+5, 5, Hit creature in <direction> direction for normal damage
+6, 6, Stunned for <duration>
+7, 7, (DC 10 Con save) Unconscious for <duration>
+8, 9, Incapacitated for <duration>
+10, 10, Bleeding (lose {1d2} hp/round)
+11, 15, (DC 10 check) Weapon sundered
+16, 20, Fall Prone
+21, 25, Opponent(s) get Attack of Opportunity
+26, 35, Disarmed {1d3} square(s) away in <direction> direction
+36, 45, Your turn ends
+46, 55, Stumble 1 square in <direction> direction
+56, 65, -{1d4} AC penalty for <duration>
+66, 75, -{1d6} Attack penalty for <duration>
+76, 100, no effect

@@ -85,10 +85,14 @@ def generate_fumble():
         prelim_fumble_effects = fsev_gen(convert_fsev)
         reduce_fumble_effects = int(proficient) + fseverity
         if reduce_fumble_effects >= len(prelim_fumble_effects):
-            fumble_effects = ['No Results']
+            print(prelim_fumble_effects)
+            fumble_effects = ['no effect']
         elif reduce_fumble_effects < len(prelim_fumble_effects):
             x = len(prelim_fumble_effects) - reduce_fumble_effects
-            fumble_effects = random.choices(prelim_fumble_effects, k=x)
+            print(prelim_fumble_effects)
+            fumble_effects = prelim_fumble_effects[0:x]
+            print(fumble_effects)
+            # fumble_effects = random.choices(prelim_fumble_effects, k=x)
         else:
             return 'something is amiss'
 

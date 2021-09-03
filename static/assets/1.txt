@@ -17,7 +17,7 @@
 51, 60, -{1d4} Attack penalty for <duration>
 61, 70, -{1d4} AC penalty for <duration>
 71, 80, Disarmed {1d2} square(s) away in <direction> direction
-81, 90, (DC 10 Con save) Incapactitated for <duration>
+81, 90, (DC 10 Con save) Incapacitated for <duration>
 91, 100, Move target up to one square
 101, 150, +{1d4} damage
 151, 200, x2 weapon damage

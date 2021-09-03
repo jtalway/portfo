@@ -24,6 +24,5 @@ def fsev_gen(fsev_array):
 		# check for random die rolls in the effect, such as random damage ranges
 		calculated = check_dieroll(f_effect)
 		fsev_result.append(calculated.replace('\n', ''))
-
 	return(fsev_result)
 

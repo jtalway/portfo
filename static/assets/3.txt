@@ -17,15 +17,15 @@
 41, 45, Bleeding (lose {1d2} hp/round)
 46, 50, Bleeding (lose {2d2} hp/round)
 51, 55, -{1d6} Attack penalty for <duration2>
-56, 56, (melee): Enemies in front arc take {2d3} damage  (ranged): Enemy directly behind or adjacent to target take(s) {2d3} damage
-57, 58, (melee): Enemies adjacent to you take {2d3} damage  (ranged): Up to {1d4} enemies directly behind or adjacent to target take(s) {2d3} damage
+56, 56, (melee): Enemies in front arc take {2d3} damage  (ranged): Enemy directly behind or adjacent to target take {2d3} damage
+57, 58, (melee): Enemies adjacent to you take {2d3} damage  (ranged): Up to {1d4} enemies directly behind or adjacent to target take {2d3} damage
 59, 59, (melee): Enemies in front arc knocked back 5'  (ranged): Target and up to {2d2} enemies directly behind or adjacent to target are knocked back 5'
 60, 60, (melee): Enemies in front arc knocked prone  (ranged): Target and up to {2d2} enemies directly behind or adjacent to target are knocked prone
 61, 65, -{1d6} AC penalty for <duration2>
 66, 68, (DC 12 check) Sunder Shield
 69, 70, (DC 12 check) Sunder Weapon
 71, 80, Disarmed {1d3} square(s) away in <direction> direction
-81, 90, (DC 14 Con save) Incapactitated for <duration>
+81, 90, (DC 14 Con save) Incapacitated for <duration>
 91, 98, Move target up to one square
 99, 100, Move target up to {1d2} square(s)
 101, 150, +{1d8} damage

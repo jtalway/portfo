@@ -10,15 +10,15 @@
               <form action="generate_fumble" method="post" class="reveal-content">
               <p><i>Wielder is proficient with weapon?</i><br>
               <input type="radio" name="proficient" id="proficient" value="1" checked="true"> Yes<br>
-              <input type="radio" name="proficient" id="proficient" value="0"> No <br>
+              <input type="radio" name="proficient" id="proficient" value="0"> No (or using improvised weapon)<br>
               <p>
 
               <p><i>Check all that apply:</i><br>
               <!-- each one below increases severity by 1 -->
-              <input type="checkbox" name="fsev" id="fseverity1" value="1"> Fighter Attack Progression<br>
-              <input type="checkbox" name="fsev" id="fseverity2" value="1"> Possesses Combat-related proficiencies<br>
-              <input type="checkbox" name="fsev" id="fseverity3" value="1"> Possesses Combat-related Power/Feats<br>
-              <input type="checkbox" name="fsev" id="fseverity4" value="1"> Using a magic weapon <br>
+              <input type="checkbox" name="fsev" id="fseverity1" value="1"> Has multiple attacks<br>
+              <input type="checkbox" name="fsev" id="fseverity2" value="1"> Has Martial Weapon Proficiency or Martial Arts<br>
+              <input type="checkbox" name="fsev" id="fseverity3" value="1"> Str or Dex saving throw Proficiency<br>
+              <input type="checkbox" name="fsev" id="fseverity4" value="1"> Using a magic weapon<br>
               <p>
               <button type="submit" class="btn btn-danger btn-lg">Generate Fumble Effect(s)</button>
               </form>

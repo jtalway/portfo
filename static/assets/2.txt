@@ -23,7 +23,7 @@
 66, 68, (DC 10 check) Sunder Shield
 69, 70, (DC 10 check) Sunder Weapon
 71, 80, Disarmed {1d3} square(s) away in <direction> direction
-81, 90, (DC 12 Con save) Incapactitated for <duration>
+81, 90, (DC 12 Con save) Incapacitated for <duration>
 91, 98, Move target up to one square
 99, 100, Move target up to {1d2} square(s)
 101, 150, +{1d6} damage
