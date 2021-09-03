@@ -1,6 +1,6 @@
 1, 1, Hit self for base weapon damage
 2, 2, Hit self for normal damage
-3, 3, Hit creature in <direction> direction for nonlethal damage
+3, 3, Hit self for max damage
 4, 4, Hit creature in <direction> direction for base weapon damage
 5, 5, Hit creature in <direction> direction for normal damage
 6, 6, Stunned for <duration>
