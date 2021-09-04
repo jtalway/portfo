@@ -3,6 +3,7 @@ import csv
 from critical import *
 from fumble import *
 from abilityscore import *
+from dice_roller import *
 import random
 
 app = Flask(__name__)
@@ -25,6 +26,12 @@ def critical():
 @app.route('/fumbles')
 def fumble():
     return render_template('fumble.html')
+
+@app.route('/die')
+@app.route('/dice')
+@app.route('/roller')
+def roller():
+    return render_template('dice.html')
 
 def write_to_file(data):
     with open('database.txt', mode='a') as database:
@@ -104,6 +111,19 @@ def generate_abilityscore():
         method = request.form['abilityscoremethod']
         ability_scores = abilityscore_gen(method)
         return render_template('abilityscore.html', ability_scores = ability_scores)
+    else:
+        return 'something went wrong, try again!'
+
+# DICE ROLLER
+@app.route('/roll_dice', methods=['POST', 'GET'])
+def roll_dice():
+    if request.method == 'POST':
+        quantity = request.form['quantity']
+        dice = request.form['dice']
+        mod = request.form['mod']
+        mod_value = request.form['mod_value']
+        roll_result = check_for_modifier(quantity, dice, mod, mod_value)
+        return render_template('dice.html', total = roll_result[0], quantity = quantity, dice = dice, mod = mod, mod_value = mod_value)
     else:
         return 'something went wrong, try again!'
 
