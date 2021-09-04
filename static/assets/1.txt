@@ -13,7 +13,7 @@
 23, 25, Deafened for <duration>
 26, 30, 1/2 Move for <duration>
 31, 40, Prone
-41, 50, Bleeding (lose 1hp/round)
+41, 50, Bleeding (lose 1 hp/round)
 51, 60, -{1d4} Attack penalty for <duration>
 61, 70, -{1d4} AC penalty for <duration>
 71, 80, Disarmed {1d2} square(s) away in <direction> direction

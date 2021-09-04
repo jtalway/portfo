@@ -15,8 +15,8 @@
 31, 40, Prone
 41, 50, Bleeding (lose {1d2} hp/round)
 51, 55, -{1d6} Attack penalty for <duration>
-56, 56, (melee): Enemies in front arc take {1d4} damage  (ranged): Enemy directly behind or adjacent to target take(s) {1d4} damage
-57, 58, (melee): Enemies adjacent to you take {1d4} damage  (ranged): Up to {1d3} enemies directly behind or adjacent to target take(s) {1d4} damage
+56, 56, (melee): Enemies in front arc take {1d4} damage  (ranged): Enemy directly behind or adjacent to target takes {1d4} damage
+57, 58, (melee): Enemies adjacent to you take {1d4} damage  (ranged): Up to {1d3} enemies directly behind or adjacent to target take {1d4} damage
 59, 59, (melee): Enemies in front arc knocked back 5'  (ranged): Target and up to {1d3} enemies directly behind or adjacent to target are knocked back 5'
 60, 60, (melee): Enemies in front arc knocked prone  (ranged): Target and up to {1d3} enemies directly behind or adjacent to target are knocked prone
 61, 65, -{1d6} AC penalty for <duration>

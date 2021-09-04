@@ -13,8 +13,8 @@
 41, 45, Bleeding (lose {2d2} hp/round)
 46, 50, Bleeding (lose {2d3} hp/round)
 51, 55, +{2d7} damage
-56, 56, (melee): Enemies in front arc take {2d5} damage  (ranged): Enemy directly behind or adjacent to target take(s) {2d5} damage
-57, 58, (melee): Enemies adjacent to you take {2d5} damage  (ranged): Enemies directly behind or adjacent to target take(s) {2d5} damage
+56, 56, (melee): Enemies in front arc take {2d5} damage  (ranged): Enemy directly behind or adjacent to target takes {2d5} damage
+57, 58, (melee): Enemies adjacent to you take {2d5} damage  (ranged): Enemies directly behind or adjacent to target take {2d5} damage
 59, 59, (melee): Enemies in front arc knocked back 5'  (ranged): Target and up to {2d2} enemies directly behind or adjacent to target are knocked back 5'
 60, 60, (melee): Enemies in front arc knocked prone  (ranged): Target and up to {2d2} enemies directly behind or adjacent to target are knocked prone
 61, 65, +{1d20} damage
