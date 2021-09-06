@@ -1,7 +1,6 @@
 from openfile import * 
 from array_result import *
-from check_duration import *
-from check_dieroll import *
+from crit_checks import *
 
 
 def severity_gen(total_severity):
@@ -48,15 +47,16 @@ def crit_gen(crit_array):
 		effect = array_result(f_array)
 		# print(effect)
 		# check for conditionals in the effect, such as duration or direction
-		c_effect = check_duration(effect)
+		crit_duration = check_duration(effect)
 		# print(c_effect)
 		# check for random die rolls in the effect, such as random damage ranges
-		calculated = check_dieroll(c_effect)
-		crit_result.append(calculated.replace('\n', ''))
+		crit_roll_calc = check_dieroll(crit_duration)
+		crit_result.append(crit_roll_calc.replace('\n', ''))
 		# print(calculated)
+	# check for multiple x2 damage
+	crit_multiplier = duplicate_dmg(crit_result)
+	#final_crit_result = check_damage_add(crit_multiplier)
+	final_crit_result = crit_multiplier
 
-	# for i in crit_result:
-	# 	print(i)
-
-	return(crit_result)
+	return(final_crit_result)
 

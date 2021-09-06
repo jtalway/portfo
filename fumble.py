@@ -1,7 +1,6 @@
 from openfile import * 
 from array_result import *
-from check_duration import *
-from check_dieroll import *
+from crit_checks import *
 
 
 def fseverity_gen():
