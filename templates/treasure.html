@@ -1,0 +1,58 @@
+{% include "header-top.html" %}
+<title>AD&D Treasure</title> 
+{% include "header-bottom.html" %}
+  <div class="section-container">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+              {% include 'generator.html' %}
+              
+              <h4>AD&D Treasure Generator</h4>
+              <form action="generate_treasure" method="post" class="reveal-content">
+              <label for="treasure">Treasure type: </label>
+              <select name="treasure" id="treasure">
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+                <option value="D">D</option>
+                <option value="E">E</option>
+                <option value="F">F</option>
+                <option value="G">G</option>
+                <option value="H">H</option>
+                <option value="I">I</option>
+                <option value="J">J</option>
+                <option value="K">K</option>
+                <option value="L">L</option>
+                <option value="M">M</option>
+                <option value="N">N</option>
+                <option value="O">O</option>
+                <option value="P">P</option>
+                <option value="Q">Q</option>
+                <option value="R">R</option>
+                <option value="S">S</option>
+                <option value="T">T</option>
+                <option value="U">U</option>
+                <option value="V">V</option>
+                <option value="X">X</option>
+                <option value="Y">Y</option>
+                <option value="Z">Z</option>
+              </select>
+              <label for="quantity">X</label>
+              <input type="number" name="quantity" id="quantity" minlength="1" maxlength="2" size="5">
+              <script type="text/javascript">
+              document.getElementById('quantity').value = '1';
+              </script>
+              <br>
+              <button type="submit" class="btn btn-danger btn-lg">Generate Treasure</button>
+              </form>
+
+              <b>Treasure Result</b><br>
+              {% for treasure_element in treasure_hoard %}
+                <li> {{ treasure_element }}</li>
+              {% endfor %}
+              </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+{% include "footer.html" %}

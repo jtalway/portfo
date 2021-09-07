@@ -4,6 +4,7 @@ from critical import *
 from fumble import *
 from abilityscore import *
 from dice_roller import *
+from treasure import *
 import random
 
 app = Flask(__name__)
@@ -26,6 +27,10 @@ def critical():
 @app.route('/fumbles')
 def fumble():
     return render_template('fumble.html')
+
+@app.route('/treasure')
+def treasure():
+    return render_template('treasure.html')
 
 @app.route('/die')
 @app.route('/dice')
@@ -124,6 +129,51 @@ def roll_dice():
         mod_value = request.form['mod_value']
         roll_result = check_for_modifier(quantity, dice, mod, mod_value)
         return render_template('dice.html', total = roll_result[0], quantity = quantity, dice = dice, mod = mod, mod_value = mod_value)
+    else:
+        return 'something went wrong, try again!'
+
+# TREASURE
+@app.route('/generate_treasure', methods=['POST', 'GET'])
+def generate_treasure():
+    if request.method == 'POST':
+        treasure_type = request.form['treasure']
+        treasure_quantity = request.form['quantity']
+        treasure_dict = treasure_category(treasure_type)
+        #treasure_hoard = generate_hoard(treasure_dict)
+        treasure_result = []
+        for key in treasure_dict:
+            q = treasure_dict[key][0]
+            die = treasure_dict[key][1]
+            mult = treasure_dict[key][2]
+            chance = treasure_dict[key][3]
+            x = 0
+            grand_total = 0
+            while x < int(treasure_quantity):
+                #print(f'quantity: {q}, die: {die}, multiplier: {mult}, % chance: {chance}')
+                rNum = randint(1, 100)
+                #print(f'random: {rNum}, chance: {chance}%')
+                if rNum <= chance:
+                    count = 0
+                    i = 0
+                    while i < q:
+                        dice = randint(1, die)
+                        count = count + dice
+                        #print(f'die roll: {dice}, count: {count}')
+                        i+=1
+                    total = mult * count
+                    grand_total = grand_total + total
+                    x+=1
+                else:
+                    x+=1
+                    continue
+            if grand_total > 0:
+                coin_result = str(grand_total) + ' ' + key
+                treasure_result.append(coin_result)
+            else:
+                continue
+        treasure_hoard = treasure_result
+        #print(treasure_hoard)
+        return render_template('treasure.html', treasure_hoard = treasure_hoard)
     else:
         return 'something went wrong, try again!'
 
