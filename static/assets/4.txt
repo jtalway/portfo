@@ -1,22 +1,23 @@
 1, 1, (DC 14 Con save) Instant Kill - if save take 1/4 max hit points in damage
 2, 2, (DC 16 Con save) Unconscious for <duration>
 3, 3, (DC 16 Con save) Paralyzed for <duration>
-4, 5, {1d6} Strength damage - until long rest 
-6, 7, {1d6} Dexterity damage - until long rest 
-8, 9, {1d6} Constitution damage - until long rest 
-10, 11, {1d6} Intelligence damage - until long rest 
-12, 13, {1d6} Wisdom damage - until long rest 
-14, 15, {1d6} Charisma damage - until long rest 
+4, 4, {1d4} Strength damage - until long rest 
+5, 5, {1d4} Dexterity damage - until long rest 
+6, 6, {1d4} Constitution damage - until long rest 
+7, 7, {1d4} Intelligence damage - until long rest 
+8, 8, {1d4} Wisdom damage - until long rest 
+9, 9, {1d4} Charisma damage - until long rest
+10, 15, +{1d16} damage
 16, 20, (DC 14 Con save) Stunned for <duration>
 21, 30, Exhaustion +1 level
 31, 40, +{1d12} damage
-41, 45, Bleeding (lose {2d2} hp/round)
+41, 45, Bleeding (lose {1d4} hp/round)
 46, 50, Bleeding (lose {2d3} hp/round)
 51, 55, +{2d7} damage
 56, 56, (melee): Enemies in front arc take {2d5} damage  (ranged): Enemy directly behind or adjacent to target takes {2d5} damage
 57, 58, (melee): Enemies adjacent to you take {2d5} damage  (ranged): Enemies directly behind or adjacent to target take {2d5} damage
-59, 59, (melee): Enemies in front arc knocked back 5'  (ranged): Target and up to {2d2} enemies directly behind or adjacent to target are knocked back 5'
-60, 60, (melee): Enemies in front arc knocked prone  (ranged): Target and up to {2d2} enemies directly behind or adjacent to target are knocked prone
+59, 59, (melee): Enemies in front arc knocked back 5'  (ranged): Target and up to four enemies directly behind or adjacent to target are knocked back 5'
+60, 60, (melee): Enemies in front arc knocked prone  (ranged): Target and up to four enemies directly behind or adjacent to target are knocked prone
 61, 65, +{1d20} damage
 66, 70, (DC 14 check) Sunder Shield
 71, 75, (DC 14 check) Sunder Weapon

@@ -1,0 +1,12 @@
+1, 18, potion
+19, 32, scroll
+33, 36, ring
+37, 41, rod & staff
+42, 45, wand
+46, 48, misc a
+49, 51, misc b
+52, 54, misc c
+55, 57, misc d
+58, 60, misc e
+61, 75, armor & shield
+76, 100, weapon

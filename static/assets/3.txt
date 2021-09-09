@@ -1,12 +1,13 @@
 1, 1, (DC 12 Con save) Instant Kill - if save take 1/4 max hit points in damage
 2, 2, (DC 14 Con save) Unconscious for <duration>
 3, 3, (DC 14 Con save) Paralyzed for <duration>
-4, 5, {1d4} Strength damage - until long rest 
-6, 7, {1d4} Dexterity damage - until long rest 
-8, 9, {1d4} Constitution damage - until long rest 
-10, 11, {1d4} Intelligence damage - until long rest 
-12, 13, {1d4} Wisdom damage - until long rest 
-14, 15, {1d4} Charisma damage - until long rest 
+4, 4, {1d3} Strength damage - until long rest 
+5, 5, {1d3} Dexterity damage - until long rest 
+6, 6, {1d3} Constitution damage - until long rest 
+7, 7, {1d3} Intelligence damage - until long rest 
+8, 8, {1d3} Wisdom damage - until long rest 
+9, 9, {1d3} Charisma damage - until long rest
+10, 15, +{1d10} damage
 16, 17, (DC 14 Con save) Stunned for <duration>
 18, 19, Exhaustion +1 level
 20, 22, Blinded for <duration2>
@@ -14,13 +15,13 @@
 26, 28, 1/2 Move for <duration2>
 29, 30, 1/3 Move for <duration2>
 31, 40, Prone
-41, 45, Bleeding (lose {1d2} hp/round)
+41, 45, Bleeding (lose {1d3} hp/round)
 46, 50, Bleeding (lose {2d2} hp/round)
 51, 55, -{1d6} Attack penalty for <duration2>
 56, 56, (melee): Enemies in front arc take {2d3} damage  (ranged): Enemy directly behind or adjacent to target takes {2d3} damage
-57, 58, (melee): Enemies adjacent to you take {2d3} damage  (ranged): Up to {1d4} enemies directly behind or adjacent to target take {2d3} damage
-59, 59, (melee): Enemies in front arc knocked back 5'  (ranged): Target and up to {2d2} enemies directly behind or adjacent to target are knocked back 5'
-60, 60, (melee): Enemies in front arc knocked prone  (ranged): Target and up to {2d2} enemies directly behind or adjacent to target are knocked prone
+57, 58, (melee): Enemies adjacent to you take {2d3} damage  (ranged): Up to two enemies directly behind or adjacent to target take {2d3} damage
+59, 59, (melee): Enemies in front arc knocked back 5'  (ranged): Target and up to two enemies directly behind or adjacent to target are knocked back 5'
+60, 60, (melee): Enemies in front arc knocked prone  (ranged): Target and up to two enemies directly behind or adjacent to target are knocked prone
 61, 65, -{1d6} AC penalty for <duration2>
 66, 68, (DC 12 check) Sunder Shield
 69, 70, (DC 12 check) Sunder Weapon

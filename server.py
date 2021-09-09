@@ -4,8 +4,9 @@ from critical import *
 from fumble import *
 from abilityscore import *
 from dice_roller import *
-from treasure import *
+from treasure_table import *
 import random
+import re
 
 app = Flask(__name__)
 
@@ -146,6 +147,7 @@ def generate_treasure():
             die = treasure_dict[key][1]
             mult = treasure_dict[key][2]
             chance = treasure_dict[key][3]
+            magic_item_type = treasure_dict[key][4]
             x = 0
             grand_total = 0
             while x < int(treasure_quantity):
@@ -171,8 +173,21 @@ def generate_treasure():
                 treasure_result.append(coin_result)
             else:
                 continue
+
+        magic_items = re.findall(r'Magic Items', str(treasure_result))
+        print(magic_items)
+        if magic_items:
+            # q = die_roll[0][0]
+            # die = die_roll[0][1]
+            print(magic_item_type)
+            # print("[+] Dice Quantity: " +  q + ", Die Size: " +  die + ", Random Die Roll Result: " + str(rNum))
+            # calculated = re.sub(r'{(?P<q>.*?)d(?P<die>.*?)}', str(rNum), data)
+            # return(calculated)
+        else:
+            print("[-] Magic Items NOT found")
+
         treasure_hoard = treasure_result
-        #print(treasure_hoard)
+        print(treasure_hoard)
         return render_template('treasure.html', treasure_hoard = treasure_hoard)
     else:
         return 'something went wrong, try again!'
