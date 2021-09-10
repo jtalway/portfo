@@ -9,4 +9,3 @@
 55, 57, miscD
 58, 60, miscE
 61, 75, armorshield
-76, 100, weapon

@@ -1,0 +1,47 @@
+1, 1, prison of Zagyg
+2, 6, Quaal's feather token
+7, 10, quiver of Ehlonna
+11, 12, ring gates
+13, 13, robe of the archmagi
+14, 19, robe of blending
+20, 21, robe of bones
+22, 23, robe of eyes
+24, 24, robe of powerlessness
+25, 26, robe of scintillating colors
+27, 27, robe of stars
+28, 29, robe of vermin
+30, 35, robe of useful items
+36, 38, rope of climbing
+39, 39, rope of constriction
+40, 42, rope of entanglement
+43, 43, rug of smothering
+44, 44, rug of welcome
+45, 45, saw of mighty cutting
+46, 46, scarab of death
+47, 48, scarab of enraging enemies
+49, 50, scarab of insanity
+51, 56, scarab of protection
+57, 57, scarab versus golems
+58, 59, shadow lanthorn
+60, 60, sheet of smallness
+61, 62, shoes of Farlanghn
+63, 63, shrouds of disintegration
+64, 64, slippers of kicking
+65, 69, slippers of spider climbing
+70, 70, spade of colossal excavation
+71, 72, spoon of stirring
+73, 75, stone horse
+76, 77, stone of controlling earth elementals
+78, 79, stone of good luck (luckstone)
+80, 80, stone of weight (loadstone)
+81, 81, tome of clear thought
+82, 82, tome of leadership & influence
+83, 83, tome of understanding
+84, 84, vacuous grimoire
+85, 85, vest of escape
+86, 87, druid's vestment
+88, 89, well of many worlds
+90, 91, wind fan
+92, 95, wings of flying
+96, 97, Zagyg's flowing flagon
+98, 100, Zagyg's spell component case

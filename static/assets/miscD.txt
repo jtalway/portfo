@@ -1,0 +1,51 @@
+1, 6, instruments of the bards
+7, 7, iron bands of Bilarro
+8, 8, jewel of attacks
+9, 9, jewel of flawlessness
+10, 11, lantern of revealing
+12, 13, lens of darkvision
+14, 15, lens of detection
+16, 16, libram of gainful conjuration
+17, 17, libram of ineffable damnation
+18, 18, libram of silver magic
+19, 19, lyre of building
+20, 20, mantle of Celestian
+21, 22, mantle of magic resistance
+23, 23, manual of bodily health
+24, 24, manual of gainful exercise
+25, 25, manual of golems
+26, 26, manual of puissant skill at arms
+27, 27, manual of quickness of action
+28, 28, unknown
+29, 29, unknown
+30, 30, manual of stealthy pilfering
+31, 31, mask of the skull
+32, 32, mattock of the titans
+33, 33, maul of the titans
+34, 36, medallion of ESP
+37, 37, medallion of thought projection
+38, 38, mirror of life trapping
+39, 39, mirror of mental prowess
+40, 40, mirror of opposition
+41, 42, Murlynd's spoon
+43, 45, necklace of adaptation
+46, 50, necklace of missiles
+51, 55, necklace of prayer beads
+56, 56, necklace of strangulation
+57, 57, orb of storms
+58, 60, pearl of power
+61, 61, pearl of sirines
+62, 62, pearl of wisdom
+63, 63, periapt of foul rotting
+64, 65, periapt of health
+66, 70, periapt of proof against poison
+71, 75, periapt of would closure
+76, 80, phylactery of faithfulness
+81, 84, phylactery of long years
+85, 85, phylactery of monstrous attention
+86, 86, pipes of haunting
+87, 87, pipes of pain
+88, 94, pipes of the sewers
+95, 95, pipes of sounding
+96, 96, portable hole
+97, 100, pouch of accessibility

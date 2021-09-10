@@ -266,6 +266,149 @@ def treasure_category(treasure_type):
 	else:
 		print("[-] Something went wrong")
 	
-# def magic_items():
 
 
+def find_magic_items(magic_item_type, q):
+	if magic_item_type == 'any':
+		calc_magic_item_types = []
+		i = 0
+		while i < q:
+			f_array = openfile('magic-items')
+			data = array_result(f_array)
+			calc_magic_item_types.append(data.replace('\n', ''))
+			i+=1
+		return(calc_magic_item_types)
+		
+	elif magic_item_type == 'armor or weapon':
+		calc_magic_item_types = []
+		i = 0
+		while i < q:
+			f_array = openfile('armor-weapon')
+			data = array_result(f_array)
+			calc_magic_item_types.append(data.replace('\n', ''))
+			i+=1
+		return(calc_magic_item_types)
+
+	elif magic_item_type == 'any + 1 potion':
+		calc_magic_item_types = []
+		i = 0
+		while i < q:
+			f_array = openfile('magic-items')
+			data = array_result(f_array)
+			calc_magic_item_types.append(data.replace('\n', ''))
+			i+=1
+		p = 0
+		while p < q/2:
+			calc_magic_item_types.append('potion')
+			p+=1
+		return(calc_magic_item_types)
+
+	elif magic_item_type == 'any + 1 scroll':
+		calc_magic_item_types = []
+		i = 0
+		while i < q:
+			f_array = openfile('magic-items')
+			data = array_result(f_array)
+			calc_magic_item_types.append(data.replace('\n', ''))
+			i+=1
+		p = 0
+		while p < q/3:
+			calc_magic_item_types.append('scroll')
+			p+=1
+		return(calc_magic_item_types)
+
+	elif magic_item_type == 'non-weapon':
+		calc_magic_item_types = []
+		i = 0
+		while i < q:
+			f_array = openfile('non-weapon')
+			data = array_result(f_array)
+			calc_magic_item_types.append(data.replace('\n', ''))
+			i+=1
+		return(calc_magic_item_types)
+
+	elif magic_item_type == 'potion':
+		calc_magic_item_types = []
+		i = 0
+		while i < q:
+			calc_magic_item_types.append('potion')
+			i+=1
+		return(calc_magic_item_types)
+
+	elif magic_item_type == 'scroll':
+		calc_magic_item_types = []
+		i = 0
+		while i < q:
+			calc_magic_item_types.append('scroll')
+			i+=1
+		return(calc_magic_item_types)
+
+
+
+def roll_magic_items(mi):
+	if mi == 'potion':
+		f_array = openfile(mi)
+		data = array_result(f_array)
+		return(data)
+		
+	elif mi == 'scroll':
+		f_array = openfile(mi)
+		data = array_result(f_array)
+		return(data)
+
+	elif mi == 'ring':
+		f_array = openfile(mi)
+		data = array_result(f_array)
+		return(data)
+
+	elif mi == 'rodstaff':
+		f_array = openfile(mi)
+		data = array_result(f_array)
+		return(data)
+
+	elif mi == 'wand':
+		f_array = openfile(mi)
+		data = array_result(f_array)
+		return(data)
+
+	elif mi == 'miscA':
+		f_array = openfile(mi)
+		data = array_result(f_array)
+		return(data)
+
+	elif mi == 'miscB':
+		f_array = openfile(mi)
+		data = array_result(f_array)
+		return(data)
+
+	elif mi == 'miscC':
+		f_array = openfile(mi)
+		data = array_result(f_array)
+		return(data)
+
+	elif mi == 'miscD':
+		f_array = openfile(mi)
+		data = array_result(f_array)
+		return(data)
+
+	elif mi == 'miscE':
+		f_array = openfile(mi)
+		data = array_result(f_array)
+		return(data)
+
+	elif mi == 'armorshield':
+		f_array = openfile(mi)
+		data = array_result(f_array)
+		return(data)
+
+	elif mi == 'weapon':
+		rNum = randint(1, 100)
+		if rNum <= 28:
+			weapon_type = 'weaponA'
+		elif rNum <=56:
+			weapon_type = 'weaponB'
+		else:
+			weapon_type = 'sword'
+		f_array = openfile(weapon_type)
+		data = array_result(f_array)
+		return(data)

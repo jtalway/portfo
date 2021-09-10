@@ -142,6 +142,7 @@ def generate_treasure():
         treasure_dict = treasure_category(treasure_type)
         #treasure_hoard = generate_hoard(treasure_dict)
         treasure_result = []
+
         for key in treasure_dict:
             q = treasure_dict[key][0]
             die = treasure_dict[key][1]
@@ -151,16 +152,13 @@ def generate_treasure():
             x = 0
             grand_total = 0
             while x < int(treasure_quantity):
-                #print(f'quantity: {q}, die: {die}, multiplier: {mult}, % chance: {chance}')
                 rNum = randint(1, 100)
-                #print(f'random: {rNum}, chance: {chance}%')
                 if rNum <= chance:
                     count = 0
                     i = 0
                     while i < q:
                         dice = randint(1, die)
                         count = count + dice
-                        #print(f'die roll: {dice}, count: {count}')
                         i+=1
                     total = mult * count
                     grand_total = grand_total + total
@@ -172,22 +170,41 @@ def generate_treasure():
                 coin_result = str(grand_total) + ' ' + key
                 treasure_result.append(coin_result)
             else:
-                continue
+                continue;
 
-        magic_items = re.findall(r'Magic Items', str(treasure_result))
-        print(magic_items)
+        magic_items = re.findall(r'[0-9]+ Magic Items or maps', str(treasure_result))
         if magic_items:
-            # q = die_roll[0][0]
-            # die = die_roll[0][1]
-            print(magic_item_type)
-            # print("[+] Dice Quantity: " +  q + ", Die Size: " +  die + ", Random Die Roll Result: " + str(rNum))
-            # calculated = re.sub(r'{(?P<q>.*?)d(?P<die>.*?)}', str(rNum), data)
-            # return(calculated)
+            mi_result = magic_items[-1].split(' ')
+            mi_total_quantity = int(mi_result[0])
+            print(mi_total_quantity)
+            # get list of outcomes from magic_item_type
+            print(f'Treasure Result: {treasure_result}')
+            treasure_result.pop()
+            print(f'Updated: {treasure_result}')
+            magic_treasure = find_magic_items(magic_item_type, mi_total_quantity)
+            print(f'Items: {magic_items}, Type: {magic_item_type}')
+            print(f'Magic Treasure(type, not individual roll): {magic_treasure}')
+
+            # generate individual items
+            magic_items_rolled_list = []
+            for mi in magic_treasure:
+                magic_item_rolled = roll_magic_items(mi)
+                magic_items_rolled_list.append(magic_item_rolled)
+            print(f'Magic Items Rolled List: {magic_items_rolled_list}')
+
+
+            # append to magic_treasure list
+            for i in range(len(magic_items_rolled_list)):
+                treasure_result.append(magic_items_rolled_list[i])
+
+            # return magic_treasure list
+            # append to treasure_hoard
+
         else:
             print("[-] Magic Items NOT found")
 
         treasure_hoard = treasure_result
-        print(treasure_hoard)
+        print(f'Treasure Hoard: {treasure_hoard}')
         return render_template('treasure.html', treasure_hoard = treasure_hoard)
     else:
         return 'something went wrong, try again!'

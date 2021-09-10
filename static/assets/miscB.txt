@@ -1,0 +1,41 @@
+1, 3, candle of invocation
+4, 5, candle of truth
+6, 7, cape of the mountebank
+8, 9, carpet of flying
+10, 11, censer of controlling air elementals
+12, 12, censer of summoning hostile air elementals
+13, 13, chaos diamond
+14, 14, chime of hunger
+15, 15, chime of interruption
+16, 17, chime of opening
+18, 18, circlet of persuasion
+19, 19, cloak of arachnidia
+20, 22, cloak of the bat
+23, 26, cloak of displacement
+27, 33, cloak of elvenkind
+34, 34, cloak of etherealness
+35, 37, cloak of the manta ray
+38, 38, cloak of poisonousness
+39, 64, cloak of protection
+65, 69, crystal ball
+70, 72, cube of force
+73, 74, cube of frost resistance
+75, 76, cubic gate
+77, 77, cyclocone
+78, 79, Daern's instant fortress
+80, 82, decanter of endless water
+83, 83, deck of illusions
+84, 84, dicerion of light & darkness
+85, 85, dimensional shackles
+86, 86, drums of deafening
+87, 88, drums of panic
+89, 89, efreeti bottle
+90, 90, egg of desire
+91, 91, egg of reason
+92, 92, egg of shattering
+93, 93, eversmoking bottle
+94, 94, eyes of charming
+95, 95, eyes of doom
+96, 97, eyes of the eagle
+98, 99, eyes of the minute seeing
+100, 100, eyes of petrification

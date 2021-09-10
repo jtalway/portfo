@@ -1,0 +1,64 @@
+1, 1, potion of animal control
+2, 2, potion of clairaudience
+3, 3, potion of clairvoyance
+4, 5, potion of climbing
+6, 6, potion of delusion
+7, 8, potion of diminution
+9, 9, potion of dragon control
+10, 10, dust of appearance
+11, 11, dust of disappearance
+12, 12, dust of illusion
+13, 13, dust of sneezing and choking
+14, 14, dust of timeliness
+15, 16, elixir of health
+17, 17, elixir of life
+18, 18, elixir of madness
+19, 19, elixir of youth
+20, 21, potion of esp
+22, 24, potion of extra healing
+25, 25, potion of fire breath
+26, 27, potion of fire resistance
+28, 29, potion of flying
+30, 31, potion of gaseous form
+32, 32, potion of giant control
+33, 34, potion of giant strength
+35, 36, potion of growth
+37, 41, potion of healing
+42, 43, potion of heroism
+44, 44, potion of human control
+45, 46, potion of invisibility
+47, 48, potion of invulnerability
+49, 50, Keoghtom's ointment
+51, 53, potion of levitation
+54, 54, potion of longevity
+55, 55, Nolzur's marvelous pigment
+56, 56, oil of acid resistance
+57, 57, oil of disenchantment
+58, 58, oil of elemental invulnerability
+59, 60, oil of etherealness
+61, 61, oil of fiery burning
+62, 62, oil of fumbling
+63, 63, oil of impact
+64, 64, oil of sharpness
+65, 66, oil of slipperiness
+67, 67, oil of timelessness
+68, 68, philter of beauty
+69, 69, philter of glibness
+70, 70, philter of love
+71, 72, philter of persuasiveness
+73, 73, philter of stammering & stuttering
+74, 74, potion of plant control
+75, 76, potion of polymorph
+77, 78, (potion of) poison
+79, 79, potion of rainbow hues
+80, 80, potion of silversheen
+81, 81, sovereign glue
+82, 84, potion of speed
+85, 86, potion of super-heroism
+87, 88, potion of sweet water
+89, 91, potion of treasure finding
+92, 92, ultimate solution
+93, 93, potion of undead control
+94, 95, potion of ventriloquism
+96, 97, potion of vitality
+98, 100, potion of water breathing

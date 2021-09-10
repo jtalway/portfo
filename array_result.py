@@ -11,7 +11,7 @@ def array_result(array):
         # determine the number of effect
         while rNum >= int(array[i].split(", ")[0]) and rNum <= int(array[i].split(", ")[1]):
             # grab the effect 
-            effect = array[i].split(", ")[2]
+            data = array[i].split(", ")[2]
             # print("Random Number from 1 to " + str(h) +": " + str(rNum))
             # print("Random Critical Effect: " + effect)
-            return(effect)
+            return(data)

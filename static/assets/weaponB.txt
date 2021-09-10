@@ -1,0 +1,46 @@
+1, 1, hammer +3 (dwarven thrower)
+2, 2, hammer +4
+3, 3, hammer of thunderbolts
+4, 7, javelin +1
+8, 10, javelin +2
+11, 11, javelin +3
+12, 12, javelin of lightning
+13, 13, javelin of piercing
+14, 18, lance +1
+19, 21, lance +2
+22, 26, mace +1
+27, 29, mace +2
+30, 31, mace +3
+32, 32, mace of disruption
+33, 33, mace of terror
+34, 37, morningstar +1
+38, 39, morningstar +2
+40, 40, net of snaring
+41, 44, pick +1
+45, 46, pick +2
+47, 51, polearm +1
+52, 54, polearm +2
+55, 58, quarterstaff +1
+59, 61, quarterstaff +2
+62, 62, quarterstaff +3 (bronzewood)
+63, 65, scythe +1
+66, 67, scythe +2
+68, 70, sickle +1
+71, 72, sickle +2
+73, 74, sling +1
+75, 75, sling of seeking
+76, 79, spear +1
+80, 82, spear +2
+83, 83, spear +3
+84, 85, spear (cursed backbiter)
+86, 86, staff-mace
+87, 87, staff-sling
+88, 88, staff-spear
+89, 91, trident +1
+92, 93, trident +2
+94, 94, trident +3 (military fork)
+95, 95, trident of fish command
+96, 96, trident of submission
+97, 97, trident of warning
+98, 98, trident of yearning
+99, 100, whip +1

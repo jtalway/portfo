@@ -1,0 +1,42 @@
+1, 5, arrows +1 {4d6}
+6, 8, arrows +2 {4d6}
+9, 10, arrows +3 {4d6}
+11, 11, arrows of slaying {4d6}
+12, 12, arrows of sleep {4d6}
+13, 16, axe +1
+17, 19, axe +2
+20, 20, axe +3
+21, 21, axe of hurling
+22, 22, life-drinker axe
+23, 24, bolts +1 {4d6}
+25, 27, bolts +2 {4d6}
+28, 28, bolts +3 {4d6}
+29, 33, bow +1
+34, 37, bow +2
+38, 41, sling bullets +1 {4d6}
+42, 44, sling bullets +2 {4d6}
+45, 45, sling bullets +3 {4d6}
+46, 46, sling bullets of impact {4d6}
+47, 51, crossbow +1
+52, 55, crossbow +2
+56, 56, crossbow of accuracy
+57, 57, crossbow of distance
+58, 58, crossbow of speed
+59, 63, dagger +1
+64, 65, dagger +1 (+3 vs. small humanoids & demihumans)
+66, 67, dagger +1 (+3 vs. large humanoids & giants)
+68, 70, dagger +2
+71, 71, dagger +2 (longtooth)
+72, 73, dagger +3
+74, 74, dagger of throwing
+75, 75, dagger of venom
+76, 79, dart +1
+80, 82, dart +2
+83, 84, dart +3
+85, 85, dart of homing
+86, 86, dart of the hornet's nest
+87, 89, flail +1
+90, 91, flail +2
+92, 95, hammer +1
+96, 98, hammer +2
+99, 100, hammer +3
