@@ -1,1 +1,26 @@
-1, 1, random scroll
+1, 60, spell scroll
+61, 62, scroll of antilife shell
+63, 64, scroll of antimagic shell
+65, 66, scroll of antiplant shell
+67, 68, scroll of immunity to paralyzation 10'r
+69, 70, scroll of immunity to petrification 10'r
+71, 72, scroll of immunity to poison 10'r
+73, 73, scroll of protection from aberrations
+74, 75, scroll of protection from dragons
+76, 77, scroll of protection from demons
+78, 79, scroll of protection from devils
+80, 81, scroll of protection from elementals
+82, 82, scroll of protection from faeries
+83, 83, scroll of protection from golems
+84, 84, scroll of protection from lycanthropes
+85, 86, scroll of protection from undead
+87, 87, scroll of resist acid 10'r
+88, 89, scroll of resist cold 10'r
+90, 91, scroll of resist fire 10'r
+92, 93, scroll of resist lightning 10'r
+94, 94, scroll of resist sonic attacks 10'r
+95, 95, scroll of missile weapon turning
+96, 96, scroll of bludgeoning weapon turning
+97, 97, scroll of piercing weapon turning
+98, 98, scroll of slashing weapon turning
+99, 100, cursed scroll
