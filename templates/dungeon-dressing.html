@@ -1,5 +1,5 @@
 {% include "header-top.html" %}
-<title>AD&D Treasure</title> 
+<title>Dungeon Dressing</title> 
 {% include "header-bottom.html" %}
   <div class="section-container">
     <div class="container">
@@ -7,9 +7,9 @@
         <div class="col-xs-12">
               {% include 'generator.html' %}
               
-              <h4>AD&D Treasure Generator</h4>
-              <form action="generate_treasure" method="post" class="reveal-content">
-              <label for="treasure">Treasure type: </label>
+              <h4>Dungeon Dressing</h4>
+              <form action="generate_dungeon_dressing" method="post" class="reveal-content">
+              <!-- <label for="treasure">Treasure type: </label>
               <select name="treasure" id="treasure">
                 <option value="A">A</option>
                 <option value="B">B</option>
@@ -42,29 +42,20 @@
               <input type="number" name="quantity" id="quantity" min='1' max='20' size="6" >
               <script type="text/javascript">
               document.getElementById('quantity').value = '1';
-              </script>
-              <button type="submit" class="btn btn-danger btn-lg">Generate Treasure</button>
+              </script> -->
+              <button type="submit" class="btn btn-danger btn-lg">Generate Dungeon Dressing</button>
               </form>
 
-              <b><u>Treasure Result</u></b> &nbsp; <cite style="font-size: 9px;"> generated <span id="datetime"></span></cite><br>
-              <b>Coins</b>
-              {% for coin in coin_hoard %}
-                {{ coin }} &nbsp;
-              {% endfor %}
-              <br>
-              <b>Gems</b>
-              {% for gem in gem_hoard %}
-                {{ gem  }} 
-              {% endfor %}
-              <br>
-              <b>Jewelry</b>
-              {% for jewelry in jewelry_hoard %}
-                {{ jewelry }} 
-              {% endfor %}
-              <br>
-              <b>Magic Items</b>
-              {% for treasure_element in treasure_hoard %}
-                {{ treasure_element }}
+              <b><u>Dungeon Dressing Result</u></b> &nbsp; <cite style="font-size: 9px;"> generated <span id="datetime"></span></cite><br>
+              <b>Air</b> {{ see }} &nbsp; <b>Air Currents</b> {{ feel }}<br>
+              <b>Odors</b> {{ smell }}<br>
+              <b>Unexplained Sounds / Weird Noises</b> {{ hear }}<br>
+              <b>General</b> {{ general }}
+              <hr>
+              <b>Misc Utensil / Personal Item</b> {{ utensil_personal_item }}<br>
+              <b>Furnishings</b> 
+              {% for item in formatted_furnishings %}
+                {{ item }}
               {% endfor %}
               <script>
                 var dt = new Date();

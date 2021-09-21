@@ -1,4 +1,5 @@
 # IMPORTS
+import re
 from random import randint
 from openfile import * 
 from array_result import *
@@ -28,15 +29,19 @@ def calculate_chance(treasure_var, treasure_quantity):
                 i+=1
             # treasure multiplier
             total = mult * count
+            # running total
             grand_total = grand_total + total
             x+=1
         else:
             x+=1
             continue
     category_result.append(grand_total)
+    # returns
     if magic_item_type == 'na':
+    	# non-magical treasure
     	return(category_result)
     else:
+    	# magic item generation info
     	return(category_result, magic_item_type)
 
 def determine_gems(gem_quantity):
@@ -74,16 +79,48 @@ def determine_gems(gem_quantity):
 		formatted_gem_hoard = [x + ', ' if x != final_gem_hoard[-1] else x for x in final_gem_hoard]
 	return(formatted_gem_hoard)
 
-def determine_jewelry(quantity):
-	return(quantity)
+def determine_jewelry(jewelry_quantity):
+	x = 0
+	jewelry_collection = []
+	final_jewelry_hoard = []
+	formatted_jewelry_hoard = []
+	# loop thru generators for each jewelry quantity indicated
+	while x < int(jewelry_quantity):
+		# read jewelry info file
+		jewelry_base_value_array = openfile('jewelry-base-value')
+		# get jewelry info
+		base_value = array_result(jewelry_base_value_array)
+		jewelry = base_value.replace('\n', '')
+		# determine material
+		jewelry_material = check_material(jewelry)
+		# determine jewelry type
+		jewelry_type = find_jewelry_type(jewelry_material).replace('\n', '')
+		# calculate gp value
+		final_jewelry_item = calculate_value(jewelry_type)
+		# add jewelry to the collection
+		jewelry_collection.append(final_jewelry_item)
+		x+=1
+	# get duplicates
+	jewelry_hoard = Counter(jewelry_collection)
+	# sort by highest quantity
+	sorted_jewelry_hoard = dict(sorted(jewelry_hoard.items(), key=lambda item: item[1], reverse=True))
+	for key in sorted_jewelry_hoard:
+		quantity = sorted_jewelry_hoard[key]
+		# attach quantities > 1
+		if quantity > 1:
+			jewelry_result = key + ' (x ' + str(quantity) + ')'
+		else:
+			jewelry_result = key
+		# add finished jewelry to hoard
+		final_jewelry_hoard.append(jewelry_result)
+		# add comma to each entry except the last
+		formatted_jewelry_hoard = [x + ', ' if x != final_jewelry_hoard[-1] else x for x in final_jewelry_hoard]
+	return(formatted_jewelry_hoard)
 
 def determine_magic_items(quantity, magic_item_type):
 	formatted_magic_items = []
 	magic_items_rolled_list = []
 	final_magic_item_hoard = []
-	#
-	# ADD MAP CHECK IN
-	#
 	magic_item_collection = find_magic_items(quantity, magic_item_type)
 	# generate individual items
 	for mi in magic_item_collection:
@@ -113,3 +150,57 @@ def determine_magic_items(quantity, magic_item_type):
 	return(formatted_magic_items)
 
 
+def calculate_value(data):
+	# look for match like 2d6m10
+	die_roll = re.findall(r'{(?P<q>.*?)d(?P<die>.*?)m(?P<mult>.*?)}', data)
+	if die_roll:
+		n = 0
+		dice_sum = 0
+		q = die_roll[0][0]
+		die = die_roll[0][1]
+		mult = die_roll[0][2]
+		# LOOP thru quantity of dice
+		while n < int(q):
+			rNum = randint(1,int(die))
+			dice_sum = dice_sum + rNum 
+			n += 1
+		# multiply dice result with multiplier value
+		calc_die_roll = dice_sum * int(mult)
+		# replace dice equation with calcuated value
+		calculated = re.sub(r'{(?P<q>.*?)d(?P<die>.*?)m(?P<mult>.*?)}', str(calc_die_roll), data)
+		return(calculated)
+	else:
+		return(data)
+
+def check_material(data):
+	# find material tag
+    if re.findall(r'<material1>', data):
+        # open file 
+        f_array = openfile('material1')
+        # find result from array
+        result = array_result(f_array)
+        # replace material with material type
+        material_type = re.sub(r'<material1>', result, data)
+        return(material_type)
+
+    elif re.findall(r'<material2>', data):
+        f_array = openfile('material2')
+        result = array_result(f_array)
+        material_type = re.sub(r'<material2>', result, data)
+        return(material_type)
+
+    else:
+        return(data)
+
+def find_jewelry_type(data):
+	# find jewelry tag
+    if re.findall(r'<jewelry>', data):
+        # open file 
+        f_array = openfile('jewelry-type')
+        # find result from array
+        result = array_result(f_array)
+        # replace jewelry with jewelry type
+        jewelry_type = re.sub(r'<jewelry>', result, data)
+        return(jewelry_type)
+    else:
+        return(data)	

@@ -8,6 +8,7 @@ from treasure_table import *
 from treasure import *
 import random
 import re
+from collections import Counter
 
 app = Flask(__name__)
 
@@ -33,6 +34,10 @@ def fumble():
 @app.route('/treasure')
 def treasure():
     return render_template('treasure.html')
+
+@app.route('/dungeon_dressing')
+def dungeon_dressing():
+    return render_template('dungeon-dressing.html')
 
 @app.route('/die')
 @app.route('/dice')
@@ -129,7 +134,8 @@ def roll_dice():
         dice = request.form['dice']
         mod = request.form['mod']
         mod_value = request.form['mod_value']
-        roll_result = check_for_modifier(quantity, dice, mod, mod_value)
+        adv = request.form['adv']
+        roll_result = check_for_modifier(quantity, dice, mod, mod_value, adv)
         return render_template('dice.html', total = roll_result[0], quantity = quantity, dice = dice, mod = mod, mod_value = mod_value)
     else:
         return 'something went wrong, try again!'
@@ -166,9 +172,59 @@ def generate_treasure():
         # HOARDS
         coin_hoard = [coppers, silvers, electrums, golds, platinums]
         gem_hoard = gems
-        jewelry_hoard = [jewelry]
+        jewelry_hoard = jewelry
         treasure_hoard = magic_items
+        print('[+] ...... NEW TREASURE HOARD GENERATED ......')
+        print(f' CP: {copper_result}, SP: {silver_result}, EP: {electrum_result}, GP: {gold_result}, PP: {platinum_result}')
+        print(f' Gems: {gem_result}, Jewelry: {jewelry_result}, Magic Items: {magic_item_result} lots')
+        print('[-] ...... END TREASURE HOARD ......')
         return render_template('treasure.html', treasure_hoard = treasure_hoard, coin_hoard = coin_hoard, gem_hoard = gem_hoard, jewelry_hoard = jewelry_hoard)
+    else:
+        return 'something went wrong, try again!'
+
+@app.route('/generate_dungeon_dressing', methods=['POST', 'GET'])
+def generate_dungeon_dressing():
+    if request.method == 'POST':
+        sense_feel = openfile('dungeon-feel')
+        feel = array_result(sense_feel)
+        sense_see = openfile('dungeon-see')
+        see = array_result(sense_see)
+        sense_smell = openfile('dungeon-smell')
+        smell = array_result(sense_smell)
+        sense_hear = openfile('dungeon-hear')
+        hear = array_result(sense_hear)
+        sense_general = openfile('dungeon-general')
+        general = array_result(sense_general)
+        utensil_personal_array = openfile('dungeon-utensil-personal')
+        utensil_personal_item = array_result(utensil_personal_array)
+
+        rNum = randint(1, 2)
+        i = 0
+        furnishings = []
+        final_furnishings = []
+        while i < rNum:
+            furnishing_array = openfile('dungeon-furnishings')
+            furnishing_result = array_result(furnishing_array).replace('\n', '')
+            furnishings.append(furnishing_result)
+            i += 1
+        # get duplicates
+        total_furnishings = Counter(furnishings)
+        # sort by highest quantity
+        sorted_total_furnishings = dict(sorted(total_furnishings.items(), key=lambda item: item[1], reverse=True))
+        for key in sorted_total_furnishings:
+            quantity = sorted_total_furnishings[key]
+            # attach quantities > 1
+            if quantity > 1:
+                furnishing_result = key + ' (x ' + str(quantity) + ')'
+            else:
+                furnishing_result = key
+            # add finished furnishings to hoard
+            final_furnishings.append(furnishing_result)
+        # add comma to each entry except the last
+        formatted_furnishings = [x + ', ' if x != final_furnishings[-1] else x for x in final_furnishings]
+        
+        return render_template('dungeon-dressing.html', 
+            feel = feel, see = see, smell = smell, hear = hear, general = general, formatted_furnishings = formatted_furnishings, utensil_personal_item = utensil_personal_item)
     else:
         return 'something went wrong, try again!'
 

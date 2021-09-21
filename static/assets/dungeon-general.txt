@@ -1,0 +1,54 @@
+1, 1, broken arrow
+2, 4, ashes
+5, 6, bones
+7, 7, broken bottle
+8, 8, corroded chain
+9, 9, splintered club
+10, 19, cobwebs
+20, 20, bent copper coin
+21, 22, ceiling cracks
+23, 24, floor cracks
+25, 26, wall cracks
+27, 27, dagger hilt
+28, 29, ceiling dampness
+30, 33, wall dampness
+34, 40, dripping
+41, 41, dried blood
+42, 44, dung
+45, 49, dust
+50, 50, cracked flask
+51, 51, food scraps
+52, 52, common fungi
+53, 55, guano
+56, 56, hair/fur bits
+57, 57, cracked hammer head
+58, 58, badly dented helmet
+59, 59, bent rusted iron bar
+60, 60, blunt javelin head
+61, 61, leather boot
+62, 64, dry leaves and twigs
+65, 68, common mold
+69, 69, pick handle
+70, 70, broken pole
+71, 71, pottery shards
+72, 73, rags
+74, 74, rotten rope
+75, 76, rubble and dirt
+77, 77, torn sack
+78, 78, slimy ceiling coating
+79, 79, slimy floor coating
+80, 80, slimy wall coating
+81, 81, rusted spike
+82, 83, sticks
+84, 84, small stones
+85, 85, straw
+86, 86, broken sword blade
+87, 87, scattered teeth/fangs
+88, 88, torch stub
+89, 89, wall scratchings
+90, 91, small puddle of water
+92, 93, large puddle of water
+94, 95, trickle of water
+96, 96, wax drippings
+97, 97, wax blob (candle stub)
+98, 100, rotting wood pieces

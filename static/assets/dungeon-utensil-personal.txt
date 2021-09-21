@@ -1,0 +1,91 @@
+1, 1, awl
+2, 2, bandages
+3, 3, basin
+4, 5, basket
+6, 6, beater
+7, 7, book
+8, 9, bottle
+10, 10, bowl
+11, 11, small box
+12, 13, brush
+14, 14, candle
+15, 15, candle snuffer
+16, 16, candlestick
+17, 17, cane (walking stick)
+18, 18, case
+19, 19, small casket
+20, 20, chopper
+21, 21, coffer
+22, 22, cologne
+23, 23, comb
+24, 24, cup
+25, 25, decanter
+26, 26, dipper
+27, 27, dish
+28, 28, earspoon
+29, 29, ewer
+30, 30, flagon
+31, 31, flask
+32, 32, food
+33, 33, fork
+34, 34, grater
+35, 35, grinder
+36, 36, hourglass
+37, 37, jack (container)
+38, 38, jar
+39, 39, jug
+40, 40, kettle
+41, 41, knife
+42, 42, knucklebones
+43, 43, ladle
+44, 44, lamp
+45, 45, lantern
+46, 46, masher
+47, 47, mirror
+48, 48, mug
+49, 49, needle(s)
+50, 50, oil (cooking of fuel)
+51, 51, fuel oil
+52, 52, scented oil
+53, 53, pan
+54, 54, parchment
+55, 55, pitcher
+56, 56, musical pipe
+57, 57, smoking pipe
+58, 58, plate
+59, 59, platter
+60, 60, pot
+61, 61, pouch
+62, 62, puff
+63, 63, quill
+64, 64, razor
+65, 65, rope
+66, 67, saucer
+68, 68, scraper
+69, 69, scroll
+70, 70, shaker
+71, 71, sifter
+72, 72, soap
+73, 73, spigot
+74, 74, spoon
+75, 75, stopper
+76, 76, statuette/figurine
+77, 77, strainer
+78, 78, tankard
+79, 79, thongs
+80, 80, thread
+81, 84, tinderbox (with flint and steel)
+85, 86, towel
+87, 87, tray
+88, 88, trivet
+89, 89, tureen
+90, 91, twine
+92, 92, unguent
+93, 93, vase
+94, 94, vial
+95, 95, wallet
+96, 96, washcloth
+97, 97, whetstone
+98, 98, wig
+99, 99, wool
+100, 100, yarn

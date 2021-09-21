@@ -1,0 +1,7 @@
+1, 10, <material1> <jewelry> {1d10m100} gp
+11, 20, wrought silver and gold <jewelry> {2d6m100} gp
+21, 40, wrought gold <jewelry> {3d6m100} gp
+41, 50, <material2> <jewelry> {5d6m100} gp
+51, 70, silver <jewelry> with gems {1d6m1000} gp
+71, 90, gold <jewelry> with gems {2d4m1000} gp
+91, 100, platinum <jewelry> with gems {2d6m1000} gp

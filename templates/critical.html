@@ -25,11 +25,15 @@
               </form>
               
             
-              <ul><b>Critical Hit Effects</b>
+              <ul><b>Critical Hit Effects</b> &nbsp; <cite style="font-size: 9px;"> generated <span id="datetime"></span></cite>
               {% for critical_effects_element in critical_effects %}
                 <li> {{ critical_effects_element }}</li>
               {% endfor %}
               </ul>
+              <script>
+                var dt = new Date();
+                document.getElementById("datetime").innerHTML = dt.toLocaleTimeString();
+              </script>
         </div>
       </div>
     </div>

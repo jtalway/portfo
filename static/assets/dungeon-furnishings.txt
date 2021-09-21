@@ -1,0 +1,88 @@
+1, 1, altar
+2, 2, armchair
+3, 3, armoire
+4, 4, arras
+5, 5, bag
+6, 6, barrel
+7, 8, bed
+9, 9, bench
+10, 10, blanket
+11, 11, large box
+12, 12, brazier and charcoal
+13, 13, bucket
+14, 14, buffet
+15, 15, bunks
+16, 16, large barrel (butt)
+17, 17, cabinet
+18, 18, candelabrum
+19, 19, carpet (largish)
+20, 20, cask
+21, 21, chandelier
+22, 22, charcoal
+23, 24, chair
+25, 25, padded chair
+26, 26, padded armchair
+27, 27, large chest
+28, 28, medium chest
+29, 29, chest of drawers
+30, 30, wardrobe closet
+31, 31, coal
+32, 33, couch
+34, 34, crate
+35, 35, cresset
+36, 36, cupboard
+37, 37, cushion
+38, 38, dais
+39, 39, desk
+40, 42, fireplace and wood
+43, 43, fireplace with mantle
+44, 44, firkin
+45, 45, fountain
+46, 46, fresco
+47, 47, grindstone
+48, 48, hamper
+49, 49, hassock
+50, 50, hogshead
+51, 51, idol (largish)
+52, 52, keg
+53, 53, loom
+54, 54, mat
+55, 55, mattress
+56, 56, pail
+57, 57, painting
+58, 60, pallet
+61, 61, pedestal
+62, 64, pegs
+65, 65, pillow
+66, 66, large cask (pipe)
+67, 67, quilt
+68, 70, rug (small-medium)
+71, 71, rushes
+72, 72, sack
+73, 73, wall sconce
+74, 74, screen
+75, 75, sheet
+76, 77, shelf
+78, 78, shrine
+79, 79, sideboard
+80, 80, sofa
+81, 81, normal staff
+82, 82, stand
+83, 83, statue
+84, 84, high stool
+85, 85, normal stool
+86, 86, large table
+87, 87, long table
+88, 88, low table
+89, 89, round table
+90, 90, small table
+91, 91, trestle table
+92, 92, tapestry
+93, 93, throne
+94, 94, trunk
+95, 95, tub
+96, 96, tun
+97, 97, urn
+98, 98, wall basin and font
+99, 99, wood billets
+100, 100, workbench

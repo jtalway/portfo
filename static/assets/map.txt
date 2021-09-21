@@ -1,1 +1,4 @@
-1, 1, MAP
+1, 5, map-false
+6, 70, map-monetary
+71, 90, map-magic-treasure
+91, 100, map-combined-hoard

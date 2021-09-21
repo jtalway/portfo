@@ -1,0 +1,10 @@
+1, 20, treasure map {(2d4)*10000} copper pieces  {(1d4+1)*10000} silver pieces   any 1 magic item 4 potions
+21, 40, treasure map  {(3d6)*1000} gold pieces  any 1 magic item  4 potions
+41, 55, treasure map  {(5d6)*1000} electrum pieces  {(3d6)*1000} gold pieces  any 1 magic item  10 potions 6 scrolls
+56, 65, treasure map  {(2d4)*10000} copper pieces  {1d4+1)*10000} silver pieces  {(5d6)*1000} electrum pieces  {(3d6)*1000} gold pieces  1 sword 1 armor or shield 1 weapon any 3 magic items (no sword or potion)
+66, 75, treasure map  {(3d6)*1000} gold pieces  {(5d4)*100} platinum pieces  any 2 magic items 6 potions 6 scrolls
+76, 80, treasure map  {(5d6)*1000} electrum pieces  {(3d6)*1000} gold pieces  {(5d4)*100} platinum pieces  {5d10} jewelry  any 1 magic item 4 potions 1 sword 1 armor or shield 1 weapon
+81, 85, treasure map  {(2d4)*10000} copper pieces  {1d4+1)*10000} silver pieces  {(5d6)*1000} electrum pieces  {(3d6)*1000} gold pieces  {(5d4)*100} platinum pieces  {10d10} gems  {5d10} jewelry  and a treasure map to any 1 magic item  4 potions
+86, 90, treasure map  {(2d4)*10000} copper pieces  {1d4+1)*10000} silver pieces  {(5d6)*1000} electrum pieces  {(3d6)*1000} gold pieces  {(5d4)*100} platinum pieces  {10d10} gems  {5d10} jewelry and a treaure map to any 2 magic items 1 ring 1 rod
+91, 96, treasure map to any 3 magic items 1 rod 1 miscellaneous and a treasure map to {(2d4)*10000} copper pieces  {1d4+1)*10000} silver pieces  {(5d6)*1000} electrum pieces
+97, 100, treasure map to any 6 potions 6 scrolls 3 magic items 1 rod 1 miscellaneous and a treasure map to {(3d6)*1000} gold pieces  {(5d4)*100} platinum pieces

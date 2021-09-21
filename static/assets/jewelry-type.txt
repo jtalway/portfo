@@ -1,0 +1,35 @@
+1, 2, anklet
+3, 6, arm band
+7, 9, belt
+10, 12, box (small)
+13, 16, bracelet
+17, 19, brooch
+20, 21, buckle
+22, 25, chain
+26, 26, chalice
+27, 27, choker
+28, 30, clasp
+31, 32, coffer
+33, 33, collar
+34, 35, comb
+36, 36, coronet
+37, 37, crown
+38, 39, decanter
+40, 40, diadem
+41, 45, earring
+46, 47, fob
+48, 52, goblet
+53, 54, headband
+55, 57, idol
+58, 59, locket
+60, 62, medal
+63, 68, medallion
+69, 75, necklace
+76, 78, pendant
+79, 84, pin
+84, 84, orb
+85, 93, ring
+94, 94, sceptre
+95, 96, seal
+97, 99, statuette
+100, 100, tiara

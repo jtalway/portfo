@@ -1,5 +1,6 @@
 from openfile import * 
 from array_result import *
+from random import randint
 
 def treasure_category(treasure_type):
 	# dict = category : [quantity/number of dice, size of dice, multiplier, %chance, magic item category]
@@ -287,7 +288,7 @@ def treasure_category(treasure_type):
 			'Platinum': [1, 6, 100, 30, 'na'], 
 			'Gems': [10, 6, 1, 55, 'na'],  
 			'Jewelry': [5, 6, 1, 50, 'na'], 
-			'Magic Items or maps': [3, 1, 1, 50, 'any']}
+			'Magic Items or maps': [3, 1, 1, 50, 'any magic']}
 		return(treasure_dict)
 	else:
 		print("[-] Something went wrong")
@@ -297,6 +298,17 @@ def treasure_category(treasure_type):
 def find_magic_items(quantity, magic_item_type):
 	q = int(quantity)
 	if magic_item_type == 'any':
+		calc_magic_item_types = []
+		i = 0
+		while i < q:
+			m_m = map_or_magic()
+			f_array = openfile(m_m)
+			data = array_result(f_array)
+			calc_magic_item_types.append(data.replace('\n', ''))
+			i+=1
+		return(calc_magic_item_types)
+
+	elif magic_item_type == 'any magic':
 		calc_magic_item_types = []
 		i = 0
 		while i < q:
@@ -320,7 +332,8 @@ def find_magic_items(quantity, magic_item_type):
 		calc_magic_item_types = []
 		i = 0
 		while i < q:
-			f_array = openfile('magic-items')
+			m_m = map_or_magic()
+			f_array = openfile(m_m)
 			data = array_result(f_array)
 			calc_magic_item_types.append(data.replace('\n', ''))
 			i+=1
@@ -334,7 +347,8 @@ def find_magic_items(quantity, magic_item_type):
 		calc_magic_item_types = []
 		i = 0
 		while i < q:
-			f_array = openfile('magic-items')
+			m_m = map_or_magic()
+			f_array = openfile(m_m)
 			data = array_result(f_array)
 			calc_magic_item_types.append(data.replace('\n', ''))
 			i+=1
@@ -348,7 +362,8 @@ def find_magic_items(quantity, magic_item_type):
 		calc_magic_item_types = []
 		i = 0
 		while i < q:
-			f_array = openfile('magic-items')
+			m_m = map_or_magic()
+			f_array = openfile(m_m)
 			data = array_result(f_array)
 			calc_magic_item_types.append(data.replace('\n', ''))
 			i+=1
@@ -362,7 +377,8 @@ def find_magic_items(quantity, magic_item_type):
 		calc_magic_item_types = []
 		i = 0
 		while i < q:
-			f_array = openfile('magic-items')
+			m_m = map_or_magic()
+			f_array = openfile(m_m)
 			data = array_result(f_array)
 			calc_magic_item_types.append(data.replace('\n', ''))
 			i+=1
@@ -377,7 +393,8 @@ def find_magic_items(quantity, magic_item_type):
 		calc_magic_item_types = []
 		i = 0
 		while i < q:
-			f_array = openfile('non-weapon')
+			m_m = map_or_magic()
+			f_array = openfile(m_m)
 			data = array_result(f_array)
 			calc_magic_item_types.append(data.replace('\n', ''))
 			i+=1
@@ -444,70 +461,15 @@ def find_magic_items(quantity, magic_item_type):
 		pass
 
 
-
-
 def roll_magic_items(mi):
-	if mi == 'potion':
-		f_array = openfile(mi)
-		data = array_result(f_array)
-		return(data)
-		
-	elif mi == 'scroll':
-		f_array = openfile(mi)
-		data = array_result(f_array)
-		return(data)
+	f_array = openfile(mi)
+	data = array_result(f_array)
+	return(data)
 
-	elif mi == 'ring':
-		f_array = openfile(mi)
-		data = array_result(f_array)
-		return(data)
 
-	elif mi == 'rodstaffwand':
-		f_array = openfile(mi)
-		data = array_result(f_array)
-		return(data)
-
-	elif mi == 'map':
-		f_array = openfile(mi)
-		data = array_result(f_array)
-		return(data)
-
-	elif mi == 'miscA':
-		f_array = openfile(mi)
-		data = array_result(f_array)
-		return(data)
-
-	elif mi == 'miscB':
-		f_array = openfile(mi)
-		data = array_result(f_array)
-		return(data)
-
-	elif mi == 'miscC':
-		f_array = openfile(mi)
-		data = array_result(f_array)
-		return(data)
-
-	elif mi == 'miscD':
-		f_array = openfile(mi)
-		data = array_result(f_array)
-		return(data)
-
-	elif mi == 'miscE':
-		f_array = openfile(mi)
-		data = array_result(f_array)
-		return(data)
-
-	elif mi == 'armorshield':
-		f_array = openfile(mi)
-		data = array_result(f_array)
-		return(data)
-
-	elif mi == 'sword':
-		f_array = openfile(mi)
-		data = array_result(f_array)
-		return(data)
-
-	elif mi == 'weapon':
-		f_array = openfile(mi)
-		data = array_result(f_array)
-		return(data)
+def map_or_magic():
+	rNum = randint(1, 100)
+	if rNum <= 10:
+		return('map')
+	else:
+		return('magic-items')

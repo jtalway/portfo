@@ -1,0 +1,14 @@
+1, 5, slight breeze
+6, 10, slight damp breeze
+11, 12, gusting breeze
+13, 18, cold current
+19, 20, slight downdraft
+21, 22, strong downdraft
+23, 69, still
+70, 75, very chill still
+76, 85, warm (or hot) still
+86, 87, slight updraft
+88, 89, strong updraft
+90, 93, strong wind
+94, 95, strong gusting wind
+96, 100, strong moaning wind

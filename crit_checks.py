@@ -4,7 +4,6 @@ from openfile import *
 from array_result import *
 
 def check_dieroll(data):
-
     die_roll = re.findall(r'{(?P<q>.*?)d(?P<die>.*?)}', data)
     # print(match)
     if die_roll:
@@ -61,27 +60,3 @@ def duplicate_dmg(data):
         mult_dmg_effect = 'x' + str(dmg_mult) + ' weapon damage'
         data.append(mult_dmg_effect)
     return(data)
-
-# def check_damage_add(data):
-#     damage_count = 0
-#     add_dmg = 0
-#     checktext = r'(\+)(?P<q>.*?)damage'
-#     print(data)
-#     damage = re.findall(checktext, str(data))
-#     for i, effect in enumerate(damage):
-#         print(damage)
-#         if damage:
-#             q = damage[0][1]
-#             damage_count = damage_count + int(q)
-#             print(damage_count)
-#             print(data)
-#         else:
-#             continue
-#     data[:] = [x for x in data if x != damage]
-#     print(data)
-#     if damage_count:
-#         add_dmg = '+' + str(damage_count) + ' damage'
-#         data.append(add_dmg)
-#         print(add_dmg)
-#         print(data)
-#     return(data)

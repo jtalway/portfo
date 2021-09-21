@@ -17,20 +17,24 @@
               </form>
 
               <table>
-                <th>Ability Scores</th>
+                <th>Ability Scores </th>
                   {% if ability_scores %}
                   {% for ability, score in ability_scores.items() %}
                   <tr>
                     <td>{{ ability }}: </td>
                     <td>&nbsp;</td>
-                    <td style="text-align:right">{{ score }}</td>
+                    <td style="text-align: right">{{ score }}</td>
                   </tr>
                   {% else %}
                     <tr><td>None yet</td></tr>
                   {% endfor %}
                   {% endif %}
+                  <tr><td colspan="2">&nbsp; <cite style="font-size: 9px;"> generated <span id="datetime"></span></cite></td></tr>
               </table>
-
+              <script>
+                var dt = new Date();
+                document.getElementById("datetime").innerHTML = dt.toLocaleTimeString();
+              </script>
         </div>
       </div>
     </div>
