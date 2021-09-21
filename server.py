@@ -148,10 +148,12 @@ def generate_treasure():
         coppers = str(copper_result[0]) + ' cp'
         silver_result = calculate_chance(treasure_dict['Silver'], treasure_quantity)
         silvers = str(silver_result[0]) + ' sp'
+        electrum_result = calculate_chance(treasure_dict['Electrum'], treasure_quantity)
+        electrums = str(electrum_result[0]) + ' ep'
         gold_result = calculate_chance(treasure_dict['Gold'], treasure_quantity)
         golds = str(gold_result[0]) + ' gp'
-        platinum_or_electrum_result = calculate_chance(treasure_dict['Platinum or Electrum'], treasure_quantity)
-        platinums = str(platinum_or_electrum_result[0]) + ' pp or ep'
+        platinum_result = calculate_chance(treasure_dict['Platinum'], treasure_quantity)
+        platinums = str(platinum_result[0]) + ' pp'
         # GEMS
         gem_result = calculate_chance(treasure_dict['Gems'], treasure_quantity)
         gems = determine_gems(str(gem_result[0]))
@@ -162,7 +164,7 @@ def generate_treasure():
         magic_item_result, magic_item_type = calculate_chance(treasure_dict['Magic Items or maps'], treasure_quantity)
         magic_items = determine_magic_items(magic_item_result[0], magic_item_type)
         # HOARDS
-        coin_hoard = [coppers, silvers, golds, platinums]
+        coin_hoard = [coppers, silvers, electrums, golds, platinums]
         gem_hoard = gems
         jewelry_hoard = [jewelry]
         treasure_hoard = magic_items

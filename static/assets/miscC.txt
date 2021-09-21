@@ -1,40 +1,33 @@
-1, 12, figurine of wondrous power
-13, 13, flask of curses
-14, 15, gauntlets of dexterity
-16, 16, gauntlets of fumbling
-17, 18, gauntlets of ogre power
-19, 19, gauntlets of rust
-20, 21, gauntlets of swimming & climbing
-22, 22, gem of brightness
-23, 24, gem of insight
-25, 25, gem of seeing
-26, 27, girdle of dwarvenkind
+1, 15, figurine of wondrous power
+16, 16, flask of curses
+17, 18, gauntlets of dexterity
+19, 20, guantlets of fumbling
+21, 22, gauntlets of ogre power
+23, 25, gauntlets of swimming and climbing
+26, 26, gem of brightness
+27, 27, gem of seeing
 28, 28, girdle of femininity/masculinity
 29, 29, girdle of giant strength
-30, 33, girdle of many pouches
-34, 35, gloves of missile storing
-36, 38, gloves of thievery
-39, 39, hand of glory
-40, 40, harp of charming
-41, 43, hat of difference
-44, 48, hat of disguise
-49, 50, hat of stupidity
-51, 51, helm of brilliance
-52, 56, helm of comprehending language & reading magic
-57, 57, helm of opposite alignment
-58, 58, helm of telepathy
-59, 59, helm of teleportation
-60, 61, helm of underwater action
-62, 67, Heward's handy haversack
-68, 68, horn of blasting
-69, 70, horn of bubbles
-71, 71, horn of collapsing
-72, 76, horn of fog
-77, 77, horn of collapsing
-78, 81, horn of tritons
-82, 88, horn of Valhalla
-89, 91, horseshoes of speed
-92, 93, horseshoes of a zephyr
-94, 98, incense of meditation
-99, 99, incense of obsession
-100, 100, ioun stone
+30, 30, helm of brilliance
+31, 35, helm of comprehending languages and reading magic
+36, 37, helm of opposite alignment
+38, 39, helm of telepathy
+40, 40, helm of teleportation
+41, 45, helm of underwater action
+46, 46, horn of blasting
+47, 48, horn of bubbles
+49, 49, horn of collapsing
+50, 53, horn of the tritons
+54, 60, horn of Valhalla
+61, 63, horseshoes of speed
+63, 65, horseshoes of a zephyr
+66, 70, incense of meditation
+71, 71, incense of obsession
+72, 72, ioun stones
+73, 78, instrument of the bards
+79, 80, iron flask
+81, 85, javelin of lightning
+86, 90, javelin of piercing
+91, 91, jewel of attacks
+92, 92, jewel of flawlessness
+93, 100, Keoghtom's ointment

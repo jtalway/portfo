@@ -87,8 +87,8 @@ def determine_magic_items(quantity, magic_item_type):
 	magic_item_collection = find_magic_items(quantity, magic_item_type)
 	# generate individual items
 	for mi in magic_item_collection:
-		magic_item_rolled = roll_magic_items(mi).replace('\n', '')
-		magic_items_rolled_list.append(magic_item_rolled)
+		magic_item_rolled = roll_magic_items(mi)
+		magic_items_rolled_list.append(magic_item_rolled.replace('\n', ''))
 	#
 	# CHECK FOR SPECIALTY ITEMS THAT REQUIRE FURTHER ROLLS/DETERMINATIONS
 	#

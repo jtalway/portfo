@@ -1,41 +1,33 @@
-1, 1, alchemy jug
-2, 2, amulet of barkskin
-3, 3, amulet of inescapable location
-4, 4, amulet of life protection
-5, 5, amulet of mighty fists
-6, 6, amulet of the planes
-7, 8, amulet of proof against detection & location
-9, 10, amulet versus undead
-11, 11, apparatus of Kwalish
-12, 12, arrow of direction
-13, 13, artifact or relic
-14, 15, bag of beans
-16, 16, bad of devouring
-17, 21, bag of holding
-22, 22, bag of transmuting
-23, 23, bag of tricks
-24, 25, bead of force
-26, 26, beaker of plentiful potions
-27, 27, folding boat
-28, 30, Boccob's blessed book
-31, 31, boots of dancing
-32, 36, boots of elvenkind
-37, 40, boots of levitation
-41, 41, boots of the north
-42, 44, boots of speed
-45, 47, boots of striding & springing
-48, 48, boots of teleportation
-49, 50, boots of varied tracks
-51, 51, winged boots
-52, 53, bowl of commanding water elementals
-54, 54, bowl of watery death
-55, 57, bracers of archery
-58, 58, bracers of brachiation
-59, 79, bracers of defense
+1, 2, alchemy jug
+3, 4, amulet of inescapable location
+5, 5, amulet of life protection
+6, 7, amulet of the planes
+8, 11, amulet of proof against detection and location
+12, 13, apparatus of kwalish
+14, 16, arrow of direction
+17, 17, ARTIFACT OR RELIC
+18, 20, bag of beans
+21, 21, bag of devouring
+22, 26, bag of holding
+27, 27, bag of transmuting
+28, 29, bag of tricks
+30, 31, beaker of plentiful potions
+32, 32, folding boat
+33, 33, book of exalted deeds
+34, 34, book of infinite spells
+35, 35, book of vile darkness
+36, 36, boots of dancing
+37, 42, boots of elvenkind
+43, 47, boots of levitation
+48, 51, boots of speed
+52, 55, boots of striding and springing
+56, 58, bowl of commanding water elementals
+59, 59, bowl of watery death
+60, 79, bracers of defense
 80, 81, bracers of defenselessness
 82, 84, brazier of commanding fire elementals
 85, 85, brazier of sleep smoke
 86, 92, brooch of shielding
 93, 93, broom of animated attack
 94, 98, broom of flying
-99, 100, Bucknard's everful purse
+99, 100, Bucknard's everfull purse

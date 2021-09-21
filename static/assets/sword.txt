@@ -1,32 +1,26 @@
 1, 25, sword +1
-26, 29, sword +1 (flame-tongue)
-30, 30, sword +1 (luck blade)
-31, 34, sword +1 (+3 vs. lycanthropes & shape-changers)
-35, 38, sword +1 (+3 vs. magic-using & enchanted creatures)
-39, 42, sword +1 (+3 vs. regenerating creatures)
-43, 46, sword +1 (+3 vs. reptiles)
-47, 56, sword +2
-57, 58, sword +2 (dragon slayer)
-59, 60, sword +2 (giant slayer)
-61, 62, sword +2 (nine-lives stealer)
-63, 67, sword +3
-68, 69, sword +3 (frost brand)
-70, 72, sword +4
-73, 73, sword +4 (defender)
-74, 75, sword +5
-76, 76, sword +5 (defender)
-77, 77, sword +5 (holy avenger)
-78, 78, hornblade
-79, 81, sun sword
-82, 82, broadsword (Final Word type)
-83, 84, sword of dancing
-85, 85, sword of life stealing
-86, 87, sword of the planes
-88, 89, sword of sharpness
-90, 91, sword of subtlety
-92, 93, sword of wounding
-94, 96, short sword of quickness
-97, 97, sword (vorpal)
-98, 98, sword +1 (cursed)
-99, 99, sword +2 (cursed berserking)
-100, 100, sword -2 (cursed)
+26, 30, sword +1 (+2 vs magic-using and enchanted creatures)
+31, 35, sword +1 (+3 vs lycanthropes and shape changers)
+36, 40, sword +1 (+3 vs regenerating creatures)
+41, 45, sword +1 (+4 vs reptiles)
+46, 49, sword +1 (flame tongue)
+50, 50, sword +1 (luck blade)
+51, 58, sword +2
+59, 62, sword +2 (giant slayer)
+63, 66, sword +2 (dragon slayer)
+67, 67, sword +2 (nine lives stealer)
+68, 71, sword +3
+72, 74, sword +3 (frost brand)
+75, 76, sword +4
+77, 77, sword +4 (defender)
+78, 78, sword +5
+79, 79, sword +5 (defender)
+80, 80, sword +5 (holy avenger)
+81, 81, sword of dancing
+82, 82, sword of wounding
+83, 83, sword of life stealing
+84, 84, sword of sharpness
+85, 85, sword (vorpal weapon)
+86, 90, sword +1 (cursed)
+91, 95, sword -2 (cursed)
+96, 100, sword (cursed berserking)

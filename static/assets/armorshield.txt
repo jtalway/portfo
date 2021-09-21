@@ -1,53 +1,26 @@
-1, 3, banded mail armor +1
-4, 5, banded mail armor +2
-6, 6, banded mail armor +3
-7, 7, banded mail armor +4
-8, 8, banded mail armor of luck
-9, 14, chainmail armor +1
-15, 18, chainmail armor +2
-19, 20, chainmail armor +3
-21, 21, chainmail armor +4
-22, 22, chainmail armor +5
-23, 25, chain shirt armor +1
-26, 27, chain shirt armor +2
-28, 28, chain shirt armor +3
-29, 29, chain shirt armor +4
-30, 30, celestial chainmail armor
-31, 31, demon armor
-32, 33, full plate armor +1
-34, 35, full plate armor +2
-36, 36, full plate armor +3
-37, 37, full plate armor +4
-38, 38, full plate armor +5
-39, 39, full plate armor of arrow attraction
-40, 40, full plate armor of command
-41, 41, full plate armor of the deep
-42, 42, full plate armor of rage
-43, 43, full plate armor of speed
-44, 50, leather armor +1
-51, 52, leather armor +2
-53, 53, padded armor +1
-54, 57, platemail armor +1
-58, 59, platemail armor +2
-60, 61, platemail armor +3
-62, 62, platemail armor +4
-63, 63, platemail armor +5
-64, 64, platemail armor of etherealness
-65, 65, platemail armor of vulnerability
-66, 68, ringmail armor +1
-69, 70, ringmail armor +2
-71, 72, scalemail armor +1
-73, 74, scalemail armor +2
-75, 75, scalemail armor +3
-76, 77, splint mail armor +1
-78, 79, splint mail armor +2
-80, 80, splint mail armor +3
-81, 81, splint mail armor +4
-82, 85, studded leather +1
-86, 87, studded leather +2
-88, 92, shield +1
-93, 95, shield +2
-96, 97, shield +3
-98, 98, shield +4
-99, 99, shield +1, +4 versus missiles
-100, 100, shield -1, missle attractor
+1, 5, chain mail armor +1
+6, 9, chain mail armor +2
+10, 11, chain mail armor +3
+12, 19, leather armor +1
+20, 26, plate mail armor +1
+27, 32, plate mail armor +2
+33, 35, plate mail armor +3
+36, 37, plate mail armor +4
+38, 38, plate mail armor +5
+39, 39, plate mail armor of etherealness
+40, 44, plate mail armor of vulnerability
+45, 50, ring mail armor +1
+51, 55, scale mail armor +1
+56, 59, scale mail armor +2
+60, 63, splint mail armor +1
+64, 66, splint mail armor +2
+67, 68, splint mail armor +3
+69, 69, splint mail armor +4
+70, 75, studded leather armor +1
+76, 84, shield +1
+85, 89, shield +2
+90, 93, shield +3
+94, 95, shield +4
+96, 96, shield +5
+97, 97, large shield +1 (+4 vs. missiles)
+98, 100, shield -1 (missile attractor)

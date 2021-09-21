@@ -1,0 +1,36 @@
+1, 8, arrow +1 {2d12}
+9, 12, arrow +2 {2d8}
+13, 14, arrow +3 {2d6}
+15, 15, arrow of slaying
+16, 20, axe +1
+21, 22, axe +2
+23, 23, throwing axe +2
+24, 24, axe +3
+25, 27, battle axe +1
+28, 32, bolt +2 {2d10}
+33, 35, bow +1
+36, 36, crossbow of accuracy +3
+37, 37, crossbow of distance
+38, 38, crossbow of speed
+39, 46, dagger +1 (+2 vs. creatures smaller than man-sized)
+47, 50, dagger +2 (+3 vs. creatures larger than man-sized)
+51, 51, dagger of venom
+52, 56, flail +1
+57, 60, hammer +1
+61, 62, hammer +2
+63, 63, hammer +3 (dwarven thrower)
+64, 64, hammer of thunderbolts
+65, 67, javelin +2
+68, 72, mace +1
+73, 75, mace +2
+76, 76, mace of disruption
+77, 77, mace +4
+78, 80, military pick +1
+81, 83, morning star +1
+84, 88, scimitar +2
+89, 89, sling of seeking +2
+90, 94, spear +1
+95, 96, spear +2
+97, 97, spear +3
+98, 99, spear (cursed backbiter)
+100, 100, trident +3 (military fork)

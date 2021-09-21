@@ -1,0 +1,29 @@
+1, 1, Axe of the Dwarvish Lords
+2, 2, Baba Yaga's Hut
+3, 4, Codex of the Infinite Planes
+5, 20, Crown of Might
+21, 21, Crystal of the Ebon Flame
+22, 22, Cup and Talisman of Al'Akbar
+23, 24, Eye of Vecna
+25, 25, Hand of Vecna
+26, 26, Heward's Mystical Organ
+27, 27, Horn of Change
+28, 29, Invulnerable Coat of Arnd
+30, 31, Iron Flask of Tuerny the Merciless
+32, 32, Jacinth of Inestimable Beauty
+33, 33, Johydee's Mask
+34, 35, Kurath's Quill
+36, 37, Mace of Cuthbert
+38, 38, Machine of Lum the Mad
+39, 40, Mighty Servant of Leuk-O
+41, 47, Orb of the Dragonkind
+48, 63, Orb of Might
+64, 64, Queen Ehlissa's Marvelous Nightingale
+65, 66, Recorder of Ye'Cind
+67, 68, Ring of Gaxx
+69, 74, Rod of Seven Parts
+75, 91, Sceptre of Might
+92, 92, Sword of Kas
+93, 98, Teeth of Dahlver-Nar
+99, 99, Throne of the Gods
+100, 100, Wand of Orcus 

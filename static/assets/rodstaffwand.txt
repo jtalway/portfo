@@ -1,0 +1,30 @@
+1, 3, rod of absorption
+4, 4, rod of beguiling
+5, 14, rod of cancellation
+15, 16, rod of lordly might
+17, 17, rod of resurrection
+18, 18, rod of rulership
+19, 19, rod of smiting
+20, 20, staff of command
+21, 22, staff of curing
+23, 23, staff of the magi
+24, 24, staff of power
+25, 27, staff of the serpent
+28, 31, staff of striking
+32, 33, staff of withering
+34, 34, wand of conjuration
+35, 38, wand of enemy detection
+39, 41, wand of fear
+42, 44, wand of fire
+45, 47, wand of frost
+48, 52, wand of illumination
+53, 56, wand of illusion
+57, 59, wand of lightning
+60, 68, wand of magic detection
+69, 73, wand of metal and mineral detection
+74, 78, wand of magic missiles
+79, 86, wand of negation
+87, 89, wand of paralyzation
+90, 92, wand of polymorphing
+92, 94, wand of secret door and trap location
+95, 100, wand of wonder

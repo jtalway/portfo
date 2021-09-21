@@ -1,43 +1,24 @@
-1, 5, ring of animal friendship
-6, 10, ring of blinking
-11, 11, Boccob's ring
-12, 13, ring of chameleon power
-14, 15, ring of clumsiness
-16, 19, ring of contrariness
-20, 21, ring of counterspells
-22, 24, ring of delusion
-25, 25, ring of djinni summoning
-26, 26, ring of elemental command
-27, 27, ring of energy resistance (acid)
-28, 29, ring of energy resistance (cold)
-30, 31, ring of energy resistance (electricity)
-32, 35, ring of energy resistance (fire)
-36, 36, ring of energy resistance (sonic)
-37, 37, ring of faerie
-38, 42, ring of feather falling
-43, 45, ring of force shield
-46, 48, ring of free action
-49, 50, ring of human influence
-51, 54, ring of invisibility
-55, 56, ring of jumping
-57, 57, ring of mammal control
-58, 59, ring of mind shielding
-60, 60, ring of multiple wishes
-61, 68, ring of protection
-69, 70, ring of the ram
-71, 71, ring of regeneration
-72, 74, ring of shocking grasp
-75, 76, ring of shooting stars
-77, 78, ring of spell storing
-79, 80, ring of spell turning
-81, 83, ring of sustenance
-84, 86, ring of swimming
-87, 88, ring of telekinesis
-89, 90, ring of three wishes
-91, 91, ring of truth
-92, 92, ring of vampiric regeneration
-93, 96, ring of warmth
-97, 97, ring of water walking
-98, 98, ring of weakness
+1, 6, ring of contrariness
+7, 12, ring of delusion
+13, 14, ring of djinni summoning
+15, 15, ring of elemental command
+16, 21, ring of feather falling
+22, 27, ring of fire resistance
+28, 30, ring of free action
+31, 33, ring of human influence
+34, 40, ring of invisibility
+41, 43, ring of mammal control
+44, 44, ring of multiple wishes
+45, 60, ring of protection
+61, 61, ring of regeneration
+62, 63, ring of shooting stars
+64, 65, ring of spell storing
+66, 69, ring of spell turning
+70, 75, ring of swimming
+76, 77, ring of telekinesis
+78, 79, ring of three wishes
+80, 85, ring of warmth
+86, 90, ring of water walking
+91, 98, ring of weakness
 99, 99, ring of wizardry
 100, 100, ring of x-ray vision
