@@ -42,15 +42,29 @@
               <script type="text/javascript">
               document.getElementById('quantity').value = '1';
               </script>
-              <br>
               <button type="submit" class="btn btn-danger btn-lg">Generate Treasure</button>
               </form>
 
-              <b>Treasure Result</b><br>
-              {% for treasure_element in treasure_hoard %}
-                <li> {{ treasure_element }}</li>
+              <b><u>Treasure Result</u></b><br>
+              <b>Coins</b>
+              {% for coin in coin_hoard %}
+                {{ coin }} &nbsp;
               {% endfor %}
-              </ul>
+              <br>
+              <b>Gems</b>
+              {% for gem in gem_hoard %}
+                {{ gem  }} 
+              {% endfor %}
+              <br>
+              <b>Jewelry</b>
+              {% for jewelry in jewelry_hoard %}
+                {{ jewelry }} &nbsp;
+              {% endfor %}
+              <br>
+              <b>Magic Items</b>
+              {% for treasure_element in treasure_hoard %}
+                {{ treasure_element }}
+              {% endfor %}
         </div>
       </div>
     </div>

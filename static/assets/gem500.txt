@@ -1,0 +1,6 @@
+1, 1, aquamarine
+2, 2, violet garnet
+3, 3, black pearl
+4, 4, peridot
+5, 5, deep blue spinel
+6, 6, topaz

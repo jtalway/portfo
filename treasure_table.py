@@ -268,7 +268,8 @@ def treasure_category(treasure_type):
 	
 
 
-def find_magic_items(magic_item_type, q):
+def find_magic_items(quantity, magic_item_type):
+	q = int(quantity)
 	if magic_item_type == 'any':
 		calc_magic_item_types = []
 		i = 0

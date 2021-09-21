@@ -1,0 +1,13 @@
+1, 1, bloodstone
+2, 2, carnelian
+3, 3, chalcedony
+4, 4, chrysoprase
+5, 5, citrine
+6, 6, jasper
+7, 7, moonstone
+8, 8, onyx
+9, 9, rock crystal
+10, 10, sardonyx
+11, 11, smoky quartz
+12, 12, star rose quartz
+13, 13, zircon

@@ -1,0 +1,4 @@
+1, 1, black sapphire
+2, 2, jacinth
+3, 3, oriental emerald
+4, 4, ruby

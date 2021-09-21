@@ -1,0 +1,10 @@
+1, 1, black opal
+2, 2, diamond
+3, 3, emerald
+4, 4, fire opal
+5, 5, opal
+6, 6, oriental amethyst
+7, 7, oriental topaz
+8, 8, sapphire
+9, 9, star ruby
+10, 10, star sapphire

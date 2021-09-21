@@ -5,6 +5,7 @@ from fumble import *
 from abilityscore import *
 from dice_roller import *
 from treasure_table import *
+from treasure import *
 import random
 import re
 
@@ -139,73 +140,33 @@ def generate_treasure():
     if request.method == 'POST':
         treasure_type = request.form['treasure']
         treasure_quantity = request.form['quantity']
+        # find details on treasure type
         treasure_dict = treasure_category(treasure_type)
-        #treasure_hoard = generate_hoard(treasure_dict)
         treasure_result = []
-
-        for key in treasure_dict:
-            q = treasure_dict[key][0]
-            die = treasure_dict[key][1]
-            mult = treasure_dict[key][2]
-            chance = treasure_dict[key][3]
-            magic_item_type = treasure_dict[key][4]
-            x = 0
-            grand_total = 0
-            while x < int(treasure_quantity):
-                rNum = randint(1, 100)
-                if rNum <= chance:
-                    count = 0
-                    i = 0
-                    while i < q:
-                        dice = randint(1, die)
-                        count = count + dice
-                        i+=1
-                    total = mult * count
-                    grand_total = grand_total + total
-                    x+=1
-                else:
-                    x+=1
-                    continue
-            if grand_total > 0:
-                coin_result = str(grand_total) + ' ' + key
-                treasure_result.append(coin_result)
-            else:
-                continue;
-
-        magic_items = re.findall(r'[0-9]+ Magic Items or maps', str(treasure_result))
-        if magic_items:
-            mi_result = magic_items[-1].split(' ')
-            mi_total_quantity = int(mi_result[0])
-            print(mi_total_quantity)
-            # get list of outcomes from magic_item_type
-            print(f'Treasure Result: {treasure_result}')
-            treasure_result.pop()
-            print(f'Updated: {treasure_result}')
-            magic_treasure = find_magic_items(magic_item_type, mi_total_quantity)
-            print(f'Items: {magic_items}, Type: {magic_item_type}')
-            print(f'Magic Treasure(type, not individual roll): {magic_treasure}')
-
-            # generate individual items
-            magic_items_rolled_list = []
-            for mi in magic_treasure:
-                magic_item_rolled = roll_magic_items(mi)
-                magic_items_rolled_list.append(magic_item_rolled)
-            print(f'Magic Items Rolled List: {magic_items_rolled_list}')
-
-
-            # append to magic_treasure list
-            for i in range(len(magic_items_rolled_list)):
-                treasure_result.append(magic_items_rolled_list[i])
-
-            # return magic_treasure list
-            # append to treasure_hoard
-
-        else:
-            print("[-] Magic Items NOT found")
-
-        treasure_hoard = treasure_result
-        print(f'Treasure Hoard: {treasure_hoard}')
-        return render_template('treasure.html', treasure_hoard = treasure_hoard)
+        # COINS
+        copper_result = calculate_chance(treasure_dict['Copper'], treasure_quantity)
+        coppers = str(copper_result[0]) + ' cp'
+        silver_result = calculate_chance(treasure_dict['Silver'], treasure_quantity)
+        silvers = str(silver_result[0]) + ' sp'
+        gold_result = calculate_chance(treasure_dict['Gold'], treasure_quantity)
+        golds = str(gold_result[0]) + ' gp'
+        platinum_or_electrum_result = calculate_chance(treasure_dict['Platinum or Electrum'], treasure_quantity)
+        platinums = str(platinum_or_electrum_result[0]) + ' pp or ep'
+        # GEMS
+        gem_result = calculate_chance(treasure_dict['Gems'], treasure_quantity)
+        gems = determine_gems(str(gem_result[0]))
+        # JEWELRY
+        jewelry_result = calculate_chance(treasure_dict['Jewelry'], treasure_quantity)
+        jewelry = determine_jewelry(str(jewelry_result[0]))
+        # MAGIC ITEMS
+        magic_item_result, magic_item_type = calculate_chance(treasure_dict['Magic Items or maps'], treasure_quantity)
+        magic_items = determine_magic_items(magic_item_result[0], magic_item_type)
+        # HOARDS
+        coin_hoard = [coppers, silvers, golds, platinums]
+        gem_hoard = gems
+        jewelry_hoard = [jewelry]
+        treasure_hoard = magic_items
+        return render_template('treasure.html', treasure_hoard = treasure_hoard, coin_hoard = coin_hoard, gem_hoard = gem_hoard, jewelry_hoard = jewelry_hoard)
     else:
         return 'something went wrong, try again!'
 

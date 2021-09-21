@@ -1,0 +1,11 @@
+1, 1, amber
+2, 2, alexandrite
+3, 3, amethyst
+4, 4, chrysoberyl
+5, 5, coral
+6, 6, garnet
+7, 7, jade
+8, 8, jet
+9, 9, pearl
+10, 10, spinel
+11, 11, tourmaline
