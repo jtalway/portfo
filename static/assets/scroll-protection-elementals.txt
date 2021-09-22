@@ -1,0 +1,5 @@
+1, 15, scroll of protection from air elementals
+16, 30, scroll of protection from earth elementals
+31, 45, scroll of protection from fire elementals
+46, 60, scroll of protection from water elementals
+61, 100, scroll of protection from all elementals

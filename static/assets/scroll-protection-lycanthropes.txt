@@ -1,0 +1,7 @@
+1, 5, scroll of protection from lycanthropes (werebears)
+6, 10, scroll of protection from lycanthropes (wereboars)
+11, 20, scroll of protection from lycanthropes (wererats)
+21, 25, scroll of protection from lycanthropes (weretigers)
+26, 40, scroll of protection from lycanthropes (werewolves)
+41, 98, scroll of protection from lycanthropes (all lycanthropes)
+99, 100, scroll of protection from lycanthropes (shape-changers)

@@ -8,7 +8,9 @@
 36, 37, plate mail armor +4
 38, 38, plate mail armor +5
 39, 39, plate mail armor of etherealness
-40, 44, plate mail armor of vulnerability
+40, 41, plate mail armor of vulnerability -1
+42, 43, plate mail armor of vulnerability -2
+44, 44, plate mail armor of vulnerability -3
 45, 50, ring mail armor +1
 51, 55, scale mail armor +1
 56, 59, scale mail armor +2

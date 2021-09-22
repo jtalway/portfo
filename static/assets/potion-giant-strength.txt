@@ -1,0 +1,6 @@
+1, 6, potion of hill giant strength
+7, 10, potion of stone giant strength
+11, 14, potion of frost giant strength
+15, 17, potion of fire giant strength
+18, 19, potion of cloud giant strength
+20, 20, potion of storm giant strength

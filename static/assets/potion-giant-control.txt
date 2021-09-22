@@ -1,0 +1,6 @@
+1, 5, potion of hill giant control
+6, 9, potion of stone giant control
+10, 13, potion of frost giant control
+14, 17, potion of fire giant control
+18, 19, potion of cloud giant control
+20, 20, potion of storm giant control

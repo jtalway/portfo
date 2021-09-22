@@ -1,0 +1,4 @@
+1, 8, periapt of proof against poison +1
+9, 14, periapt of proof against poison +2
+15, 18, periapt of proof against poison +3
+19, 20, periapt of proof against poison +4

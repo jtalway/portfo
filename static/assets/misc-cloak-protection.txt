@@ -1,0 +1,5 @@
+1, 35, cloak of protection +1
+36, 65, cloak of protection +2
+66, 85, cloak of protection +3
+86, 95, cloak of protection +4
+96, 100, cloak of protection +5

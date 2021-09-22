@@ -1,0 +1,4 @@
+1, 5, manual of clay golems
+6, 17, manual of flesh golems
+18, 18, manual of iron golems
+19, 20, manual of stone golems

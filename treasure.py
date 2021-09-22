@@ -5,6 +5,7 @@ from openfile import *
 from array_result import *
 from collections import Counter
 from treasure_table import *
+from treasure_checks import *
 
 # FUNCTIONS
 
@@ -120,17 +121,23 @@ def determine_jewelry(jewelry_quantity):
 def determine_magic_items(quantity, magic_item_type):
 	formatted_magic_items = []
 	magic_items_rolled_list = []
+	final_magic_item_list = []
 	final_magic_item_hoard = []
 	magic_item_collection = find_magic_items(quantity, magic_item_type)
 	# generate individual items
 	for mi in magic_item_collection:
 		magic_item_rolled = roll_magic_items(mi)
 		magic_items_rolled_list.append(magic_item_rolled.replace('\n', ''))
+	print(magic_items_rolled_list)
 	#
 	# CHECK FOR SPECIALTY ITEMS THAT REQUIRE FURTHER ROLLS/DETERMINATIONS
-	#
+	for magic_item in magic_items_rolled_list:
+		updated_magic_item = check_special_item(magic_item)
+		print(updated_magic_item)
+		final_magic_item_list.append(updated_magic_item.replace('\n', ''))		
+
 	# get duplicates
-	magic_item_hoard = Counter(magic_items_rolled_list)
+	magic_item_hoard = Counter(final_magic_item_list)
 	# sort by highest quantity
 	sorted_magic_item_hoard = dict(sorted(magic_item_hoard.items(), key=lambda item: item[1], reverse=True))
 	for key in sorted_magic_item_hoard:

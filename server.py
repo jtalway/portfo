@@ -1,4 +1,4 @@
-from flask import Flask, render_template, url_for, request, redirect
+from flask import Flask, render_template, url_for, request, redirect, abort
 import csv
 from critical import *
 from fumble import *
@@ -9,6 +9,7 @@ from treasure import *
 import random
 import re
 from collections import Counter
+from jinja2 import TemplateNotFound
 
 app = Flask(__name__)
 
@@ -228,31 +229,31 @@ def generate_dungeon_dressing():
     else:
         return 'something went wrong, try again!'
 
-# @app.errorhandler(404)
-# def not_found():
-#     """Page not found."""
-#     return make_response(
-#         render_template("404.html"),
-#         404
-#      )
+@app.errorhandler(404)
+def not_found():
+    """Page not found."""
+    return make_response(
+        render_template("404.html"),
+        404
+     )
 
 
-# @app.errorhandler(400)
-# def bad_request():
-#     """Bad request."""
-#     return make_response(
-#         render_template("400.html"),
-#         400
-#     )
+@app.errorhandler(400)
+def bad_request():
+    """Bad request."""
+    return make_response(
+        render_template("400.html"),
+        400
+    )
 
 
-# @app.errorhandler(500)
-# def server_error():
-#     """Internal server error."""
-#     return make_response(
-#         render_template("500.html"),
-#         500
-#     )
+@app.errorhandler(500)
+def server_error():
+    """Internal server error."""
+    return make_response(
+        render_template("500.html"),
+        500
+    )
 
 @app.route('/abilityscore')
 def abilityscore():
@@ -261,3 +262,6 @@ def abilityscore():
 @app.route('/<string:page_name>')
 def html_page(page_name):
     return render_template(page_name)
+
+if __name__=="__main__":
+    app.run(debug=True)

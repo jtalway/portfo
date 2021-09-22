@@ -1,0 +1,6 @@
+1, 30, girdle of hill giant strength (19)
+31, 50, girdle of stone giant strength (20)
+51, 70, girdle of frost giant strength (21)
+71, 85, girdle of fire giant strength (22)
+86, 95, girdle of cloud giant strength (23)
+96, 100, girdle of storm giant strength (24)

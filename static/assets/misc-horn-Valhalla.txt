@@ -1,0 +1,4 @@
+1, 8, silver horn of Valhalla
+9, 15, brass horn of Valhalla
+16, 18, bronze horn of Valhalla
+19, 20, iron horn of Valhalla

@@ -1,0 +1,12 @@
+1, 2, potion of white dragon control
+3, 4, potion of black dragon control
+5, 7, potion of green dragon control
+8, 9, potion of blue dragon control
+10, 10, potion of red dragon control
+11, 12, potion of brass dragon control
+13, 14, potion of copper dragon control
+15, 15, potion of bronze dragon control
+16, 16, potion of silver dragon control
+17, 17, potion of gold dragon control
+18, 19, potion of evil dragon control
+20, 20, potion of good dragon control

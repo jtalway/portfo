@@ -1,0 +1,6 @@
+1, 20, ring of contrariness (flying)
+21, 40, ring of contrariness (invisibility)
+41, 60, ring of contrariness (levitation)
+61, 70, ring of contrariness (shocking grasp)
+71, 80, ring of contrariness (spell turning)
+81, 100, ring of contrariness (strength 18/00)

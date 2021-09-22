@@ -1,0 +1,7 @@
+1, 5, bracers of defense (AC 8)
+6, 15, bracers of defense (AC 7)
+16, 35, bracers of defense (AC 6)
+36, 50, bracers of defense (AC 5)
+51, 70, bracers of defense (AC 4)
+71, 85, bracers of defense (AC 3)
+86, 100, bracers of defense (AC 2)

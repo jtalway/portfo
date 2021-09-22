@@ -1,0 +1,4 @@
+1, 1, ring of air elemental command
+2, 2, ring of earth elemental command
+3, 3, ring of fire elemental command
+4, 4, ring of water elemental command

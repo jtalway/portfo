@@ -1,0 +1,7 @@
+1, 70, ring of protection +1
+71, 82, ring of protection +2
+83, 83, ring of protection +2 (5'r)
+84, 90, ring of protection +3
+91, 91, ring of protection +3 (5'r)
+92, 97, ring of protection +4 AC (+2 saves)
+98, 100, ring of protection +6 AC (+1 saves)

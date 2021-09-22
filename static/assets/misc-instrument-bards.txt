@@ -1,0 +1,7 @@
+1, 5, instrument of the bards (fochlucan bandore)
+6, 9, instrument of the bards (mac-fuirmidh cittern)
+10, 12, instrument of the bards (doss lute)
+13, 15, instrument of the bards (canaith mandolin)
+16, 17, instrument of the bards (cli lyre)
+18, 19, instrument of the bards (anstruth harp)
+20, 20, instrument of the bards (ollamh harp)

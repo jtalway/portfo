@@ -1,0 +1,8 @@
+1, 2, potion of human control (dwarf)
+3, 4, potion of human control (elf/halfelf)
+5, 6, potion of human control (gnome)
+7, 8, potion of human control (halfling)
+9, 10, potion of human control (halforc)
+11, 16, potion of human control (human)
+17, 19, potion of human control (humanoids)
+20, 20, potion of human control (elf/halfelf/human)

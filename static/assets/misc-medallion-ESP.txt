@@ -1,0 +1,4 @@
+1, 15, medallion of ESP (30')
+16, 18, medallion of ESP (30' with telepath)
+19, 19, medallion of ESP (60')
+20, 20, medallion of ESP (90')
