@@ -24,12 +24,13 @@
               <button type="submit" class="btn btn-danger btn-lg">Generate Critical Effect(s)</button>
               </form>
               
-            
+              {% if critical_effects %}
               <ul><b>Critical Hit Effects</b> &nbsp; <cite style="font-size: 9px;"> generated <span id="datetime"></span></cite>
               {% for critical_effects_element in critical_effects %}
                 <li> {{ critical_effects_element }}</li>
               {% endfor %}
               </ul>
+              {% endif %}
               <script>
                 var dt = new Date();
                 document.getElementById("datetime").innerHTML = dt.toLocaleTimeString();

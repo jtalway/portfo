@@ -38,8 +38,10 @@
               <br>
               <button type="submit" class="btn btn-danger btn-lg">Roll Dice!</button>
               </form>
+              {% if total %}
               <b>Roll Result</b>&nbsp; <cite style="font-size: 9px;"> generated <span id="datetime"></span></cite><br>
                 {{ quantity }}d{{ dice }} {{ mod }} {{ mod_value }} = <mark style="font-size:20px">{{ total }}</mark>
+              {% endif %}
               <script>
                 var dt = new Date();
                 document.getElementById("datetime").innerHTML = dt.toLocaleTimeString();

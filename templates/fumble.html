@@ -23,12 +23,13 @@
               <button type="submit" class="btn btn-danger btn-lg">Generate Fumble Effect(s)</button>
               </form>
               
-            
+              {% if fumble_effects %}
               <ul><b>Fumble Effects</b>&nbsp; <cite style="font-size: 9px;"> generated <span id="datetime"></span></cite>
               {% for fumble_effects_element in fumble_effects %}
                 <li> {{ fumble_effects_element }}</li>
               {% endfor %}
               </ul>
+              {% endif %}
               <script>
                 var dt = new Date();
                 document.getElementById("datetime").innerHTML = dt.toLocaleTimeString();

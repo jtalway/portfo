@@ -78,7 +78,7 @@ def check_special_item(magic_item):
 		return(final_magic_item)
 
 	elif magic_item == 'instrument of the bards':
-		item_array = openfile('misc-instrument-bard')
+		item_array = openfile('misc-instrument-bards')
 		final_magic_item = array_result(item_array)
 		return(final_magic_item)
 

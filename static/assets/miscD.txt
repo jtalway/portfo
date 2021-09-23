@@ -13,7 +13,7 @@
 13, 15, medallion of ESP
 16, 17, medallion of thought projection
 18, 18, mirror of life trapping
-19, 19, mirrof of mental prowess
+19, 19, mirror of mental prowess
 20, 20, mirror of oppression
 21, 23, necklace of adaptation
 24, 27, necklace of missiles

@@ -39,33 +39,42 @@
                 <option value="Z">Z</option>
               </select>
               <label for="quantity">X</label>
-              <input type="number" name="quantity" id="quantity" min='1' max='20' size="6" >
+              <input type="number" name="quantity" id="quantity" min='1' max='10' size="6" >
               <script type="text/javascript">
               document.getElementById('quantity').value = '1';
               </script>
               <button type="submit" class="btn btn-danger btn-lg">Generate Treasure</button>
               </form>
-
+              {% if coin_hoard or gem_hoard or jewelry_hoard or treasure_hoard %}
               <b><u>Treasure Result</u></b> &nbsp; <cite style="font-size: 9px;"> generated <span id="datetime"></span></cite><br>
+              {% endif %}
+              {% if coin_hoard %}
               <b>Coins</b>
               {% for coin in coin_hoard %}
                 {{ coin }} &nbsp;
               {% endfor %}
               <br>
+              {% endif %}
+              {% if gem_hoard %}
               <b>Gems</b>
               {% for gem in gem_hoard %}
                 {{ gem  }} 
               {% endfor %}
               <br>
+              {% endif %}
+              {% if jewelry_hoard %}
               <b>Jewelry</b>
               {% for jewelry in jewelry_hoard %}
                 {{ jewelry }} 
               {% endfor %}
               <br>
+              {% endif %}
+              {% if treasure_hoard %}
               <b>Magic Items</b>
               {% for treasure_element in treasure_hoard %}
                 {{ treasure_element }}
               {% endfor %}
+              {% endif %}
               <script>
                 var dt = new Date();
                 document.getElementById("datetime").innerHTML = dt.toLocaleTimeString();

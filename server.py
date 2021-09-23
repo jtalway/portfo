@@ -137,7 +137,7 @@ def roll_dice():
         mod_value = request.form['mod_value']
         adv = request.form['adv']
         roll_result = check_for_modifier(quantity, dice, mod, mod_value, adv)
-        return render_template('dice.html', total = roll_result[0], quantity = quantity, dice = dice, mod = mod, mod_value = mod_value)
+        return render_template('dice.html', total = roll_result[0], quantity = roll_result[1], dice = roll_result[2], mod = mod, mod_value = mod_value)
     else:
         return 'something went wrong, try again!'
 
@@ -175,10 +175,10 @@ def generate_treasure():
         gem_hoard = gems
         jewelry_hoard = jewelry
         treasure_hoard = magic_items
-        print('[+] ...... NEW TREASURE HOARD GENERATED ......')
-        print(f' CP: {copper_result}, SP: {silver_result}, EP: {electrum_result}, GP: {gold_result}, PP: {platinum_result}')
-        print(f' Gems: {gem_result}, Jewelry: {jewelry_result}, Magic Items: {magic_item_result} lots')
-        print('[-] ...... END TREASURE HOARD ......')
+        # print('[+] ...... NEW TREASURE HOARD GENERATED ......')
+        # print(f' CP: {copper_result}, SP: {silver_result}, EP: {electrum_result}, GP: {gold_result}, PP: {platinum_result}')
+        # print(f' Gems: {gem_result}, Jewelry: {jewelry_result}, Magic Items: {magic_item_result} lots')
+        # print('[-] ...... END TREASURE HOARD ......')
         return render_template('treasure.html', treasure_hoard = treasure_hoard, coin_hoard = coin_hoard, gem_hoard = gem_hoard, jewelry_hoard = jewelry_hoard)
     else:
         return 'something went wrong, try again!'
