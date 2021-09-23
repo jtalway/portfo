@@ -1,0 +1,15 @@
+1, 1, animal summoning 1
+2, 2, call woodland beings
+3, 3, control temperature 10'r
+4, 4, cure serious wounds
+5, 5, dispel magic
+6, 6, hallucinatory forest
+7, 7, hold plant
+8, 8, plant door
+9, 9, produce fire
+10, 10, protection from lightning
+11, 11, repel insects
+12, 12, speak with plants
+13, 13, cause serious wounds (reverse cure serious wounds)
+14, 14, vanish forest (reverse of hallucinatory forest)
+15, 15, quench fire (reverse produce fire)

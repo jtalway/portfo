@@ -1,0 +1,12 @@
+1, 1, audible glamer
+2, 2, change self
+3, 3, color spray
+4, 4, dancing lights
+5, 5, darkness
+6, 6, detect illusion
+7, 7, detect invisibility
+8, 8, gaze reflection
+9, 9, hypnotism
+10, 10, light
+11, 11, phantasmal force
+12, 12, wall of fog

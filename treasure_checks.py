@@ -37,6 +37,12 @@ from array_result import *
 # scimitar +2
 
 def check_special_item(magic_item):
+	# check for scroll
+	magic_item = check_if_scroll(magic_item)
+	# check for sword
+	# check for rod
+	# check for staff
+	# check for wand
 	if magic_item == 'ring of protection':
 		item_array = openfile('ring-protection')
 		final_magic_item = array_result(item_array)
@@ -167,5 +173,46 @@ def check_special_item(magic_item):
 		final_magic_item = array_result(item_array)
 		return(final_magic_item)
 
+
 	else:
 		return(magic_item)
+
+def check_if_scroll(magic_item):
+	is_scroll = re.findall(r'^scroll of (?P<num_spells>.*?) spell(s\b|\b) {(?P<min_range>.*?)a(?P<max_range>.*?)}', magic_item)
+	if is_scroll:
+		i = 0
+		scroll_list = []
+		num_spells = int(is_scroll[0][0])
+		min_range = int(is_scroll[0][2])
+		max_range = int(is_scroll[0][3])
+		f_array = openfile('scroll-type')
+		spellcasting_class = array_result(f_array).replace('\n', '')
+		if spellcasting_class == "magic-user":
+			pass
+		else:
+			if max_range == 8:
+				max_range = 6
+			elif max_range == 9:
+				max_range = 7
+			else:
+				pass
+		# print(f"[+] Class: {spellcasting_class} Number of spells: {num_spells} Min: {min_range} Max: {max_range}")
+		while i < num_spells:
+			rNum = randint(min_range, max_range)
+			#print(f'Level of Spell {rNum}')
+			page = 'spells-' + spellcasting_class + '-' + str(rNum)
+			f_array = openfile(page)
+			randomly_rolled_spell = array_result(f_array).replace('\n', '')
+			scroll_list.append(randomly_rolled_spell)
+			i += 1
+		scroll_header = spellcasting_class + " scroll of ("
+		scroll_footer = ")"
+		generated_spells = ", ".join(scroll_list)
+		complete_scroll = scroll_header + generated_spells + scroll_footer
+		return(complete_scroll)
+
+	else:
+		# print("[-] Die roll NOT found")
+		return(magic_item)
+
+

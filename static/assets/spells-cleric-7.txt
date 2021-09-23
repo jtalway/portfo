@@ -1,0 +1,13 @@
+1, 1, astral spell
+2, 2, control weather
+3, 3, earthquake
+4, 4, gate
+5, 5, holy word
+6, 6, regenerate
+7, 7, restoration
+8, 8, resurrection
+9, 9, symbol
+10, 10, wind walk
+11, 11, wither (reverse regenerate)
+12, 12, energy drain (reverse restoration)
+13, 13, destruction (reverse resurrection)

@@ -1,0 +1,16 @@
+1, 1, antipathy/sympathy
+2, 2, Bigby's clenched fist
+3, 3, clone
+4, 4, glassteel
+5, 5, incendiary cloud
+6, 6, mass charm
+7, 7, maze
+8, 8, mind blank
+9, 9, monster summoning VI
+10, 10, Otto's irresitible dance
+11, 11, permanency
+12, 12, polymorph any object
+13, 13, power word (blind)
+14, 14, Serten's spell immunity
+15, 15, symbol
+16, 16, trap the soul

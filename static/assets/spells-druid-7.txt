@@ -1,0 +1,12 @@
+1, 1, animate rock
+2, 2, chariot of sustarre
+3, 3, confusion
+4, 4, conjure earth elemental
+5, 5, control weather
+6, 6, creeping doom
+7, 7, finger of death
+8, 8, fire storm
+9, 9, reincarnate
+10, 10, transmute metal to wood
+11, 11, dismiss earth elemental (reverse conjure earth elemental)
+12, 12, fire quench (reverse fire storm)

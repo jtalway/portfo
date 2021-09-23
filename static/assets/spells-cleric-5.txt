@@ -1,0 +1,14 @@
+1, 1, atonement
+2, 2, commune
+3, 3, cure critical wounds
+4, 4, dispel evil
+5, 5, flame strike
+6, 6, insect plague
+7, 7, plane shift
+8, 8, quest
+9, 9, raise dead
+10, 10, true seeing
+11, 11, cause critical wounds (reverse of cure critical wounds)
+12, 12, dispel good (reverse of dispel evil)
+13, 13, slay living (reverse raise dead)
+14, 14, false seeing (reverse of true seeing)

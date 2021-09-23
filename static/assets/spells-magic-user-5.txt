@@ -1,0 +1,26 @@
+1, 1, airy water
+2, 2, animal growth
+3, 3, animate dead
+4, 4, Bigby's interposing hand
+5, 5, cloudkill
+6, 6, conjure elemental
+7, 7, cone of cold
+8, 8, contact other plane
+9, 9, distance distortion
+10, 10, extension II
+11, 11, feeblemind
+12, 12, hold monster
+13, 13, Leomund's secret chest
+14, 14, magic jar
+15, 15, monster summoning III
+16, 16, Mordenkainen's faithful hound
+17, 17, passwall
+18, 18, stone shape
+19, 19, telekinesis
+20, 20, teleport
+21, 21, transmute rock to mud
+22, 22, wall of force
+23, 23, wall of iron
+24, 24, wall of stone
+25, 25, shrink animal (reverse animal growth)
+26, 26, transmute mud to rock (reverse transmute rock to mud)

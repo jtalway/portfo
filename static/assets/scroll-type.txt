@@ -1,0 +1,4 @@
+1, 63, magic-user
+64, 70, illusionist
+71, 93, cleric
+94, 100, druid

@@ -1,0 +1,12 @@
+1, 1, aerial servant
+2, 2, animate object
+3, 3, blade barrier
+4, 4, conjure animals
+5, 5, find the path
+6, 6, heal
+7, 7, part water
+8, 8, speak with monsters
+9, 9, stone tell
+10, 10, word of recall
+11, 11, lose the path (reverse find the path)
+12, 12, harm (reverse heal)

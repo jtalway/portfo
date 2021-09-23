@@ -1,0 +1,26 @@
+1, 1, audible glamer
+2, 2, continual light
+3, 3, darkness 15'r
+4, 4, detect evil
+5, 5, detect invisibility
+6, 6, ESP
+7, 7, fools gold
+8, 8, forget
+9, 9, invisibility
+10, 10, knock
+11, 11, Leomund's trap
+12, 12, levitate
+13, 13, locate object
+14, 14, magic mouth
+15, 15, mirror image
+16, 16, pyrotechnics
+17, 17, ray of enfeeblement
+18, 18, rope trick
+19, 19, scare
+20, 20, shatter
+21, 21, stinking cloud
+22, 22, strength
+23, 23, web
+24, 24, wizard lock
+25, 25, detect good (reverse detect evil)
+26, 26, obscure object (reverse locate object)

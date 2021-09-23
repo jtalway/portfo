@@ -1,0 +1,8 @@
+1, 1, conjure animals
+2, 2, demi-shadow magic
+3, 3, mass suggestion
+4, 4, permanent illusion
+5, 5, programmed illusion
+6, 6, shades
+7, 7, true sight
+8, 8, veil

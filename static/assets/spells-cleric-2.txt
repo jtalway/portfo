@@ -1,0 +1,14 @@
+1, 1, augury
+2, 2, chant
+3, 3, detect charm
+4, 4, find traps
+5, 5, hold person
+6, 6, know alignment
+7, 7, resist fire
+8, 8, silence 15'r
+9, 9, slow poison
+10, 10, snake charm
+11, 11, speak with animals
+12, 12, spiritual hammer
+13, 13, protection from detect charm (reverse of detect charm)
+14, 14, obscure alignment (reverse of know alignment)

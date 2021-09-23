@@ -128,12 +128,10 @@ def determine_magic_items(quantity, magic_item_type):
 	for mi in magic_item_collection:
 		magic_item_rolled = roll_magic_items(mi)
 		magic_items_rolled_list.append(magic_item_rolled.replace('\n', ''))
-	print(magic_items_rolled_list)
 	#
 	# CHECK FOR SPECIALTY ITEMS THAT REQUIRE FURTHER ROLLS/DETERMINATIONS
 	for magic_item in magic_items_rolled_list:
 		updated_magic_item = check_special_item(magic_item)
-		print(updated_magic_item)
 		final_magic_item_list.append(updated_magic_item.replace('\n', ''))		
 
 	# get duplicates

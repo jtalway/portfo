@@ -1,0 +1,13 @@
+1, 1, animal growth
+2, 2, animal summoning 2
+3, 3, anti-plant shell
+4, 4, commune with nature
+5, 5, control winds
+6, 6, insect plague
+7, 7, pass plant
+8, 8, sticks to snakes
+9, 9, transmute rock to mud
+10, 10, wall of fire
+11, 11, shrink animal (reverse animal growth)
+12, 12, snakes to sticks (reverse sticks to snakes)
+13, 13, transmute mud to rock (reverse transmute rock to mud)

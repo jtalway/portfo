@@ -1,0 +1,8 @@
+1, 1, chaos
+2, 2, demi-shadow monster
+3, 3, major creation
+4, 4, maze
+5, 5, projected image
+6, 6, shadow door
+7, 7, shadow magic
+8, 8, summon shadow

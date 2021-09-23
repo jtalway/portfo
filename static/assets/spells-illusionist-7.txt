@@ -1,0 +1,5 @@
+1, 1, alter reality
+2, 2, astral spell
+3, 3, prismatic spray
+4, 4, prismatic wall
+5, 5, vision

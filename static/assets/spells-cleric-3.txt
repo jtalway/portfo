@@ -1,0 +1,17 @@
+1, 1, animate dead
+2, 2, continual light
+3, 3, create food and water
+4, 4, cure blindness
+5, 5, cure disease
+6, 6, dispel magic
+7, 7, feign death
+8, 8, glyph of warding
+9, 9, locate object
+10, 10, prayer
+11, 11, remove curse
+12, 12, speak with dead
+13, 13, continual darkness (reverse continual light)
+14, 14, cause blindness (reverse cure blindness)
+15, 15, cause disease (reverse cure disease)
+16, 16, obscure object (reverse locate object)
+17, 17, bestow curse (reverse remove curse)

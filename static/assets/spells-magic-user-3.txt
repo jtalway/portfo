@@ -1,0 +1,27 @@
+1, 1, blink
+2, 2, clairaudience
+3, 3, clairvoyance
+4, 4, dispel magic
+5, 5, explosive runes
+6, 6, feign death
+7, 7, fireball
+8, 8, flame arrow
+9, 9, fly
+10, 10, gust of wind
+11, 11, haste
+12, 12, hold person
+13, 13, infravision
+14, 14, invisibility 10'r
+15, 15, Leomund's tiny hut
+16, 16, lightning bolt
+17, 17, monster summoning I
+18, 18, phantasmal force
+19, 19, protection from evil 10'r
+20, 20, protection from normal missiles
+21, 21, slow
+22, 22, suggestion
+23, 23, tongues
+24, 24, water breathing
+25, 25, protection from good 10'r (reverse protection from evil 10'r)
+26, 26, babble (reverse tongues)
+27, 27, air breathing (reverse water breathing)

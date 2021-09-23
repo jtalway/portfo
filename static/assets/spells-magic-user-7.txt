@@ -1,0 +1,16 @@
+1, 1, Bigby's grasping hand
+2, 2, cacodemon
+3, 3, charm plants
+4, 4, delayed blast fireball
+5, 5, Drawmij's instant summons
+6, 6, duo-dimension
+7, 7, limited wish
+8, 8, mass invisibility
+9, 9, monster summoning V
+10, 10, Mordenkainen's sword
+11, 11, phase door
+12, 12, power word (stun)
+13, 13, reverse gravity
+14, 14, simulacrum
+15, 15, statue
+16, 16, vanish

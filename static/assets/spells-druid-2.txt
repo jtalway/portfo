@@ -1,0 +1,14 @@
+1, 1, barkskin
+2, 2, charm person or mammal
+3, 3, create water
+4, 4, cure light wounds
+5, 5, feign death
+6, 6, fire trap
+7, 7, heat metal
+8, 8, locate plants
+9, 9, obscurement
+10, 10, produce flame
+11, 11, trip
+12, 12, warp wood
+13, 13, cause light wounds (reverse cure light wounds)
+14, 14, chill metal (reverse heat metal)

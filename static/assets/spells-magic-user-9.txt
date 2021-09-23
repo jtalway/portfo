@@ -1,0 +1,14 @@
+1, 1, astral spell
+2, 2, Bigby's crushing hand
+3, 3, gate
+4, 4, imprisonment
+5, 5, meteor swarm
+6, 6, monster summoning VII
+7, 7, power word (kill)
+8, 8, prismatic sphere
+9, 9, shape change
+10, 10, temporal stasis
+11, 11, time stop
+12, 12, wish
+13, 13, freedom (reverse imprisonment)
+14, 14, temporal reinstatement (reverse temporal stasis)

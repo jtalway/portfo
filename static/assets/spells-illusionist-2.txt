@@ -1,0 +1,12 @@
+1, 1, blindness
+2, 2, blur
+3, 3, deafness
+4, 4, detect magic
+5, 5, fog cloud
+6, 6, hypnotic pattern
+7, 7, improved phantasmal force
+8, 8, invisibility
+9, 9, magic mouth
+10, 10, mirror image
+11, 11, misdirection
+12, 12, ventriloquism

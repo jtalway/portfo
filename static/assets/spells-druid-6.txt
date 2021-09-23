@@ -1,0 +1,12 @@
+1, 1, animal summoning 3
+2, 2, anti-animal shell
+3, 3, conjure fire elemental
+4, 4, cure critical wounds
+5, 5, feeblemind
+6, 6, fire seeds
+7, 7, transport via plants
+8, 8, turn wood
+9, 9, wall of thorns
+10, 10, weather summoning
+11, 11, dismiss fire elemental (reverse conjure fire elemental)
+12, 12, cause critical wounds (reverse cure critical wounds)

@@ -1,0 +1,34 @@
+1, 1, affect normal fires
+2, 2, burning hands
+3, 3, charm person
+4, 4, comprehend languages
+5, 5, dancing lights
+6, 6, detect magic
+7, 7, enlarge
+8, 8, erase
+9, 9, feather fall
+10, 10, find familiar
+11, 11, friends
+12, 12, hold portal
+13, 13, identify
+14, 14, jump
+15, 15, light
+16, 16, magic missile
+17, 17, mending
+18, 18, message
+19, 19, Nystul's magic aura
+20, 20, protection from evil
+21, 21, push
+22, 22, read magic
+23, 23, shield
+24, 24, shocking grasp
+25, 25, sleep
+26, 26, spider climb
+27, 27, Tenser's floating disc
+28, 28, unseen servant
+29, 29, ventriloquism
+30, 30, write
+31, 31, confuse languages (reverse comprehend languages)
+32, 32, reduce (reverse enlarge)
+33, 33, protection from good (reverse protection from evil)
+34, 34, unreadable magic (reverse read magic)

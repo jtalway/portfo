@@ -1,0 +1,15 @@
+1, 1, call lightning
+2, 2, cure disease
+3, 3, hold animal
+4, 4, neutralize poison
+5, 5, plant growth
+6, 6, protection from fire
+7, 7, pytrotechnics
+8, 8, snare
+9, 9, stone shape
+10, 10, summon insects
+11, 11, tree
+12, 12, water breathing
+13, 13, cause disease (reverse cure disease)
+14, 14, poison (reverse neutralize poison)
+15, 15, air breathing (reverse water breathing)

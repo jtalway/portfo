@@ -1,0 +1,26 @@
+1, 1, anti-magic shell
+2, 2, Bigby's forceful hand
+3, 3, control weather
+4, 4, death spell
+5, 5, disintegrate
+6, 6, enchant an item
+7, 7, extension III
+8, 8, geas
+9, 9, glassee
+10, 10, globe of invulnerability
+11, 11, guards and wards
+12, 12, invisible stalker
+13, 13, legend lore
+14, 14, lower water
+15, 15, monster summoning IV
+16, 16, move earth
+17, 17, Otiluke's freezing sphere
+18, 18, part water
+19, 19, project image
+20, 20, reincarnation
+21, 21, repulsion
+22, 22, spiritwrack
+23, 23, stone to flesh
+24, 24, Tenser's transformation
+25, 25, raise water (reverse lower water)
+26, 26, flesh to stone (reverse stone to flesh)

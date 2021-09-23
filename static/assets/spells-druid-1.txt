@@ -1,0 +1,13 @@
+1, 1, animal friendship
+2, 2, detect magic
+3, 3, detect snares and pits
+4, 4, entangle
+5, 5, faerie fire
+6, 6, invisibility to animals
+7, 7, locate animals
+8, 8, pass without trace
+9, 9, predict weather
+10, 10, purify water
+11, 11, shillelagh
+12, 12, speak with animals
+13, 13, putrify water (reverse purify water)

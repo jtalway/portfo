@@ -1,0 +1,26 @@
+1, 1, charm monster
+2, 2, confusion
+3, 3, dig
+4, 4, dimension door
+5, 5, enchanted weapon
+6, 6, extension I
+7, 7, fear
+8, 8, fire charm
+9, 9, fire shield
+10, 10, fire trap
+11, 11, fumble
+12, 12, hallucinatory terrain
+13, 13, ice storm
+14, 14, massmorph
+15, 15, minor globe of invulnerability
+16, 16, monster summoning II
+17, 17, plant growth
+18, 18, polymorph other
+19, 19, polymorph self
+20, 20, Rary's mnemonic enhancer
+21, 21, remove curse
+22, 22, wall of fire
+23, 23, wall of ice
+24, 24, wizard eye
+25, 25, cursed weapon (reverse enchanted weapon)
+26, 26, bestow curse (reverse remove curse)

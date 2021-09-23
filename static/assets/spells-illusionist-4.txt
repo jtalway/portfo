@@ -1,0 +1,8 @@
+1, 1, confusion
+2, 2, dispel exhaustion
+3, 3, emotion
+4, 4, improved invisibility
+5, 5, massmorph
+6, 6, minor creation
+7, 7, phantasmal killer
+8, 8, shadow monsters

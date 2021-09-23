@@ -1,0 +1,12 @@
+1, 1, continual darkness
+2, 2, continual light
+3, 3, dispel illusion
+4, 4, fear
+5, 5, hallucinatory terrain
+6, 6, illusionary script
+7, 7, invisibility 10'r
+8, 8, non-detection
+9, 9, paralyzation
+10, 10, rope trick
+11, 11, spectral force
+12, 12, suggestion
