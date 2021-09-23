@@ -1,0 +1,4 @@
+1, 30, bag of holding (type I)
+31, 70, bag of holding (type II)
+71, 90, bag of holding (type III)
+91, 100, bag of holding (type IV)

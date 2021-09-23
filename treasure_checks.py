@@ -3,43 +3,24 @@ from random import randint
 from openfile import * 
 from array_result import *
 
-# ring of multiple wishes
 # ring of spell storing
-# ring of telekinesis
-# ring of wizardy
-# <rod> charges 50 - {1d10-1}
-# <staff> charges 25 - {1d6-1}
-# <wand> charges 100 - {1d20-1}
 # ARTIFACT or RELIC
 # bag of beans
-# bag of holding
 # bag of tricks
 # beaker of plentiful potions
 # book of infinite spells
-# Bucknard's everfull purse
-# dust of appearance
-# dust of disappearance
-# incense of meditation
-# incense of obsession
 # ioun stones
-# iron flask
-# javelin of lightning
-# javelin of piercing
-# necklace of missiles
 # necklace of prayer beads
-# Nolzur's marvelous pigments
-# Quaal's feather token
-# robe of useful items
-# scarab of enraging enemies
-# scarab of insanity
 # <sword>
-# arrow of slaying
-# scimitar +2
 
 def check_special_item(magic_item):
+	#
+	# BIG IF cuz they can't be all types
+	#
 	# check for scroll
 	magic_item = check_if_scroll(magic_item)
 	# check for sword
+	magic_item = check_if_sword(magic_item)
 	# check for rod
 	magic_item = check_if_rod(magic_item)
 	# check for staff
@@ -52,8 +33,34 @@ def check_special_item(magic_item):
 		final_magic_item = array_result(item_array)
 		return(final_magic_item)
 
+	elif magic_item == 'ring of telekinesis':
+		item_array = openfile('ring-telekinesis')
+		final_magic_item = array_result(item_array)
+		return(final_magic_item)
+
+	elif magic_item == 'ring of wizardry':
+		item_array = openfile('ring-wizardry')
+		final_magic_item = array_result(item_array)
+		return(final_magic_item)
+
+	elif magic_item == 'ring of multiple wishes':
+		rNum = randint(2, 8)
+		wishes = str(rNum)
+		magic_item = magic_item + " (" + wishes + " wishes)"
+		return(magic_item)
+
+	elif magic_item == 'bag of holding':
+		item_array = openfile('misc-bag-holding')
+		final_magic_item = array_result(item_array)
+		return(final_magic_item)
+
 	elif magic_item == 'bracers of defense':
 		item_array = openfile('misc-bracers-defense')
+		final_magic_item = array_result(item_array)
+		return(final_magic_item)
+
+	elif magic_item == "Bucknard's everfull purse":
+		item_array = openfile('misc-everfull-purse')
 		final_magic_item = array_result(item_array)
 		return(final_magic_item)
 
@@ -72,6 +79,18 @@ def check_special_item(magic_item):
 		final_magic_item = array_result(item_array)
 		return(final_magic_item)
 
+	elif magic_item == 'dust of appearance':
+		rNum = randint(5, 50)
+		number = str(rNum)
+		magic_item = magic_item + " (" + number + " containers)"
+		return(magic_item)
+
+	elif magic_item == 'dust of disappearance':
+		rNum = randint(5, 50)
+		number = str(rNum)
+		magic_item = magic_item + " (" + number + " containers)"
+		return(magic_item)
+
 	elif magic_item == 'figurine of wondrous power':
 		item_array = openfile('misc-figurine-wondrous')
 		final_magic_item = array_result(item_array)
@@ -87,10 +106,39 @@ def check_special_item(magic_item):
 		final_magic_item = array_result(item_array)
 		return(final_magic_item)
 
+	elif magic_item == 'incense of meditation':
+		rNum = randint(2, 8)
+		q = str(rNum)
+		magic_item = magic_item + " (x " + q + ")"
+		return(magic_item)
+
+	elif magic_item == 'incense of obsession':
+		rNum = randint(2, 8)
+		q = str(rNum)
+		magic_item = magic_item + " (x " + q + ")"
+		return(magic_item)
+
 	elif magic_item == 'instrument of the bards':
 		item_array = openfile('misc-instrument-bards')
 		final_magic_item = array_result(item_array)
 		return(final_magic_item)
+
+	elif magic_item == 'iron flask':
+		item_array = openfile('misc-iron-flask')
+		final_magic_item = array_result(item_array)
+		return(final_magic_item)
+
+	elif magic_item == 'javelin of lightning':
+		rNum = randint(2, 5)
+		q = str(rNum)
+		magic_item = magic_item + " (x " + q + ")"
+		return(magic_item)
+
+	elif magic_item == 'javelin of piercing':
+		rNum = randint(2, 8)
+		q = str(rNum)
+		magic_item = magic_item + " (x " + q + ")"
+		return(magic_item)
 
 	elif magic_item == 'manual of golems':
 		item_array = openfile('misc-manual-golems')
@@ -99,6 +147,22 @@ def check_special_item(magic_item):
 
 	elif magic_item == 'medallion of ESP':
 		item_array = openfile('misc-medallion-ESP')
+		final_magic_item = array_result(item_array)
+		return(final_magic_item)
+
+	elif magic_item == 'necklace of missiles':
+		item_array = openfile('misc-necklace-missiles')
+		final_magic_item = array_result(item_array)
+		return(final_magic_item)
+
+	elif magic_item == "Nolzur's marvelous pigments":
+		rNum = randint(1, 4)
+		number = str(rNum)
+		magic_item = magic_item + " (" + number + " containers)"
+		return(magic_item)
+
+	elif magic_item == "Quaal's feather token":
+		item_array = openfile('misc-feather-token')
 		final_magic_item = array_result(item_array)
 		return(final_magic_item)
 
@@ -116,6 +180,18 @@ def check_special_item(magic_item):
 		item_array = openfile('misc-robe-archmagi')
 		final_magic_item = array_result(item_array)
 		return(final_magic_item)
+
+	elif magic_item == 'scarab of enraging enemies':
+		rNum = randint(19, 24)
+		charges = str(rNum)
+		magic_item = magic_item + " (" + charges + " charges)"
+		return(magic_item)
+
+	elif magic_item == 'scarab of insanity':
+		rNum = randint(9, 16)
+		charges = str(rNum)
+		magic_item = magic_item + " (" + charges + " charges)"
+		return(magic_item)
 
 	elif magic_item == 'ARTIFACT OR RELIC':
 		item_array = openfile('artifactrelic')
@@ -177,6 +253,15 @@ def check_special_item(magic_item):
 		final_magic_item = array_result(item_array)
 		return(final_magic_item)
 
+	elif magic_item == 'arrow of slaying':
+		item_array = openfile('weapon-arrow-slaying')
+		final_magic_item = array_result(item_array)
+		return(final_magic_item)
+
+	elif magic_item == 'scimitar +2':
+		item_array = openfile('weapon-scimitar')
+		final_magic_item = array_result(item_array)
+		return(final_magic_item)
 
 	else:
 		return(magic_item)
@@ -200,10 +285,8 @@ def check_if_scroll(magic_item):
 				max_range = 7
 			else:
 				pass
-		# print(f"[+] Class: {spellcasting_class} Number of spells: {num_spells} Min: {min_range} Max: {max_range}")
 		while i < num_spells:
 			rNum = randint(min_range, max_range)
-			#print(f'Level of Spell {rNum}')
 			page = 'spells-' + spellcasting_class + '-' + str(rNum)
 			f_array = openfile(page)
 			randomly_rolled_spell = array_result(f_array).replace('\n', '')
@@ -216,7 +299,6 @@ def check_if_scroll(magic_item):
 		return(complete_scroll)
 
 	else:
-		# print("[-] Die roll NOT found")
 		return(magic_item)
 
 
@@ -228,7 +310,6 @@ def check_if_rod(magic_item):
 		complete_rod = magic_item + " (" + charges + " charges)"
 		return(complete_rod)
 	else:
-		# print("[-] Die roll NOT found")
 		return(magic_item)
 
 def check_if_staff(magic_item):
@@ -239,17 +320,24 @@ def check_if_staff(magic_item):
 		complete_staff = magic_item + " (" + charges + " charges)"
 		return(complete_staff)
 	else:
-		# print("[-] Die roll NOT found")
 		return(magic_item)
 
 def check_if_wand(magic_item):
 	is_wand = re.findall(r'^\bwand\b of \w+', magic_item)
-	print(is_wand)
 	if is_wand:
 		rNum = randint(0, 19)
 		charges = str(100 - rNum)
 		complete_wand = magic_item + " (" + charges + " charges)"
 		return(complete_wand)
 	else:
-		# print("[-] Die roll NOT found")
+		return(magic_item)
+
+def check_if_sword(magic_item):
+	is_sword = re.findall(r'^\bsword\b', magic_item)
+	if is_sword:
+		array = openfile('sword-type')
+		sword_type = array_result(array).replace('\n', '')
+		complete_sword = sword_type + " " + magic_item
+		return(complete_sword)
+	else:
 		return(magic_item)

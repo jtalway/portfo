@@ -1,0 +1,5 @@
+1, 70, long
+71, 90, broad
+91, 95, short
+96, 99, bastard
+100, 100, two-handed

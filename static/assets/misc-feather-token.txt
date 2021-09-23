@@ -1,0 +1,6 @@
+1, 4, Quaal's feather token (anchor)
+5, 7, Quaal's feather token (bird)
+8, 10, Quaal's feather token (fan)
+11, 13, Quaal's feather token (swan boat)
+14, 18, Quaal's feather token (tree)
+19, 20, Quaal's feather token (whip)

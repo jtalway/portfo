@@ -1,0 +1,7 @@
+1, 45, scimitar +1
+46, 65, scimitar +2
+66, 80, scimitar +3
+81, 90, scimitar +4
+91, 95, scimitar +5
+96, 98, scimitar of wounding
+99, 100, scimitar of sharpness

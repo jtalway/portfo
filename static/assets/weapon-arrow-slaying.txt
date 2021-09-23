@@ -1,0 +1,24 @@
+1, 1, arrow of arachnid slaying
+2, 2, arrow of avian slaying
+3, 3, arrow of bard slaying
+4, 4, arrow of cleric slaying
+5, 5, arrow of demon slaying
+6, 6, arrow of devil slaying
+7, 7, arrow of dragon slaying
+8, 8, arrow of druid slaying
+9, 9, arrow of elemental slaying
+10, 10, arrow of fighter slaying
+11, 11, arrow of giant slaying
+12, 12, arrow of golem slaying
+13, 13, arrow of illusionist slaying
+14, 14, arrow of ki-rin slaying
+15, 15, arrow of magic-user slaying
+16, 16, arrow of mammal slaying
+17, 17, arrow of monk slaying
+18, 18, arrow of paladin slaying
+19, 19, arrow of ranger slaying
+20, 20, arrow of reptile slaying
+21, 21, arrow of sea monster slaying
+22, 22, arrow of thief slaying
+23, 23, arrow of titan slaying
+24, 24, arrow of undead slaying

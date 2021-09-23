@@ -1,0 +1,7 @@
+1, 4, necklace of missiles (type I)
+5, 8, necklace of missiles (type II)
+9, 12, necklace of missiles (type III)
+13, 16, necklace of missiles (type IV)
+17, 18, necklace of missiles (type V)
+19, 19, necklace of missiles (type VI)
+20, 20, necklace of missiles (type VII)

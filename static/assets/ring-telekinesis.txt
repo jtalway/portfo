@@ -1,0 +1,5 @@
+1, 25, ring of telekinesis (250gp max)
+26, 50, ring of telekinesis (500gp max)
+51, 89, ring of telekinesis (1000gp max)
+90, 99, ring of telekinesis (2000gp max)
+100, 100, ring of telekinesis (4000gp max)

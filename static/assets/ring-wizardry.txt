@@ -1,0 +1,8 @@
+1, 50, ring of wizardry (1st lvl)
+51, 75, ring of wizardry (2nd lvl)
+76, 82, ring of wizardry (3rd lvl)
+83, 88, ring of wizardry (1st-2nd lvl)
+89, 92, ring of wizardry (4th lvl)
+93, 95, ring of wizardry (5th lvl)
+96, 99, ring of wizardry (1st-3rd lvl)
+100, 100, ring of wizardry (4th-5th lvl)
