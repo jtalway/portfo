@@ -1,4 +1,4 @@
-1, 1, animal summoning 3
+1, 1, animal summoning III
 2, 2, anti-animal shell
 3, 3, conjure fire elemental
 4, 4, cure critical wounds

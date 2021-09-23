@@ -5,9 +5,7 @@
     <div class="container">
       <div class="row">
         <div class="col-xs-12">
-              {% include 'generator.html' %}
-              
-              <h4>AD&D Treasure Generator</h4>
+           <h4>AD&D Treasure Generator</h4>
               <form action="generate_treasure" method="post" class="reveal-content">
               <label for="treasure">Treasure type: </label>
               <select name="treasure" id="treasure">
@@ -55,6 +53,13 @@
               {% endfor %}
               <br>
               {% endif %}
+               {% if treasure_hoard %}
+              <b>Magic Items</b>
+              {% for treasure_element in treasure_hoard %}
+                {{ treasure_element }}
+              {% endfor %}
+              <br>
+              {% endif %}
               {% if gem_hoard %}
               <b>Gems</b>
               {% for gem in gem_hoard %}
@@ -67,14 +72,8 @@
               {% for jewelry in jewelry_hoard %}
                 {{ jewelry }} 
               {% endfor %}
-              <br>
               {% endif %}
-              {% if treasure_hoard %}
-              <b>Magic Items</b>
-              {% for treasure_element in treasure_hoard %}
-                {{ treasure_element }}
-              {% endfor %}
-              {% endif %}
+             
               <script>
                 var dt = new Date();
                 document.getElementById("datetime").innerHTML = dt.toLocaleTimeString();

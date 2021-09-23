@@ -1,5 +1,5 @@
 1, 1, animal growth
-2, 2, animal summoning 2
+2, 2, animal summoning II
 3, 3, anti-plant shell
 4, 4, commune with nature
 5, 5, control winds

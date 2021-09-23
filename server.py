@@ -36,6 +36,10 @@ def fumble():
 def treasure():
     return render_template('treasure.html')
 
+@app.route('/magic-item')
+def magic_item():
+    return render_template('magic-item.html')
+
 @app.route('/dungeon_dressing')
 def dungeon_dressing():
     return render_template('dungeon-dressing.html')
@@ -182,6 +186,26 @@ def generate_treasure():
         return render_template('treasure.html', treasure_hoard = treasure_hoard, coin_hoard = coin_hoard, gem_hoard = gem_hoard, jewelry_hoard = jewelry_hoard)
     else:
         return 'something went wrong, try again!'
+
+
+
+# MAGIC ITEM
+@app.route('/generate_magic_item', methods=['POST', 'GET'])
+def generate_magic_item():
+    if request.method == 'POST':
+        magic_item_type = request.form['treasure']
+        magic_item_quantity = request.form['quantity']
+        magic_items = determine_magic_items(magic_item_quantity, magic_item_type)
+        treasure_hoard = magic_items
+
+        return render_template('magic-item.html', treasure_hoard = treasure_hoard)
+    else:
+        return 'something went wrong, try again!'
+
+
+
+
+
 
 @app.route('/generate_dungeon_dressing', methods=['POST', 'GET'])
 def generate_dungeon_dressing():

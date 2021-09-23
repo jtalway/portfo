@@ -457,6 +457,56 @@ def find_magic_items(quantity, magic_item_type):
 			i+=1
 		return(calc_magic_item_types)
 
+	elif magic_item_type == 'ring':
+		calc_magic_item_types = []
+		i = 0
+		while i < q:
+			calc_magic_item_types.append('ring')
+			i+=1
+		return(calc_magic_item_types)
+
+	elif magic_item_type == 'rodstaffwand':
+		calc_magic_item_types = []
+		i = 0
+		while i < q:
+			calc_magic_item_types.append('rodstaffwand')
+			i+=1
+		return(calc_magic_item_types)
+	
+	elif magic_item_type == 'miscX':
+		calc_magic_item_types = []
+		i = 0
+		while i < q:
+			array = openfile('miscX')
+			result = array_result(array).replace("\n", "")
+			calc_magic_item_types.append(result)
+			i+=1
+		return(calc_magic_item_types)
+
+	elif magic_item_type == 'armorshield':
+		calc_magic_item_types = []
+		i = 0
+		while i < q:
+			calc_magic_item_types.append('armorshield')
+			i+=1
+		return(calc_magic_item_types)
+
+	elif magic_item_type == 'sword':
+		calc_magic_item_types = []
+		i = 0
+		while i < q:
+			calc_magic_item_types.append('sword')
+			i+=1
+		return(calc_magic_item_types)
+
+	elif magic_item_type == 'weapon':
+		calc_magic_item_types = []
+		i = 0
+		while i < q:
+			calc_magic_item_types.append('weapon')
+			i+=1
+		return(calc_magic_item_types)
+
 	else:
 		pass
 

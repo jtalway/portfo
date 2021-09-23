@@ -41,8 +41,12 @@ def check_special_item(magic_item):
 	magic_item = check_if_scroll(magic_item)
 	# check for sword
 	# check for rod
+	magic_item = check_if_rod(magic_item)
 	# check for staff
+	magic_item = check_if_staff(magic_item)
 	# check for wand
+	magic_item = check_if_wand(magic_item)
+
 	if magic_item == 'ring of protection':
 		item_array = openfile('ring-protection')
 		final_magic_item = array_result(item_array)
@@ -205,7 +209,7 @@ def check_if_scroll(magic_item):
 			randomly_rolled_spell = array_result(f_array).replace('\n', '')
 			scroll_list.append(randomly_rolled_spell)
 			i += 1
-		scroll_header = spellcasting_class + " scroll of ("
+		scroll_header = spellcasting_class + " scroll ("
 		scroll_footer = ")"
 		generated_spells = ", ".join(scroll_list)
 		complete_scroll = scroll_header + generated_spells + scroll_footer
@@ -216,3 +220,36 @@ def check_if_scroll(magic_item):
 		return(magic_item)
 
 
+def check_if_rod(magic_item):
+	is_rod = re.findall(r'^\brod\b of \w+', magic_item)
+	if is_rod:
+		rNum = randint(0, 9)
+		charges = str(50 - rNum)
+		complete_rod = magic_item + " (" + charges + " charges)"
+		return(complete_rod)
+	else:
+		# print("[-] Die roll NOT found")
+		return(magic_item)
+
+def check_if_staff(magic_item):
+	is_staff = re.findall(r'^\bstaff\b of \w+', magic_item)
+	if is_staff:
+		rNum = randint(0, 5)
+		charges = str(25 - rNum)
+		complete_staff = magic_item + " (" + charges + " charges)"
+		return(complete_staff)
+	else:
+		# print("[-] Die roll NOT found")
+		return(magic_item)
+
+def check_if_wand(magic_item):
+	is_wand = re.findall(r'^\bwand\b of \w+', magic_item)
+	print(is_wand)
+	if is_wand:
+		rNum = randint(0, 19)
+		charges = str(100 - rNum)
+		complete_wand = magic_item + " (" + charges + " charges)"
+		return(complete_wand)
+	else:
+		# print("[-] Die roll NOT found")
+		return(magic_item)

@@ -1,9 +1,9 @@
-1, 2, treasure map ({(2d4)*10000} copper pieces {1d4+1)*10000} silver pieces)
-3, 5, treasure map ({(5d6)*1000} electrum pieces)
-6, 10, treasure map ({(3d6)*1000} gold pieces)
-11, 12, treasure map ({(5d4)*100} platinum pieces)
+1, 2, treasure map ({(2d4)*10000} cp {1d4+1)*10000} sp)
+3, 5, treasure map ({(5d6)*1000} ep)
+6, 10, treasure map ({(3d6)*1000} gp)
+11, 12, treasure map ({(5d4)*100} pp)
 13, 15, treasure map ({10d10} gems)
 16, 17, treasure map ({5d10} jewelry)
 18, 18, double value monetary treasure map
 19, 19, triple value monetary treasure map
-20, 20, treasure map ({(2d4)*10000} copper pieces {1d4+1)*10000} silver pieces {(5d6)*1000} electrum pieces {(3d6)*1000} gold pieces {(5d4)*100} platinum pieces {10d10} gems {5d10} jewelry)
+20, 20, treasure map ({(2d4)*10000} cp {1d4+1)*10000} sp {(5d6)*1000} ep {(3d6)*1000} gp {(5d4)*100} pp {10d10} gems {5d10} jewelry)
