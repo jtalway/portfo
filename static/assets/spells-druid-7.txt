@@ -8,5 +8,5 @@
 8, 8, fire storm
 9, 9, reincarnate
 10, 10, transmute metal to wood
-11, 11, dismiss earth elemental (reverse conjure earth elemental)
-12, 12, fire quench (reverse fire storm)
+11, 11, dismiss earth elemental (r. conjure earth elemental)
+12, 12, fire quench (r. fire storm)

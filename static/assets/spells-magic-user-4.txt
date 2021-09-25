@@ -22,5 +22,5 @@
 22, 22, wall of fire
 23, 23, wall of ice
 24, 24, wizard eye
-25, 25, cursed weapon (reverse enchanted weapon)
-26, 26, bestow curse (reverse remove curse)
+25, 25, cursed weapon (r. enchanted weapon)
+26, 26, bestow curse (r. remove curse)

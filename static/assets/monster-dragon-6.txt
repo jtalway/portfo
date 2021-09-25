@@ -1,0 +1,10 @@
+1, 8, old black dragon {1a1}
+9, 19, adult blue dragon {1a1}
+20, 29, old brass dragon {1a1}
+30, 36, adult bronze dragon {1a1}
+37, 48, adult copper dragon {1a1}
+49, 52, adult gold dragon {1a1}
+53, 65, adult green dragon {1a1}
+66, 78, adult red dragon {1a1}
+79, 87, adult silver dragon {1a1}
+88, 100, old white dragon {1a1}

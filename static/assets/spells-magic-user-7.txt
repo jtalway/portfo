@@ -9,7 +9,7 @@
 9, 9, monster summoning V
 10, 10, Mordenkainen's sword
 11, 11, phase door
-12, 12, power word (stun)
+12, 12, power word - stun
 13, 13, reverse gravity
 14, 14, simulacrum
 15, 15, statue

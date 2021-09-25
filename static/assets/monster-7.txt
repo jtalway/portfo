@@ -1,0 +1,46 @@
+1, 5, black pudding
+6, 10, CHARACTER
+11, 14, chimera {1a2}
+15, 15, succubus demon {1a1}
+16, 16, type I demon {1a1}
+17, 17, type II demon {1a1}
+18, 18, type III demon {1a1}
+19, 19, barbed devil {1a1}
+20, 20, bone devil {1a1}
+21, 21, horned devil {1a1}
+22, 23, DRAGON-7
+24, 24, efreeti {1a1}
+25, 26, elemental {1a1}
+27, 30, ettin {1a2}
+31, 33, hill giant {1a3}
+34, 35, stone giant {1a3}
+36, 37, fire giant {1a2}
+38, 38, frost giant {1a2}
+39, 39, flesh golem {1a1}
+40, 41, gorgon {1a1}
+42, 43, groaning spirit {1a1}
+44, 44, hydra (10 heads) {1a1}
+45, 45, hydra (11 heads) {1a1}
+46, 46, hydra (12 heads) {1a1}
+47, 47, pyrohydra (7-9 heads) {1a1}
+48, 49, intellect devourer {1a1}
+50, 50, invisible stalker {1a1}
+51, 52, lamia {1a2}
+53, 56, fire lizard {1a3}
+57, 59, lurker above {1a1}
+60, 60, mezzodaemon {1a1}
+61, 63, mimic {1a1}
+64, 65, mind flayer {1a2}
+66, 69, mummy {1a2}
+70, 70, spirit naga {1a2}
+71, 73, neo-otyugh {1a1}
+74, 74, night hag {1a2}
+75, 78, roper {1a2}
+79, 82, shambling mound {1a2}
+83, 86, shedu {1a2}
+87, 87, giant slug {1a1}
+88, 91, spectre {1a1}
+92, 93, trapper {1a1}
+94, 95, umber hulk {1a1}
+96, 97, will-o-wisp {1a3}
+98, 100, xorn {1a3}

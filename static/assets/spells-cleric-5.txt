@@ -8,7 +8,7 @@
 8, 8, quest
 9, 9, raise dead
 10, 10, true seeing
-11, 11, cause critical wounds (reverse of cure critical wounds)
-12, 12, dispel good (reverse of dispel evil)
-13, 13, slay living (reverse raise dead)
-14, 14, false seeing (reverse of true seeing)
+11, 11, cause critical wounds (r. of cure critical wounds)
+12, 12, dispel good (r. of dispel evil)
+13, 13, slay living (r. raise dead)
+14, 14, false seeing (r. of true seeing)

@@ -1,0 +1,3 @@
+1, 25, bandit {5a15}
+26, 30, berserker {3a9}
+31, 45, brigand {5a15}

@@ -1,0 +1,27 @@
+1, 3, basilisk
+4, 10, carrion crawler {1a2}
+11, 16, CHARACTER
+17, 17, erinyes devil {1a2}
+18, 19, djinni {1a1}
+20, 21, DRAGON-6
+22, 25, green slime {1a1}
+26, 27, hydra (8 heads) {1a1}
+28, 28, hydra (9 heads) {1a1}
+29, 32, jackalwere {1a2}
+33, 36, lammasu {1a3}
+37, 38, werebear {1a1}
+39, 41, weretiger {1a2}
+42, 50, manticore {1a2}
+51, 55, medusa {1a1}
+56, 56, brown mold {1a1}
+57, 58, yellow mold {1a1}
+59, 60, ogre magi {1a2}
+61, 68, otyugh {1a1}
+69, 70, rakshasa {1a1}
+71, 73, salamander {1a2}
+74, 77, phase spider {1a3}
+78, 88, troll {1a3}
+89, 93, wight {1a4}
+94, 95, wind walker {1a2}
+96, 98, wraith {1a2}
+99, 100, wyvern {1a1}

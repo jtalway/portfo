@@ -1,0 +1,3 @@
+1, 28, very young black dragon {1a1}
+29, 62, very young brass dragon {1a1}
+63, 100, very young white dragon {1a1}

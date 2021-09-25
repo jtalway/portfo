@@ -1,0 +1,21 @@
+1, 8, CHARACTER
+9, 15, cockatrice {1a2}
+16, 18, displacer beast {1a2}
+19, 22, doppleganger {1a3}
+23, 24, DRAGON-5
+25, 26, hydra (7 heads) {1a1}
+27, 27, pyrohydra (6 heads) {1a1}
+28, 28, imp {1a2}
+29, 31, leucrotta {1a2}
+32, 50, subterranean lizard {1a3}
+51, 52, wereboar {1a3}
+53, 60, minotaur {1a3}
+61, 64, yellow mold {1a1}
+65, 65, quasit {1a1}
+66, 67, rust monster {1a1}
+68, 70, shrieker {2a5}
+71, 72, slithering tracker {1a1}
+73, 74, giant amphisbaena snake {1a1}
+75, 82, giant poisonous snake {1a1}
+83, 86, giant spitting snake {1a1}
+87, 100, giant spider {1a2}

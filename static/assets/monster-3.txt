@@ -1,0 +1,18 @@
+1, 10, boring beetle {1a3}
+11, 20, bugbear {2a7}
+21, 30, CHARACTER
+31, 32, DRAGON-3
+33, 34, violet fungi {1a3}
+35, 40, gelatinous cube {1a1}
+41, 45, ghoul {1a4}
+46, 50, giant lizard {1a3}
+51, 54, wererat {2a5}
+55, 60, ochre jelly {1a1}
+61, 72, ogre {1a3}
+73, 74, piercer {2a5}
+75, 75, rot grub {1a4}
+76, 77, shrieker {2a5}
+78, 84, huge spider {1a3}
+85, 93, large spider {2a5}
+94, 95, giant tick {1a3}
+96, 100, giant weasel {1a4}

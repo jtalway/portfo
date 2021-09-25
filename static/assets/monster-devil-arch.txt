@@ -1,0 +1,4 @@
+1, 1, Asmodeus
+2, 2, Baalzebul
+3, 3, Dispater
+4, 4, Geryon

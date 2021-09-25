@@ -22,5 +22,5 @@
 22, 22, strength
 23, 23, web
 24, 24, wizard lock
-25, 25, detect good (reverse detect evil)
-26, 26, obscure object (reverse locate object)
+25, 25, detect good (r. detect evil)
+26, 26, obscure object (r. locate object)

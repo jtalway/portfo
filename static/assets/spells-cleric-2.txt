@@ -10,5 +10,5 @@
 10, 10, snake charm
 11, 11, speak with animals
 12, 12, spiritual hammer
-13, 13, protection from detect charm (reverse of detect charm)
-14, 14, obscure alignment (reverse of know alignment)
+13, 13, undetectable charm (r. of detect charm)
+14, 14, obscure alignment (r. of know alignment)

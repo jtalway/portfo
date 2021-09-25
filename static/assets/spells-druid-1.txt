@@ -10,4 +10,4 @@
 10, 10, purify water
 11, 11, shillelagh
 12, 12, speak with animals
-13, 13, putrify water (reverse purify water)
+13, 13, putrify water (r. purify water)

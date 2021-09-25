@@ -1,2 +1,2 @@
-1, 90, ring of regeneration (normal)
-91, 100, ring of regeneration (vampiric)
+1, 90, ring of normal regeneration
+91, 100, ring of vampiric regeneration

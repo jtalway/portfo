@@ -1,0 +1,20 @@
+1, 8, carnivorous ape {1a3}
+9, 14, blink dog {2a5}
+15, 22, CHARACTER
+23, 24, DRAGON-4
+25, 30, gargoyle {1a2}
+31, 36, ghast {1a4}
+37, 40, gray ooze {1a1}
+41, 44, hell hound {1a2}
+45, 46, hydra (5 heads) {1a1}
+47, 47, hydra (6 heads) {1a1}
+48, 48, pyrohydra (5 heads) {1a1}
+49, 62, werewolf {1a2}
+63, 75, yellow mold {1a1}
+76, 78, owlbear {1a2}
+79, 79, rust monster {1a1}
+80, 82, shadow {1a3}
+83, 90, giant constrictor snake {1a1}
+91, 94, su-monster {1a2}
+95, 96, ice toad {1a1}
+97, 100, poisonous toad {1a3}

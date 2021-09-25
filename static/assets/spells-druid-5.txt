@@ -8,6 +8,6 @@
 8, 8, sticks to snakes
 9, 9, transmute rock to mud
 10, 10, wall of fire
-11, 11, shrink animal (reverse animal growth)
-12, 12, snakes to sticks (reverse sticks to snakes)
-13, 13, transmute mud to rock (reverse transmute rock to mud)
+11, 11, shrink animal (r. animal growth)
+12, 12, snakes to sticks (r.sticks to snakes)
+13, 13, transmute mud to rock (r. transmute rock to mud)

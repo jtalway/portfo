@@ -10,7 +10,7 @@
 10, 10, Otto's irresitible dance
 11, 11, permanency
 12, 12, polymorph any object
-13, 13, power word (blind)
+13, 13, power word - blind
 14, 14, Serten's spell immunity
 15, 15, symbol
 16, 16, trap the soul

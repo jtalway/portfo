@@ -8,6 +8,6 @@
 8, 8, resurrection
 9, 9, symbol
 10, 10, wind walk
-11, 11, wither (reverse regenerate)
-12, 12, energy drain (reverse restoration)
-13, 13, destruction (reverse resurrection)
+11, 11, wither (r. regenerate)
+12, 12, energy drain (r. restoration)
+13, 13, destruction (r. resurrection)

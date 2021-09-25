@@ -8,5 +8,5 @@
 8, 8, speak with monsters
 9, 9, stone tell
 10, 10, word of recall
-11, 11, lose the path (reverse find the path)
-12, 12, harm (reverse heal)
+11, 11, lose the path (r. find the path)
+12, 12, harm (r. heal)

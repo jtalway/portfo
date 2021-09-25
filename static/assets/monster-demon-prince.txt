@@ -1,0 +1,4 @@
+1, 1, Demogorgon
+2, 2, Juiblex
+3, 3, Orcus
+4, 4, Yeenoghu

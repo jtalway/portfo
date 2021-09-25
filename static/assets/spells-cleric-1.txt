@@ -10,11 +10,11 @@
 10, 10, remove fear
 11, 11, resist cold
 12, 12, sanctuary
-13, 13, curse (reverse bless)
-14, 14, destroy water (reverse create water)
-15, 15, cause light wounds (reverse cure light wounds)
-16, 16, detect good (reverse detect evil)
-17, 17, darkness (reverse light)
-18, 18, protection from good (reverse protection from evil)
-19, 19, putrify food and drink (reverse purify food and drink)
-20, 20, cause fear (reverse remove fear)
+13, 13, curse (r. bless)
+14, 14, destroy water (r. create water)
+15, 15, cause light wounds (r. cure light wounds)
+16, 16, detect good (r. detect evil)
+17, 17, darkness (r. light)
+18, 18, protection from good (r. protection from evil)
+19, 19, putrify food and drink (r. purify food and drink)
+20, 20, cause fear (r. remove fear)

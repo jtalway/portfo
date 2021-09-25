@@ -1,0 +1,9 @@
+1, 20, ancient blue dragon and very old blue dragon {1a1}
+21, 26, ancient bronze dragon and very old bronze dragon {1a1}
+27, 33, ancient copper dragon and very old copper dragon {1a1}
+34, 35, TIAMAT
+36, 40, ancient gold dragon and old gold dragon {1a1}
+41, 60, ancient green dragon and very old green dragon {1a1}
+61, 63, BAHAMUT
+64, 94, ancient red dragon and old red dragon {1a1}
+95, 100, ancient silver dragon and old silver dragon {1a1}

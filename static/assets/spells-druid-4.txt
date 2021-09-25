@@ -10,6 +10,6 @@
 10, 10, protection from lightning
 11, 11, repel insects
 12, 12, speak with plants
-13, 13, cause serious wounds (reverse cure serious wounds)
-14, 14, vanish forest (reverse of hallucinatory forest)
-15, 15, quench fire (reverse produce fire)
+13, 13, cause serious wounds (r. cure serious wounds)
+14, 14, vanish forest (r. of hallucinatory forest)
+15, 15, quench fire (r. produce fire)

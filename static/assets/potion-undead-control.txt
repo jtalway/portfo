@@ -1,10 +1,10 @@
-1, 1, potion of undead control (ghasts)
-2, 2, potion of undead control (ghosts)
-3, 3, potion of undead control (ghouls)
-4, 4, potion of undead control (shadows)
-5, 5, potion of undead control (skeletons)
-6, 6, potion of undead control (spectres)
-7, 7, potion of undead control (wights)
-8, 8, potion of undead control (wraiths)
-9, 9, potion of undead control (vampires)
-10, 10, potion of undead control (zombies)
+1, 1, potion of ghast control
+2, 2, potion of ghost control
+3, 3, potion of ghoul control
+4, 4, potion of shadow control
+5, 5, potion of skeleton control
+6, 6, potion of spectre control
+7, 7, potion of wight control
+8, 8, potion of wraith control
+9, 9, potion of vampire control
+10, 10, potion of zombie control

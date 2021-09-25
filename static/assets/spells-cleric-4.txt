@@ -8,10 +8,10 @@
 8, 8, speak with plants
 9, 9, sticks to snakes
 10, 10, tongues
-11, 11, cause serious wounds (reverse cure serious wounds)
-12, 12, undetectable lie (reverse detect lie)
-13, 13, raise water (reverse lower water)
-14, 14, poison (reverse neutralize poison)
-15, 15, protection from good 10'r (reverse protection from evil 10'r)
-16, 16, snakes to sticks (reverse sticks to snakes)
-17, 17, babble (reverse of tongues)
+11, 11, cause serious wounds (r. cure serious wounds)
+12, 12, undetectable lie (r. detect lie)
+13, 13, raise water (r. lower water)
+14, 14, poison (r. neutralize poison)
+15, 15, protection from good 10'r (r. protection from evil 10'r)
+16, 16, snakes to sticks (r. sticks to snakes)
+17, 17, babble (r. of tongues)

@@ -1,0 +1,20 @@
+1, 2, giant ant {1a4}
+3, 4, badger {1a4}
+5, 14, fire beetle {1a4}
+15, 15, manes demon {1a4}
+16, 17, dwarf {4a14}
+18, 18, ear seeker {1a1}
+19, 19, elf {3a11}
+20, 21, gnome {5a15}
+22, 26, goblin {6a15}
+27, 28, halfling {9a16}
+29, 33, hobgoblin {2a8}
+34, 48, HUMAN
+49, 54, kobold {6a18}
+55, 66, orc {7a12}
+67, 70, piercer {1a3}
+71, 83, giant rat {5a20}
+84, 85, rot grub {1a3}
+86, 96, shrieker {1a2}
+97, 98, skeleton {1a4}
+99, 100, zombie {1a3}

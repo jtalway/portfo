@@ -22,5 +22,5 @@
 22, 22, wall of force
 23, 23, wall of iron
 24, 24, wall of stone
-25, 25, shrink animal (reverse animal growth)
-26, 26, transmute mud to rock (reverse transmute rock to mud)
+25, 25, shrink animal (r. animal growth)
+26, 26, transmute mud to rock (r. transmute rock to mud)

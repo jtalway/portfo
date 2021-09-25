@@ -1,0 +1,13 @@
+1, 1, giant badger {1a4}
+2, 16, giant centipede {3a13}
+17, 27, CHARACTER
+28, 29, lemure devil {2a5}
+30, 31, gas spore {1a2}
+32, 38, gnoll {4a10}
+39, 46, piercer {1a4}
+47, 58, giant rat {6a24}
+59, 60, rot grub {1a4}
+61, 72, shrieker {1a3}
+73, 77, stirge {5a15}
+78, 87, giant toad {1a4}
+88, 100, troglodyte {2a8}

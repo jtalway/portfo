@@ -28,7 +28,7 @@
 28, 28, unseen servant
 29, 29, ventriloquism
 30, 30, write
-31, 31, confuse languages (reverse comprehend languages)
-32, 32, reduce (reverse enlarge)
-33, 33, protection from good (reverse protection from evil)
-34, 34, unreadable magic (reverse read magic)
+31, 31, confuse languages (r. comprehend languages)
+32, 32, reduce (r. enlarge)
+33, 33, protection from good (r. protection from evil)
+34, 34, unreadable magic (r. read magic)

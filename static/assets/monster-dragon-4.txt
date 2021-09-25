@@ -1,0 +1,20 @@
+1, 5, young black dragon {1a1}
+6, 9, sub-adult black dragon {1a1}
+10, 14, very young blue dragon {1a1}
+15, 20, young blue dragon {1a1}
+21, 25, young brass dragon {1a1}
+26, 30, sub-adult brass dragon {1a1}
+31, 34, very young bronze dragon {1a1}
+35, 37, young bronze dragon {1a1}
+38, 44, very young copper dragon {1a1}
+45, 50, young copper dragon {1a1}
+51, 52, very young gold dragon {1a1}
+53, 54, young gold dragon {1a1}
+55, 62, very young green dragon {1a1}
+63, 70, young green dragon {1a1}
+71, 75, very young red dragon {1a1}
+76, 80, young red dragon {1a1}
+81, 84, very young silver dragon {1a1}
+85, 88, young silver dragon {1a1}
+89, 94, young white dragon {1a1}
+95, 100, sub-adult white dragon {1a1}

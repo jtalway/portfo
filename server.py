@@ -6,6 +6,7 @@ from abilityscore import *
 from dice_roller import *
 from treasure_table import *
 from treasure import *
+from dungeon import *
 import random
 import re
 from collections import Counter
@@ -13,13 +14,34 @@ from jinja2 import TemplateNotFound
 
 app = Flask(__name__)
 
-
 @app.route('/')
 @app.route('/home')
 @app.route('/index')
 @app.route('/index.html')
 def my_home():
 	return render_template('index.html')
+
+@app.route('/die')
+@app.route('/dice')
+@app.route('/roller')
+def roller():
+    return render_template('dice.html')
+
+@app.route('/character')
+def character():
+    return render_template('generator-character.html')
+
+@app.route('/combat')
+def combat():
+    return render_template('generator-combat.html')
+
+@app.route('/adventure')
+def adventure():
+    return render_template('generator-adventure.html')
+
+@app.route('/reward')
+def reward():
+    return render_template('generator-reward.html')
 
 @app.route('/critical')
 @app.route('/criticals')
@@ -44,11 +66,9 @@ def magic_item():
 def dungeon_dressing():
     return render_template('dungeon-dressing.html')
 
-@app.route('/die')
-@app.route('/dice')
-@app.route('/roller')
-def roller():
-    return render_template('dice.html')
+@app.route('/dungeon_level')
+def dungeon_level():
+    return render_template('dungeon-level.html')
 
 def write_to_file(data):
     with open('database.txt', mode='a') as database:
@@ -203,10 +223,18 @@ def generate_magic_item():
         return 'something went wrong, try again!'
 
 
+# DUNGEON ENCOUNTER
+@app.route('/generate_dungeon_encounter', methods=['POST', 'GET'])
+def generate_dungeon_encounter():
+    if request.method == 'POST':
+        level = request.form['dungeon_level']
+        q = request.form['quantity']
+        monster_list, dl_num = dungeon_generator_monster_by_level(level, q)
+        return render_template('dungeon-encounter.html', monster_list = monster_list, dl_num = dl_num)
+    else:
+        return 'something went wrong, try again!'
 
-
-
-
+# DUNGEON DRESSING
 @app.route('/generate_dungeon_dressing', methods=['POST', 'GET'])
 def generate_dungeon_dressing():
     if request.method == 'POST':
@@ -252,6 +280,7 @@ def generate_dungeon_dressing():
             feel = feel, see = see, smell = smell, hear = hear, general = general, formatted_furnishings = formatted_furnishings, utensil_personal_item = utensil_personal_item)
     else:
         return 'something went wrong, try again!'
+
 
 @app.errorhandler(404)
 def not_found():

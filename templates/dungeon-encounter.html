@@ -1,0 +1,52 @@
+{% include "header-top.html" %}
+<title>AD&D Dungeon Encounters</title> 
+{% include "header-bottom.html" %}
+  <div class="section-container">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+           <h4>AD&D Dungeon Encounters</h4>
+              <form action="generate_dungeon_encounter" method="post" class="reveal-content">
+              <label for="dungeon_level">Dungeon level: </label>
+              <select name="dungeon_level" id="dungeon_level">
+                <option value="dungeon-1">1st</option>
+                <option value="dungeon-2">2nd</option>
+                <option value="dungeon-3">3rd</option>
+                <option value="dungeon-4">4th</option>
+                <option value="dungeon-5">5th</option>
+                <option value="dungeon-6">6th</option>
+                <option value="dungeon-7">7th</option>
+                <option value="dungeon-8">8th</option>
+                <option value="dungeon-9">9th</option>
+                <option value="dungeon-10">10th</option>
+                <option value="dungeon-11">11th</option>
+                <option value="dungeon-12">12th</option>
+                <option value="dungeon-13">13th</option>
+                <option value="dungeon-14">14th</option>
+                <option value="dungeon-15">15th</option>
+                <option value="dungeon-16">16th and down</option>
+              </select>
+              <label for="quantity">X</label>
+              <input type="number" name="quantity" id="quantity" min='1' max='100' size="6" >
+              <script type="text/javascript">
+              document.getElementById('quantity').value = '1';
+              </script>
+              <button type="submit" class="btn btn-danger btn-lg">Generate Dungeon Encounter</button>
+              </form>
+              {% if monster_list %}
+              <b><u>Encounter Result for Dungeon level {{dl_num}}</u></b> &nbsp; <cite style="font-size: 9px;"> generated <span id="datetime"></span></cite><br>
+              {% endif %}
+               {% if monster_list %}
+              {% for monster in monster_list %}
+                {{ monster }}<br>
+              {% endfor %}
+              {% endif %}         
+              <script>
+                var dt = new Date();
+                document.getElementById("datetime").innerHTML = dt.toLocaleTimeString();
+              </script>
+        </div>
+      </div>
+    </div>
+  </div>
+{% include "footer.html" %}
