@@ -1,0 +1,6 @@
+1, 10, buried and unguarded
+11, 20, hidden in water
+21, 70, guarded in a lair
+71, 80, somewhere in a ruins
+81, 90, in a burial crypt
+91, 100, secreted in a town

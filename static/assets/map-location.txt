@@ -1,0 +1,4 @@
+1, 20, labyrinth of caves found in lair
+21, 60, outdoors 5-8 miles distant
+61, 90, outdoors 10-40 miles distant
+91, 100, outdoors 50-500 miles distant

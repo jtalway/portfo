@@ -294,7 +294,7 @@ def treasure_category(treasure_type):
 		print("[-] Something went wrong")
 	
 
-
+# FIND CATEGORIES OF MAGIC ITEMS TO BE GENERATED
 def find_magic_items(quantity, magic_item_type):
 	q = int(quantity)
 	if magic_item_type == 'any':
@@ -510,16 +510,40 @@ def find_magic_items(quantity, magic_item_type):
 	else:
 		pass
 
-
+# ROLL EACH MAGIC ITEM BASED ON MAGIC ITEM CATEGORY (PASSED FROM find_magic_items)
 def roll_magic_items(mi):
+	map_types = {'map-combined-hoard', 'map-monetary', 'map-magic-treasure', 'map-false'}
 	f_array = openfile(mi)
 	data = array_result(f_array)
+	# if map, generate map and return
+	if mi in map_types:
+		data = generate_treasure_map(mi)
+		return(data)
+	else:
+		pass
 	return(data)
 
-
+# See if map or magic item for specific treasure types
 def map_or_magic():
 	rNum = randint(1, 100)
 	if rNum <= 10:
 		return('map')
 	else:
 		return('magic-items')
+
+# GENERATE TREASURE MAPS
+def generate_treasure_map(map_type):
+	print(map_type)
+	#
+	# regex for finding all variable money results, fill in dataset and place in appropriate spot
+	#
+	#find_variable_results = re.findall(r'/{\((?P<q>.[0-9+]?)d(?P<die>.[0-9]?)\)\*(?P<mult>.[0-9]+?)}', dataset)
+	array1 = openfile('map-location')
+	data1 = array_result(array1).replace("\n", "")
+	array2 = openfile('map-location2')
+	data2 = array_result(array2).replace("\n", "")
+	d_array = openfile('direction')
+	direction = array_result(d_array).replace("\n", "")
+	data = "treasure map ph"
+	#data = "treasure map (" + data + ", located: " + data1 + " in " + direction + " direction, " + data2 + ")"
+	return(data)

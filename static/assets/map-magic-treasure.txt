@@ -1,7 +1,7 @@
-1, 5, treasure map (any 1 magic item  4 potions)
-6, 8, treasure map (any 2 magic items)
-9, 12, treasure map (1 sword 1 armor or shield 1 weapon)
-13, 14, treasure map (any 3 magic items (no sword or potion))
-15, 18, treasure map (any 6 potions 6 scrolls)
-19, 19, treasure map (any 2 magic items 1 ring 1 rod)
-20, 20, treasure map (any 3 magic items 1 rod 1 miscellaneous)
+1, 5, any 1 magic item 4 potions
+6, 8, any 2 magic items
+9, 12, 1 sword 1 armor or shield 1 weapon
+13, 14, any 3 magic items (no sword or potion)
+15, 18, any 6 potions 6 scrolls
+19, 19, any 2 magic items 1 ring 1 rod
+20, 20, any 3 magic items 1 rod 1 miscellaneous

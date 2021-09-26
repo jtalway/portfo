@@ -62,6 +62,15 @@ def treasure():
 def magic_item():
     return render_template('magic-item.html')
 
+@app.route('/gem')
+@app.route('/gems')
+def gem():
+    return render_template('gem.html')
+
+@app.route('/jewelry')
+def jewelry():
+    return render_template('jewelry.html')
+
 @app.route('/dungeon_dressing')
 def dungeon_dressing():
     return render_template('dungeon-dressing.html')
@@ -219,6 +228,28 @@ def generate_magic_item():
         treasure_hoard = magic_items
 
         return render_template('magic-item.html', treasure_hoard = treasure_hoard)
+    else:
+        return 'something went wrong, try again!'
+
+# GEMS
+@app.route('/generate_gem', methods=['POST', 'GET'])
+def generate_gem():
+    if request.method == 'POST':
+        gem_quantity = request.form['quantity']
+        gem_list = determine_gems(gem_quantity)
+        treasure_hoard = gem_list
+        return render_template('gem.html', treasure_hoard = treasure_hoard)
+    else:
+        return 'something went wrong, try again!'
+
+# JEWELRY
+@app.route('/generate_jewelry', methods=['POST', 'GET'])
+def generate_jewelry():
+    if request.method == 'POST':
+        jewelry_quantity = request.form['quantity']
+        jewelry_list = determine_jewelry(jewelry_quantity)
+        treasure_hoard = jewelry_list
+        return render_template('jewelry.html', treasure_hoard = treasure_hoard)
     else:
         return 'something went wrong, try again!'
 

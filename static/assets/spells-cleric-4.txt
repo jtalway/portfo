@@ -14,4 +14,4 @@
 14, 14, poison (r. neutralize poison)
 15, 15, protection from good 10'r (r. protection from evil 10'r)
 16, 16, snakes to sticks (r. sticks to snakes)
-17, 17, babble (r. of tongues)
+17, 17, babble (r. tongues)

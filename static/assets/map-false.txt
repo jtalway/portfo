@@ -1,1 +1,1 @@
-1, 1, treasure map (false)
+1, 1, false map

@@ -12,14 +12,32 @@ def dungeon_generator_monster_by_level(dungeon_level, q):
     i = 0
     monster_level = []
     monster_list = []
+    # sets for monsters that can't be below a certain dungeon level
+    badger = {'dungeon-1', 'dungeon-2'}
+    giant_badger = {'dungeon-1', 'dungeon-2', 'dungeon-3'}
+    halfling = {'dungeon-1', 'dungeon-2', 'dungeon-3', 'dungeon-4'}
     while i < q:
         # get monster level based on dungeon level user input
         monster_file = get_monster_level(dungeon_level)
+        #print(f'dl = {dungeon_level}; ml = {monster_file}')
         monster_level.append(monster_file)
         i += 1
     for level in monster_level:
         # get monster type
         monster = get_monster_by_level(level)
+        #print(f'monster = {monster}, dl = {dungeon_level}')
+        # check for badger, halfling, giant badger
+        if monster == "badger {1a4}" and dungeon_level not in badger:
+            #print("BADGER DETECTED ON LEVELS LOWER THAN 2!")
+            monster = "hobgoblin {2a8}"
+        elif monster == "giant badger {1a4}" and dungeon_level not in giant_badger:
+            #print("GIANT BADGER DETECTED ON LEVELS LOWER THAN 3!")
+            monster = "gnoll {4a10}"
+        elif monster == "halfling {9a16}" and dungeon_level not in halfling:
+            #print("HALFLING DETECTED ON LEVELS LOWER THAN 4!")
+            monster = "giant rat {5a20}"
+        else:
+            pass
         #print("[+] ---------------------------------------------------------------------")
         # check for special encounters (human, character, dragon, demon prince, arch-devil)
         monster = special_encounter(monster)

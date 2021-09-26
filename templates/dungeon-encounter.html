@@ -34,7 +34,8 @@
               <button type="submit" class="btn btn-danger btn-lg">Generate Dungeon Encounter</button>
               </form>
               {% if monster_list %}
-              <b><u>Encounter Result for Dungeon level {{dl_num}}</u></b> &nbsp; <cite style="font-size: 9px;"> generated <span id="datetime"></span></cite><br>
+              <b><u>Dungeon {{dl_num}} Encounter</u></b> &nbsp; <cite style="font-size: 9px;">
+              generated <span id="datetime"></span></cite><br>
               {% endif %}
                {% if monster_list %}
               {% for monster in monster_list %}
