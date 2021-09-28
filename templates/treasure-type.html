@@ -62,6 +62,7 @@
               {% endif %}
               {% if gem_hoard %}
               <b>Gems</b>
+              {{ gem_count }} gems ({{ gem_value }} gp total value) <br>
               {% for gem in gem_hoard %}
                 {{ gem  }} 
               {% endfor %}
@@ -69,6 +70,7 @@
               {% endif %}
               {% if jewelry_hoard %}
               <b>Jewelry</b>
+              {{ jewelry_count }} pieces ({{ jewelry_value }} gp total value) <br>
               {% for jewelry in jewelry_hoard %}
                 {{ jewelry }} 
               {% endfor %}

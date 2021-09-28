@@ -15,9 +15,12 @@
               <button type="submit" class="btn btn-danger btn-lg">Generate Gems</button>
               </form>
               {% if treasure_hoard %}
-              <b><u>Treasure Result</u></b> &nbsp; <cite style="font-size: 9px;"> generated <span id="datetime"></span></cite><br>
+              <b><u>Gem Result</u></b> &nbsp; <cite style="font-size: 9px;"> generated <span id="datetime"></span></cite><br>
               {% endif %}
-               {% if treasure_hoard %}
+              {% if treasure_hoard|length > 1 %}
+              {{ gem_count }} gems ({{ gem_value }} gp total value) <br>
+              {% endif %}
+              {% if treasure_hoard %}
               {% for treasure_element in treasure_hoard %}
                 {{ treasure_element }}<br>
               {% endfor %}

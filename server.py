@@ -39,9 +39,9 @@ def combat():
 def adventure():
     return render_template('generator-adventure.html')
 
-@app.route('/reward')
-def reward():
-    return render_template('generator-reward.html')
+@app.route('/treasure')
+def treasure():
+    return render_template('generator-treasure.html')
 
 @app.route('/critical')
 @app.route('/criticals')
@@ -54,9 +54,9 @@ def critical():
 def fumble():
     return render_template('fumble.html')
 
-@app.route('/treasure')
-def treasure():
-    return render_template('treasure.html')
+@app.route('/treasure-type')
+def treasure_type():
+    return render_template('treasure-type.html')
 
 @app.route('/magic-item')
 def magic_item():
@@ -196,10 +196,10 @@ def generate_treasure():
         platinums = str(platinum_result[0]) + ' pp'
         # GEMS
         gem_result = calculate_chance(treasure_dict['Gems'], treasure_quantity)
-        gems = determine_gems(str(gem_result[0]))
+        gems, gem_value, gem_count = determine_gems(str(gem_result[0]))
         # JEWELRY
         jewelry_result = calculate_chance(treasure_dict['Jewelry'], treasure_quantity)
-        jewelry = determine_jewelry(str(jewelry_result[0]))
+        jewelry, jewelry_value, jewelry_count = determine_jewelry(str(jewelry_result[0]))
         # MAGIC ITEMS
         magic_item_result, magic_item_type = calculate_chance(treasure_dict['Magic Items or maps'], treasure_quantity)
         magic_items = determine_magic_items(magic_item_result[0], magic_item_type)
@@ -212,7 +212,7 @@ def generate_treasure():
         # print(f' CP: {copper_result}, SP: {silver_result}, EP: {electrum_result}, GP: {gold_result}, PP: {platinum_result}')
         # print(f' Gems: {gem_result}, Jewelry: {jewelry_result}, Magic Items: {magic_item_result} lots')
         # print('[-] ...... END TREASURE HOARD ......')
-        return render_template('treasure.html', treasure_hoard = treasure_hoard, coin_hoard = coin_hoard, gem_hoard = gem_hoard, jewelry_hoard = jewelry_hoard)
+        return render_template('treasure-type.html', treasure_hoard = treasure_hoard, coin_hoard = coin_hoard, gem_hoard = gem_hoard, jewelry_hoard = jewelry_hoard, jewelry_value = jewelry_value, jewelry_count = jewelry_count, gem_value = gem_value, gem_count = gem_count)
     else:
         return 'something went wrong, try again!'
 
@@ -236,9 +236,9 @@ def generate_magic_item():
 def generate_gem():
     if request.method == 'POST':
         gem_quantity = request.form['quantity']
-        gem_list = determine_gems(gem_quantity)
+        gem_list, gem_value, gem_count = determine_gems(gem_quantity)
         treasure_hoard = gem_list
-        return render_template('gem.html', treasure_hoard = treasure_hoard)
+        return render_template('gem.html', treasure_hoard = treasure_hoard, gem_value = gem_value, gem_count = gem_count)
     else:
         return 'something went wrong, try again!'
 
@@ -247,9 +247,9 @@ def generate_gem():
 def generate_jewelry():
     if request.method == 'POST':
         jewelry_quantity = request.form['quantity']
-        jewelry_list = determine_jewelry(jewelry_quantity)
+        jewelry_list, jewelry_value, jewelry_count = determine_jewelry(jewelry_quantity)
         treasure_hoard = jewelry_list
-        return render_template('jewelry.html', treasure_hoard = treasure_hoard)
+        return render_template('jewelry.html', treasure_hoard = treasure_hoard, jewelry_value = jewelry_value, jewelry_count = jewelry_count)
     else:
         return 'something went wrong, try again!'
 

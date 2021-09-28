@@ -59,10 +59,15 @@ def determine_gems(gem_quantity):
 		# find gem type
 		gem_type = array_result(gem_type_array)
 		# combine gem type and base value
-		gem = gem_type.replace('\n', '') + ' ' + base_value.replace('\n', '') + 'gp'
+		gem = gem_type.replace('\n', '') + ' ' + base_value.replace('\n', '') + ' gp'
 		# add gem to the collection
 		gem_collection.append(gem)
 		x+=1
+	# FIND TOTAL GP VALUE
+	# list comprehension 
+	gem_total_gp_value = sum([int(word) for item in gem_collection for word in item.split() if word.isnumeric()])
+	# GET TOTAL COUNT
+	gem_total_count = len(gem_collection)
 	# get duplicates
 	gem_hoard = Counter(gem_collection)
 	# sort by highest quantity
@@ -78,7 +83,7 @@ def determine_gems(gem_quantity):
 		final_gem_hoard.append(gem_result)
 		# add comma to each entry except the last
 		formatted_gem_hoard = [x + ', ' if x != final_gem_hoard[-1] else x for x in final_gem_hoard]
-	return(formatted_gem_hoard)
+	return formatted_gem_hoard, gem_total_gp_value, gem_total_count
 
 def determine_jewelry(jewelry_quantity):
 	x = 0
@@ -101,6 +106,17 @@ def determine_jewelry(jewelry_quantity):
 		# add jewelry to the collection
 		jewelry_collection.append(final_jewelry_item)
 		x+=1
+	# FIND TOTAL GP VALUE
+	# code below does same as the following list comprehension used instead
+	# numlist = list()
+	# for item in jewelry_collection:
+	# 	for word in item.split():
+	# 		if word.isnumeric():
+	# 			numlist.append(int(word))
+	# list comprehension 
+	jewelry_total_gp_value = sum([int(word) for item in jewelry_collection for word in item.split() if word.isnumeric()])
+	# GET TOTAL COUNT
+	jewelry_total_count = len(jewelry_collection)
 	# get duplicates
 	jewelry_hoard = Counter(jewelry_collection)
 	# sort by highest quantity
@@ -116,7 +132,7 @@ def determine_jewelry(jewelry_quantity):
 		final_jewelry_hoard.append(jewelry_result)
 		# add comma to each entry except the last
 		formatted_jewelry_hoard = [x + ', ' if x != final_jewelry_hoard[-1] else x for x in final_jewelry_hoard]
-	return(formatted_jewelry_hoard)
+	return formatted_jewelry_hoard, jewelry_total_gp_value, jewelry_total_count
 
 def determine_magic_items(quantity, magic_item_type):
 	formatted_magic_items = []

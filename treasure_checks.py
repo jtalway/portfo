@@ -4,7 +4,6 @@ from openfile import *
 from array_result import *
 
 # ring of spell storing
-# ARTIFACT or RELIC
 # bag of beans
 # bag of tricks
 # beaker of plentiful potions
