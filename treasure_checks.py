@@ -303,13 +303,18 @@ def check_if_scroll(magic_item):
 
 def check_if_rod(magic_item):
 	is_rod = re.findall(r'^\brod\b of \w+', magic_item)
-	if is_rod:
-		rNum = randint(0, 9)
-		charges = str(50 - rNum)
-		complete_rod = magic_item + " (" + charges + " charges)"
-		return(complete_rod)
-	else:
+	print(magic_item)
+	# check for rod not possessing charges
+	if magic_item == 'rod of cancellation':
 		return(magic_item)
+	else:
+		if is_rod:
+			rNum = randint(0, 9)
+			charges = str(50 - rNum)
+			complete_rod = magic_item + " (" + charges + " charges)"
+			return(complete_rod)
+		else:
+			return(magic_item)
 
 def check_if_staff(magic_item):
 	is_staff = re.findall(r'^\bstaff\b of \w+', magic_item)
@@ -336,6 +341,9 @@ def check_if_sword(magic_item):
 	if is_sword:
 		array = openfile('sword-type')
 		sword_type = array_result(array).replace('\n', '')
+		#
+		# CHECK FOR SPECIAL SWORD, I.E. INTELLIGENCE
+		#
 		complete_sword = sword_type + " " + magic_item
 		return(complete_sword)
 	else:
