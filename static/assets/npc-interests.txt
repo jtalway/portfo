@@ -1,0 +1,31 @@
+1, 3, religion
+4, 6, legends
+7, 9, history
+10, 12, nature
+13, 15, horticulture
+16, 18, husbandry
+19, 21, exotic animals
+22, 24, hunting
+25, 27, fishing
+28, 30, handicrafts
+31, 33, athletics
+34, 36, politics
+37, 39, wines and spirits
+40, 42, foods and preparation
+43, 45, gambling
+46, 48, drugs
+49, 49, collector (knives and daggers)
+50, 50, collector (swords)
+51, 51, collector (weapons)
+52, 52, collector (shields and weapons)
+53, 53, collector (armor)
+54, 54, collector (books and scrolls)
+55, 55, collector (minerals and gems)
+56, 56, collector (ornaments and jewelry)
+57, 57, collector (coins and tokens)
+58, 58, collector (trophies and skins)
+59, 59, collector (porcelain and crystal)
+60, 60, collector (artwork)
+61, 63, community service
+64, 66, altruism
+67, 72, none

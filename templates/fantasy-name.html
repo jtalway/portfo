@@ -1,0 +1,33 @@
+{% include "header-top.html" %}
+<title>Fantasy Names</title> 
+{% include "header-bottom.html" %}
+  <div class="section-container">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+           <h4>Fantasy Name Generator</h4>
+              <form action="generate_name" method="post" class="reveal-content">
+              <label for="quantity">Quantity</label>
+              <input type="number" name="quantity" id="quantity" min='1' max='100' size="6" >
+              <script type="text/javascript">
+              document.getElementById('quantity').value = '1';
+              </script>
+              <button type="submit" class="btn btn-danger btn-lg">Generate Fantasy Names</button>
+              </form>
+              {% if fantasy_names %}
+              <b><u>Fantasy Name Result</u></b> &nbsp; <cite style="font-size: 9px;"> generated <span id="datetime"></span></cite><br>
+              {% endif %}
+              {% if fantasy_names %}
+              {% for name in fantasy_names %}
+                {{ name }}<br>
+              {% endfor %}
+              {% endif %}         
+              <script>
+                var dt = new Date();
+                document.getElementById("datetime").innerHTML = dt.toLocaleTimeString();
+              </script>
+        </div>
+      </div>
+    </div>
+  </div>
+{% include "footer.html" %}

@@ -1,0 +1,6 @@
+1, 1, young
+2, 3, youthful
+4, 7, mature
+8, 8, middle-aged
+9, 9, old
+10, 10, ancient

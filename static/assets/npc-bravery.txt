@@ -1,0 +1,6 @@
+1, 3, normal
+4, 4, foolhardy
+5, 5, brave
+6, 6, fearless
+7, 7, cowardly
+8, 8, craven

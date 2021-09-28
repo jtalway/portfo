@@ -6,45 +6,11 @@ from array_result import *
 from collections import Counter
 from treasure_table import *
 from treasure_checks import *
+from calculations import *
 
 # FUNCTIONS
 
-def calculate_chance(treasure_var, treasure_quantity):
-    q = treasure_var[0]
-    die = treasure_var[1]
-    mult = treasure_var[2]
-    chance = treasure_var[3]
-    magic_item_type = treasure_var[4]
-    x = 0
-    grand_total = 0
-    category_result = []
-    while x < int(treasure_quantity):
-        rNum = randint(1, 100)
-        if rNum <= chance:
-            count = 0
-            i = 0
-            # sum dice rolls
-            while i < q:
-                dice = randint(1, die)
-                count = count + dice
-                i+=1
-            # treasure multiplier
-            total = mult * count
-            # running total
-            grand_total = grand_total + total
-            x+=1
-        else:
-            x+=1
-            continue
-    category_result.append(grand_total)
-    # returns
-    if magic_item_type == 'na':
-    	# non-magical treasure
-    	return(category_result)
-    else:
-    	# magic item generation info
-    	return(category_result, magic_item_type)
-
+# GEMS
 def determine_gems(gem_quantity):
 	x = 0
 	gem_collection = []
@@ -85,6 +51,7 @@ def determine_gems(gem_quantity):
 		formatted_gem_hoard = [x + ', ' if x != final_gem_hoard[-1] else x for x in final_gem_hoard]
 	return formatted_gem_hoard, gem_total_gp_value, gem_total_count
 
+# JEWELRY
 def determine_jewelry(jewelry_quantity):
 	x = 0
 	jewelry_collection = []
@@ -134,6 +101,7 @@ def determine_jewelry(jewelry_quantity):
 		formatted_jewelry_hoard = [x + ', ' if x != final_jewelry_hoard[-1] else x for x in final_jewelry_hoard]
 	return formatted_jewelry_hoard, jewelry_total_gp_value, jewelry_total_count
 
+# MAGIC ITEMS
 def determine_magic_items(quantity, magic_item_type):
 	formatted_magic_items = []
 	magic_items_rolled_list = []
@@ -170,29 +138,7 @@ def determine_magic_items(quantity, magic_item_type):
 		formatted_magic_items = [x + ', ' if x != final_magic_item_hoard[-1] else x for x in final_magic_item_hoard]
 	return(formatted_magic_items)
 
-
-def calculate_value(data):
-	# look for match like 2d6m10
-	die_roll = re.findall(r'{(?P<q>.*?)d(?P<die>.*?)m(?P<mult>.*?)}', data)
-	if die_roll:
-		n = 0
-		dice_sum = 0
-		q = die_roll[0][0]
-		die = die_roll[0][1]
-		mult = die_roll[0][2]
-		# LOOP thru quantity of dice
-		while n < int(q):
-			rNum = randint(1,int(die))
-			dice_sum = dice_sum + rNum 
-			n += 1
-		# multiply dice result with multiplier value
-		calc_die_roll = dice_sum * int(mult)
-		# replace dice equation with calcuated value
-		calculated = re.sub(r'{(?P<q>.*?)d(?P<die>.*?)m(?P<mult>.*?)}', str(calc_die_roll), data)
-		return(calculated)
-	else:
-		return(data)
-
+# JEWELRY MATERIAL
 def check_material(data):
 	# find material tag
     if re.findall(r'<material1>', data):
@@ -213,6 +159,7 @@ def check_material(data):
     else:
         return(data)
 
+# JEWELRY ITEM
 def find_jewelry_type(data):
 	# find jewelry tag
     if re.findall(r'<jewelry>', data):

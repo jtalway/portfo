@@ -1,0 +1,6 @@
+1, 1, soft-hearted
+2, 2, forgiving
+3, 3, hard-hearted
+4, 4, unforgiving
+5, 5, jealous
+6, 6, vengeful

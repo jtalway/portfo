@@ -7,6 +7,8 @@ from dice_roller import *
 from treasure_table import *
 from treasure import *
 from dungeon import *
+from npc import *
+from calculations import *
 import random
 import re
 from collections import Counter
@@ -30,6 +32,14 @@ def roller():
 @app.route('/character')
 def character():
     return render_template('generator-character.html')
+
+@app.route('/npc-facts')
+def npc_facts():
+    return render_template('npc-facts.html')
+
+@app.route('/fantasy-name')
+def fantasy_name():
+    return render_template('fantasy-name.html')
 
 @app.route('/combat')
 def combat():
@@ -160,6 +170,63 @@ def generate_abilityscore():
     else:
         return 'something went wrong, try again!'
 
+# NPC FACTS
+@app.route('/generate_npc_facts', methods=['POST', 'GET'])
+def generate_npc_facts():
+    if request.method == 'POST':
+        npc = npc_fact_generation()
+        alignment = npc[0]
+        age = npc[2]
+        possessions = npc[1]
+        appearance = npc[3]
+        sanity = npc[4]
+        tendencies = npc[5]
+        personality = npc[6]
+        disposition = npc[7]
+        intellect = npc[8]
+        nature = npc[9]
+        materialism = npc[10]
+        honesty = npc[11]
+        bravery = npc[12]
+        morals = npc[13]
+        piety = npc[14]
+        energy = npc[15]
+        thrift = npc[16]
+        interests = npc[17]
+
+        return render_template('npc-facts.html', 
+            alignment = alignment,
+            age = age, 
+            possessions = possessions,
+            appearance = appearance,
+            sanity = sanity,
+            tendencies = tendencies,
+            personality = personality,
+            disposition = disposition,
+            intellect = intellect,
+            nature = nature,
+            materialism = materialism,
+            honesty = honesty,
+            bravery = bravery,
+            morals = morals,
+            piety = piety,
+            energy = energy,
+            thrift = thrift,
+            interests = interests)
+    else:
+        return 'something went wrong, try again!'
+
+# FANTASY NAME
+@app.route('/generate_name', methods=['POST', 'GET'])
+def generate_name():
+    if request.method == 'POST':
+        name_quantity = request.form['quantity']
+        fantasy_names = determine_fantasy_name(name_quantity)
+        return render_template('fantasy-name.html', 
+            fantasy_names = fantasy_names)
+    else:
+        return 'something went wrong, try again!'
+
 # DICE ROLLER
 @app.route('/roll_dice', methods=['POST', 'GET'])
 def roll_dice():
@@ -212,7 +279,15 @@ def generate_treasure():
         # print(f' CP: {copper_result}, SP: {silver_result}, EP: {electrum_result}, GP: {gold_result}, PP: {platinum_result}')
         # print(f' Gems: {gem_result}, Jewelry: {jewelry_result}, Magic Items: {magic_item_result} lots')
         # print('[-] ...... END TREASURE HOARD ......')
-        return render_template('treasure-type.html', treasure_hoard = treasure_hoard, coin_hoard = coin_hoard, gem_hoard = gem_hoard, jewelry_hoard = jewelry_hoard, jewelry_value = jewelry_value, jewelry_count = jewelry_count, gem_value = gem_value, gem_count = gem_count)
+        return render_template('treasure-type.html', 
+            treasure_hoard = treasure_hoard, 
+            coin_hoard = coin_hoard, 
+            gem_hoard = gem_hoard, 
+            jewelry_hoard = jewelry_hoard, 
+            jewelry_value = jewelry_value, 
+            jewelry_count = jewelry_count, 
+            gem_value = gem_value, 
+            gem_count = gem_count)
     else:
         return 'something went wrong, try again!'
 
@@ -238,7 +313,10 @@ def generate_gem():
         gem_quantity = request.form['quantity']
         gem_list, gem_value, gem_count = determine_gems(gem_quantity)
         treasure_hoard = gem_list
-        return render_template('gem.html', treasure_hoard = treasure_hoard, gem_value = gem_value, gem_count = gem_count)
+        return render_template('gem.html', 
+            treasure_hoard = treasure_hoard, 
+            gem_value = gem_value, 
+            gem_count = gem_count)
     else:
         return 'something went wrong, try again!'
 
@@ -249,7 +327,10 @@ def generate_jewelry():
         jewelry_quantity = request.form['quantity']
         jewelry_list, jewelry_value, jewelry_count = determine_jewelry(jewelry_quantity)
         treasure_hoard = jewelry_list
-        return render_template('jewelry.html', treasure_hoard = treasure_hoard, jewelry_value = jewelry_value, jewelry_count = jewelry_count)
+        return render_template('jewelry.html', 
+            treasure_hoard = treasure_hoard, 
+            jewelry_value = jewelry_value, 
+            jewelry_count = jewelry_count)
     else:
         return 'something went wrong, try again!'
 
@@ -261,7 +342,9 @@ def generate_dungeon_encounter():
         level = request.form['dungeon_level']
         q = request.form['quantity']
         monster_list, dl_num = dungeon_generator_monster_by_level(level, q)
-        return render_template('dungeon-encounter.html', monster_list = monster_list, dl_num = dl_num)
+        return render_template('dungeon-encounter.html', 
+            monster_list = monster_list, 
+            dl_num = dl_num)
     else:
         return 'something went wrong, try again!'
 
@@ -308,7 +391,13 @@ def generate_dungeon_dressing():
         formatted_furnishings = [x + ', ' if x != final_furnishings[-1] else x for x in final_furnishings]
         
         return render_template('dungeon-dressing.html', 
-            feel = feel, see = see, smell = smell, hear = hear, general = general, formatted_furnishings = formatted_furnishings, utensil_personal_item = utensil_personal_item)
+            feel = feel, 
+            see = see, 
+            smell = smell, 
+            hear = hear, 
+            general = general, 
+            formatted_furnishings = formatted_furnishings, 
+            utensil_personal_item = utensil_personal_item)
     else:
         return 'something went wrong, try again!'
 

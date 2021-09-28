@@ -1,0 +1,9 @@
+1, 1, lawful good
+2, 2, lawful neutral
+3, 3, lawful evil
+4, 4, neutral evil
+5, 5, chaotic evil
+6, 6, chaotic neutral
+7, 7, chaotic good
+8, 8, neutral good
+9, 10, neutral

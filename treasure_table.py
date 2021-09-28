@@ -252,7 +252,7 @@ def treasure_category(treasure_type):
 			'Silver': [1, 1, 1, 0, 'na'],
 			'Electrum': [1, 1, 1, 0, 'na'],
 			'Gold': [5, 6, 1000, 60, 'na'], 
-			'Platinum': [1, 8, 1, 15, 'na'], 
+			'Platinum': [1, 8, 100, 15, 'na'], 
 			'Gems': [10, 8, 1, 60, 'na'],  
 			'Jewelry': [5, 8, 1, 50, 'na'], 
 			'Magic Items or maps': [1, 1, 1, 55, 'map']}
@@ -533,7 +533,6 @@ def map_or_magic():
 
 # GENERATE TREASURE MAPS
 def generate_treasure_map(map_type):
-	print(map_type)
 	#
 	# regex for finding all variable money results, fill in dataset and place in appropriate spot
 	#
@@ -544,6 +543,6 @@ def generate_treasure_map(map_type):
 	data2 = array_result(array2).replace("\n", "")
 	d_array = openfile('direction')
 	direction = array_result(d_array).replace("\n", "")
-	data = "treasure map ph"
-	#data = "treasure map (" + data + ", located: " + data1 + " in " + direction + " direction, " + data2 + ")"
+	data = map_type
+	data = "treasure map (" + data + ", located: " + data1 + " in " + direction + " direction, " + data2 + ")"
 	return(data)

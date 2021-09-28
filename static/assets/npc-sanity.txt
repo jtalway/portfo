@@ -1,0 +1,6 @@
+1, 12, very stable
+13, 74, normal
+75, 86, neurotic
+87, 98, unstable
+99, 99, insane
+100, 100, maniacal

@@ -1,0 +1,6 @@
+1, 1, scrupulous
+2, 2, very honorable
+3, 3, truthful
+4, 6, average
+7, 7, liar
+8, 8, deceitful

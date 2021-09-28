@@ -1,0 +1,10 @@
+1, 1, dirty
+2, 2, clean
+3, 3, unkempt
+4, 4, immaculate
+5, 5, rough
+6, 6, ragged
+7, 7, dandyish
+8, 8, foppish
+9, 9, non-descript
+10, 10, imposing

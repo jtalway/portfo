@@ -1,0 +1,9 @@
+1, 1, saintly
+2, 2, martyr/zealot
+3, 3, pious
+4, 4, reverent
+5, 8, average
+9, 9, impious
+10, 10, irreverent
+11, 11, iconoclastic
+12, 12, irreligious

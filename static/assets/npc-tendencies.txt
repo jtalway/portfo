@@ -1,0 +1,24 @@
+1, 1, optimist
+2, 2, pessimist
+3, 3, hedonist
+4, 4, altruist
+5, 5, helpful/kindly
+6, 6, careless
+7, 7, capricious/mischievous
+8, 8, sober
+9, 9, curious/inquisitive
+10, 10, moody
+11, 11, trusting
+12, 12, suspicous/cautious
+13, 13, precise/exacting
+14, 14, perceptive
+15, 15, opinionated/contraty
+16, 16, violent/warlike
+17, 17, studious
+18, 18, foul/barbaric
+19, 19, cruel/callous
+20, 20, practical joker/prankster
+21, 21, servile/obsequious
+22, 22, fanatical/obsessive
+23, 23, malevolent
+24, 24, loquacious

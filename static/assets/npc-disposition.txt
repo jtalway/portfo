@@ -1,0 +1,13 @@
+1, 2, cheerful
+3, 4, morose
+5, 5, compassionate
+6, 6, sensitive
+7, 7, unfeeling
+8, 8, insensitive
+9, 10, humble
+11, 11, proud
+12, 12, haughty
+13, 14, even tempered
+15, 16, hot tempered
+17, 18, easy going
+19, 20, harsh

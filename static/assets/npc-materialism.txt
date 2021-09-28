@@ -1,0 +1,6 @@
+1, 1, aesthetic
+2, 2, intellectualist
+3, 3, average
+4, 4, covetous
+5, 5, greedy
+6, 6, avaricious

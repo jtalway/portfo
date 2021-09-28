@@ -1,0 +1,6 @@
+1, 1, miserly
+2, 2, mean
+3, 3, thrifty
+4, 5, average
+6, 7, spendthrift
+8, 8, wastrel

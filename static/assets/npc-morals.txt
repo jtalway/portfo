@@ -1,0 +1,10 @@
+1, 12, ascetic
+13, 24, virtuous
+25, 48, normal
+49, 72, lusty
+73, 84, lustful
+85, 96, immoral
+97, 108, amoral
+109, 109, perverted
+110, 110, sadistic
+111, 111, depraved

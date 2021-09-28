@@ -1,0 +1,5 @@
+1, 1, slothful
+2, 2, lazy
+3, 5, normal
+6, 7, energetic
+8, 8, driven

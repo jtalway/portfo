@@ -1,0 +1,24 @@
+1, 5, modest
+6, 10, egoist/arrogant
+11, 15, friendly
+16, 20, aloof
+21, 25, hostile
+26, 30, well-spoken
+31, 35, diplomatic
+36, 40, abrasive
+41, 42, extroverted (forceful)
+43, 44, extroverted (overbearing)
+45, 46, extroverted (friendly)
+47, 48, extroverted (blustering)
+49, 50, extroverted (antagonistic)
+51, 52, extroverted (rude)
+53, 54, extroverted (rash)
+55, 56, extroverted (diplomatic)
+57, 57, introverted (retiring)
+58, 58, introverted (taciturn)
+59, 59, introverted (friendly)
+60, 60, introverted (aloof)
+61, 61, introverted (hostile)
+62, 62, introverted (rude)
+63, 63, introverted (courteous)
+64, 64, introverted (solitary/secretive)

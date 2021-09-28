@@ -1,0 +1,46 @@
+{% include "header-top.html" %}
+<title>NPC Facts</title> 
+{% include "header-bottom.html" %}
+  <div class="section-container">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+              <h4>NPC Facts</h4>
+              <form action="generate_npc_facts" method="post" class="reveal-content">
+              <button type="submit" class="btn btn-danger btn-lg">Generate NPC Facts</button>
+              </form>
+
+
+              {% if alignment %}
+              <b><u>NPC Facts</u></b> &nbsp; <cite style="font-size: 9px;"> generated <span id="datetime"></span></cite><br>
+              <b>Alignment</b> {{ alignment }} &nbsp; <b>Possessions (or wealth)</b> {{ possessions }}
+              <hr>
+              <i>Appearance</i><br>
+              <b>Age</b> {{ age }}<br>
+              <b>General</b> {{ appearance }}
+              <b>Sanity</b> {{ sanity }}<br>
+              <hr>
+              <table>
+                <tr><td colspan="2"><i>Traits</i></td></tr>
+                <tr><td colspan="2"><b>General Tendencies</b> {{ tendencies }}</td></tr>
+                <tr><td colspan="2"><b>Personality</b> {{ personality }}</td></tr>
+                <tr><td style="padding-right: 10px;"><b>Disposition</b> {{ disposition }} </td><td><b> Intellect</b>  {{ intellect }}</td></tr>
+                <tr><td style="padding-right: 10px;"><b>Nature</b>  {{ nature }}</td><td><b>Materialism</b>  {{ materialism }}</td></tr>
+                <tr><td style="padding-right: 10px;"><b>Honesty</b>  {{ honesty }}</td><td><b>Bravery</b>  {{ bravery }}</td></tr>
+                <tr><td style="padding-right: 10px;"><b>Morals</b>  {{ morals }}</td><td><b>Piety</b>  {{ piety }}</td></tr>
+                <tr><td style="padding-right: 10px;"><b>Energy</b>  {{ energy }}</td><td><b>Thrift</b>  {{ thrift }}</td></tr>
+                <tr><td colspan="2"><b>Interests</b>  {{ interests }}</td></tr>
+              </table>
+
+              {% endif %}
+
+
+              <script>
+                var dt = new Date();
+                document.getElementById("datetime").innerHTML = dt.toLocaleTimeString();
+              </script>
+        </div>
+      </div>
+    </div>
+  </div>
+{% include "footer.html" %}`

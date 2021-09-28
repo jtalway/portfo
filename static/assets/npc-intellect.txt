@@ -1,0 +1,8 @@
+1, 1, dull
+2, 3, average
+4, 5, active
+6, 6, dreaming
+7, 7, ponderous
+8, 8, anti-intellectual
+9, 9, scheming
+10, 10, brilliant
