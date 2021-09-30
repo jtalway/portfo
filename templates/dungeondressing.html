@@ -6,16 +6,17 @@
       <div class="row">
         <div class="col-xs-12">
               <h4>Dungeon Dressing</h4>
-              <form action="generate_dungeon_dressing" method="post" class="reveal-content">
+              <form action="dungeondressing" method="post" class="reveal-content">
               <button type="submit" class="btn btn-danger btn-lg">Generate Dungeon Dressing</button>
               </form>
               {% if see %}
               <b><u>Dungeon Dressing</u></b> &nbsp; <cite style="font-size: 9px;"> generated <span id="datetime"></span></cite><br>
-              <b>Air</b> {{ see }} &nbsp; <b>Air Currents</b> {{ feel }}<br>
+              <b>Air</b> {{ see }}<br>
+              <b>Air Currents</b> {{ feel }}<br>
               <b>Odors</b> {{ smell }}<br>
-              <b>Unexplained Sounds</b> {{ hear }}
-                            <hr>
               <b>General Feature</b> {{ general }}<br>
+              <b>Unexplained Sounds</b> {{ hear }}
+              <hr>
               <b>Misc Utensil / Personal Item</b> {{ utensil_personal_item }}<br>
               <b>Furnishings</b> 
               {% for item in formatted_furnishings %}

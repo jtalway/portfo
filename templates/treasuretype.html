@@ -6,7 +6,7 @@
       <div class="row">
         <div class="col-xs-12">
            <h4>AD&D Treasure Generator</h4>
-              <form action="generate_treasure" method="post" class="reveal-content">
+              <form action="treasuretype" method="post" class="reveal-content">
               <label for="treasure">Treasure type: </label>
               <select name="treasure" id="treasure">
                 <option value="A">A</option>
@@ -36,7 +36,7 @@
                 <option value="Y">Y &nbsp; (hoard of GP)</option>
                 <option value="Z">Z</option>
               </select>
-              <label for="quantity">X</label>
+              <br><label for="quantity">X</label>
               <input type="number" name="quantity" id="quantity" min='1' max='10' size="6" >
               <script type="text/javascript">
               document.getElementById('quantity').value = '1';

@@ -23,23 +23,10 @@ app = Flask(__name__)
 def my_home():
 	return render_template('index.html')
 
-@app.route('/die')
-@app.route('/dice')
-@app.route('/roller')
-def roller():
-    return render_template('dice.html')
 
 @app.route('/character')
 def character():
     return render_template('generator-character.html')
-
-@app.route('/npc-facts')
-def npc_facts():
-    return render_template('npc-facts.html')
-
-@app.route('/fantasy-name')
-def fantasy_name():
-    return render_template('fantasy-name.html')
 
 @app.route('/combat')
 def combat():
@@ -53,72 +40,82 @@ def adventure():
 def treasure():
     return render_template('generator-treasure.html')
 
-@app.route('/critical')
-@app.route('/criticals')
-@app.route('/criticalhit')
-def critical():
-    return render_template('critical.html')
 
-@app.route('/fumble')
-@app.route('/fumbles')
-def fumble():
-    return render_template('fumble.html')
-
-@app.route('/treasure-type')
-def treasure_type():
-    return render_template('treasure-type.html')
-
-@app.route('/magic-item')
-def magic_item():
-    return render_template('magic-item.html')
-
-@app.route('/gem')
-@app.route('/gems')
-def gem():
-    return render_template('gem.html')
-
-@app.route('/jewelry')
-def jewelry():
-    return render_template('jewelry.html')
-
-@app.route('/dungeon_dressing')
-def dungeon_dressing():
-    return render_template('dungeon-dressing.html')
-
-@app.route('/dungeon_level')
-def dungeon_level():
-    return render_template('dungeon-level.html')
-
-def write_to_file(data):
-    with open('database.txt', mode='a') as database:
-        email = data["email"]
-        subject = data["subject"]
-        message = data["message"]
-        file = database.write(f'\n{email}, {subject}, {message}')
-
-def write_to_csv(data):
-    with open('database.csv', newline='', mode='a') as database2:
-        email = data["email"]
-        subject = data["subject"]
-        message = data["message"]
-        csv_writer = csv.writer(database2, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-        csv_writer.writerow([email, subject, message])
-
-@app.route('/submit_form', methods=['POST', 'GET'])
-def submit_form():
+# DICE ROLLER
+@app.route('/diceroller', methods=['POST', 'GET'])
+def diceroller():
     if request.method == 'POST':
-        try:
-            data = request.form.to_dict()
-            write_to_csv(data)
-            return redirect('thankyou.html')
-        except:
-            return '[-] Did not save to database'
+        quantity = request.form['quantity']
+        dice = request.form['dice']
+        mod = request.form['mod']
+        mod_value = request.form['mod_value']
+        adv = request.form['adv']
+        roll_result = check_for_modifier(quantity, dice, mod, mod_value, adv)
+        return render_template('diceroller.html', total = roll_result[0], quantity = roll_result[1], dice = roll_result[2], mod = mod, mod_value = mod_value)
     else:
-        return 'something went wrong, try again!'
+        return render_template('diceroller.html')
+
+
+# NPC FACTS
+@app.route('/npcfacts', methods=['POST', 'GET'])
+def npcfacts():
+    if request.method == 'POST':
+        npc = npc_fact_generation()
+        alignment = npc[0]
+        age = npc[2]
+        possessions = npc[1]
+        appearance = npc[3]
+        sanity = npc[4]
+        tendencies = npc[5]
+        personality = npc[6]
+        disposition = npc[7]
+        intellect = npc[8]
+        nature = npc[9]
+        materialism = npc[10]
+        honesty = npc[11]
+        bravery = npc[12]
+        morals = npc[13]
+        piety = npc[14]
+        energy = npc[15]
+        thrift = npc[16]
+        interests = npc[17]
+
+        return render_template('npcfacts.html', 
+            alignment = alignment,
+            age = age, 
+            possessions = possessions,
+            appearance = appearance,
+            sanity = sanity,
+            tendencies = tendencies,
+            personality = personality,
+            disposition = disposition,
+            intellect = intellect,
+            nature = nature,
+            materialism = materialism,
+            honesty = honesty,
+            bravery = bravery,
+            morals = morals,
+            piety = piety,
+            energy = energy,
+            thrift = thrift,
+            interests = interests)
+    else:
+        return render_template('npcfacts.html')
+
+# FANTASY NAME
+@app.route('/fantasyname', methods=['POST', 'GET'])
+def fantasyname():
+    if request.method == 'POST':
+        name_quantity = request.form['quantity']
+        fantasy_names = determine_fantasy_name(name_quantity)
+        return render_template('fantasyname.html', 
+            fantasy_names = fantasy_names)
+    else:
+        return render_template('fantasyname.html')
 
 # CRITICALS
-@app.route('/generate_critical', methods=['POST', 'GET'])
-def generate_critical():
+@app.route('/critical', methods=['POST', 'GET'])
+def critical():
     if request.method == 'POST':
         weaponDmg = request.form['weaponDmg']
         selected = request.form.getlist('severity')
@@ -129,11 +126,11 @@ def generate_critical():
         # check for duplicate results and add/multiply numeric values
         return render_template('critical.html', critical_effects = critical_effects)
     else:
-        return 'something went wrong, try again!'
+        return render_template('critical.html')
 
 # FUMBLES
-@app.route('/generate_fumble', methods=['POST', 'GET'])
-def generate_fumble():
+@app.route('/fumble', methods=['POST', 'GET'])
+def fumble():
     if request.method == 'POST':
         proficient = request.form['proficient']
         # if non-proficient there MUST be a result
@@ -158,92 +155,21 @@ def generate_fumble():
         # check for duplicate results and add/multiply numeric values
         return render_template('fumble.html', fumble_effects = fumble_effects)
     else:
-        return 'something went wrong, try again!'
+        return render_template('fumble.html')
 
 # ABILITY SCORES
-@app.route('/generate_abilityscore', methods=['POST', 'GET'])
-def generate_abilityscore():
+@app.route('/abilityscore', methods=['POST', 'GET'])
+def abilityscore():
     if request.method == 'POST':
         method = request.form['abilityscoremethod']
         ability_scores = abilityscore_gen(method)
         return render_template('abilityscore.html', ability_scores = ability_scores)
     else:
-        return 'something went wrong, try again!'
-
-# NPC FACTS
-@app.route('/generate_npc_facts', methods=['POST', 'GET'])
-def generate_npc_facts():
-    if request.method == 'POST':
-        npc = npc_fact_generation()
-        alignment = npc[0]
-        age = npc[2]
-        possessions = npc[1]
-        appearance = npc[3]
-        sanity = npc[4]
-        tendencies = npc[5]
-        personality = npc[6]
-        disposition = npc[7]
-        intellect = npc[8]
-        nature = npc[9]
-        materialism = npc[10]
-        honesty = npc[11]
-        bravery = npc[12]
-        morals = npc[13]
-        piety = npc[14]
-        energy = npc[15]
-        thrift = npc[16]
-        interests = npc[17]
-
-        return render_template('npc-facts.html', 
-            alignment = alignment,
-            age = age, 
-            possessions = possessions,
-            appearance = appearance,
-            sanity = sanity,
-            tendencies = tendencies,
-            personality = personality,
-            disposition = disposition,
-            intellect = intellect,
-            nature = nature,
-            materialism = materialism,
-            honesty = honesty,
-            bravery = bravery,
-            morals = morals,
-            piety = piety,
-            energy = energy,
-            thrift = thrift,
-            interests = interests)
-    else:
-        return 'something went wrong, try again!'
-
-# FANTASY NAME
-@app.route('/generate_name', methods=['POST', 'GET'])
-def generate_name():
-    if request.method == 'POST':
-        name_quantity = request.form['quantity']
-        fantasy_names = determine_fantasy_name(name_quantity)
-        return render_template('fantasy-name.html', 
-            fantasy_names = fantasy_names)
-    else:
-        return 'something went wrong, try again!'
-
-# DICE ROLLER
-@app.route('/roll_dice', methods=['POST', 'GET'])
-def roll_dice():
-    if request.method == 'POST':
-        quantity = request.form['quantity']
-        dice = request.form['dice']
-        mod = request.form['mod']
-        mod_value = request.form['mod_value']
-        adv = request.form['adv']
-        roll_result = check_for_modifier(quantity, dice, mod, mod_value, adv)
-        return render_template('dice.html', total = roll_result[0], quantity = roll_result[1], dice = roll_result[2], mod = mod, mod_value = mod_value)
-    else:
-        return 'something went wrong, try again!'
+        return render_template('abilityscore.html')
 
 # TREASURE
-@app.route('/generate_treasure', methods=['POST', 'GET'])
-def generate_treasure():
+@app.route('/treasuretype', methods=['POST', 'GET'])
+def treasuretype():
     if request.method == 'POST':
         treasure_type = request.form['treasure']
         treasure_quantity = request.form['quantity']
@@ -279,7 +205,7 @@ def generate_treasure():
         # print(f' CP: {copper_result}, SP: {silver_result}, EP: {electrum_result}, GP: {gold_result}, PP: {platinum_result}')
         # print(f' Gems: {gem_result}, Jewelry: {jewelry_result}, Magic Items: {magic_item_result} lots')
         # print('[-] ...... END TREASURE HOARD ......')
-        return render_template('treasure-type.html', 
+        return render_template('treasuretype.html', 
             treasure_hoard = treasure_hoard, 
             coin_hoard = coin_hoard, 
             gem_hoard = gem_hoard, 
@@ -289,26 +215,24 @@ def generate_treasure():
             gem_value = gem_value, 
             gem_count = gem_count)
     else:
-        return 'something went wrong, try again!'
-
-
+        return render_template('treasuretype.html')
 
 # MAGIC ITEM
-@app.route('/generate_magic_item', methods=['POST', 'GET'])
-def generate_magic_item():
+@app.route('/magicitem', methods=['POST', 'GET'])
+def magicitem():
     if request.method == 'POST':
         magic_item_type = request.form['treasure']
         magic_item_quantity = request.form['quantity']
         magic_items = determine_magic_items(magic_item_quantity, magic_item_type)
         treasure_hoard = magic_items
 
-        return render_template('magic-item.html', treasure_hoard = treasure_hoard)
+        return render_template('magicitem.html', treasure_hoard = treasure_hoard)
     else:
-        return 'something went wrong, try again!'
+        return render_template('magicitem.html')
 
 # GEMS
-@app.route('/generate_gem', methods=['POST', 'GET'])
-def generate_gem():
+@app.route('/gem', methods=['POST', 'GET'])
+def gem():
     if request.method == 'POST':
         gem_quantity = request.form['quantity']
         gem_list, gem_value, gem_count = determine_gems(gem_quantity)
@@ -318,11 +242,11 @@ def generate_gem():
             gem_value = gem_value, 
             gem_count = gem_count)
     else:
-        return 'something went wrong, try again!'
+            return render_template('gem.html')
 
 # JEWELRY
-@app.route('/generate_jewelry', methods=['POST', 'GET'])
-def generate_jewelry():
+@app.route('/jewelry', methods=['POST', 'GET'])
+def jewelry():
     if request.method == 'POST':
         jewelry_quantity = request.form['quantity']
         jewelry_list, jewelry_value, jewelry_count = determine_jewelry(jewelry_quantity)
@@ -332,25 +256,11 @@ def generate_jewelry():
             jewelry_value = jewelry_value, 
             jewelry_count = jewelry_count)
     else:
-        return 'something went wrong, try again!'
-
-
-# DUNGEON ENCOUNTER
-@app.route('/generate_dungeon_encounter', methods=['POST', 'GET'])
-def generate_dungeon_encounter():
-    if request.method == 'POST':
-        level = request.form['dungeon_level']
-        q = request.form['quantity']
-        monster_list, dl_num = dungeon_generator_monster_by_level(level, q)
-        return render_template('dungeon-encounter.html', 
-            monster_list = monster_list, 
-            dl_num = dl_num)
-    else:
-        return 'something went wrong, try again!'
+            return render_template('jewelry.html')
 
 # DUNGEON DRESSING
-@app.route('/generate_dungeon_dressing', methods=['POST', 'GET'])
-def generate_dungeon_dressing():
+@app.route('/dungeondressing', methods=['POST', 'GET'])
+def dungeondressing():
     if request.method == 'POST':
         sense_feel = openfile('dungeon-feel')
         feel = array_result(sense_feel)
@@ -390,7 +300,7 @@ def generate_dungeon_dressing():
         # add comma to each entry except the last
         formatted_furnishings = [x + ', ' if x != final_furnishings[-1] else x for x in final_furnishings]
         
-        return render_template('dungeon-dressing.html', 
+        return render_template('dungeondressing.html', 
             feel = feel, 
             see = see, 
             smell = smell, 
@@ -399,7 +309,48 @@ def generate_dungeon_dressing():
             formatted_furnishings = formatted_furnishings, 
             utensil_personal_item = utensil_personal_item)
     else:
+        return render_template('dungeondressing.html')
+
+# DUNGEON ENCOUNTER
+@app.route('/dungeonencounter', methods=['POST', 'GET'])
+def dungeonencounter():
+    if request.method == 'POST':
+        level = request.form['dungeon_level']
+        q = request.form['quantity']
+        monster_list, dl_num = dungeon_generator_monster_by_level(level, q)
+        return render_template('dungeonencounter.html', 
+            monster_list = monster_list, 
+            dl_num = dl_num)
+    else:
+        return render_template('dungeonencounter.html')
+
+def write_to_file(data):
+    with open('database.txt', mode='a') as database:
+        email = data["email"]
+        subject = data["subject"]
+        message = data["message"]
+        file = database.write(f'\n{email}, {subject}, {message}')
+
+def write_to_csv(data):
+    with open('database.csv', newline='', mode='a') as database2:
+        email = data["email"]
+        subject = data["subject"]
+        message = data["message"]
+        csv_writer = csv.writer(database2, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+        csv_writer.writerow([email, subject, message])
+
+@app.route('/submit_form', methods=['POST', 'GET'])
+def submit_form():
+    if request.method == 'POST':
+        try:
+            data = request.form.to_dict()
+            write_to_csv(data)
+            return redirect('thankyou.html')
+        except:
+            return '[-] Did not save to database'
+    else:
         return 'something went wrong, try again!'
+
 
 
 @app.errorhandler(404)
@@ -427,10 +378,6 @@ def server_error():
         render_template("500.html"),
         500
     )
-
-@app.route('/abilityscore')
-def abilityscore():
-     return generate_abilityscore()
 
 @app.route('/<string:page_name>')
 def html_page(page_name):

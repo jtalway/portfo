@@ -6,10 +6,10 @@
       <div class="row">
         <div class="col-xs-12">
               <h4>RPG Dice Roller</h4>
-              <form action="roll_dice" method="post" class="reveal-content">
+              <form action="diceroller" method="post" class="reveal-content">
               <label for="quantity">Quantity of dice: </label>
               <input type="number" name="quantity" id="quantity" min="1" max="1000" size="7">
-              <br>
+              <hr>
               <script type="text/javascript">
                 document.getElementById('quantity').value = '1';
               </script>
@@ -19,7 +19,7 @@
               <input type="radio" name="dice" id="dice" value="10"> d10 &nbsp; &nbsp;
               <input type="radio" name="dice" id="dice" value="12"> d12 &nbsp; &nbsp;
               <input type="radio" name="dice" id="dice" value="20" checked="true"> d20 
-              <br>
+              <hr>
               <label for="modifier">Modifier: </label>
               <input type="radio" name="mod" id="mod" value="+" checked="true"> + 
               <input type="radio" name="mod" id="mod" value="-"> - 
@@ -34,7 +34,7 @@
               <input type="radio" name="adv" id="adv" value="advantage"> Advantage 
               <input type="radio" name="adv" id="adv" value="disadvantage"> Disadvantage
               <input type="radio" name="adv" id="adv" value="normal" checked="true"> normal roll 
-              <br>
+              <hr>
               <button type="submit" class="btn btn-danger btn-lg">Roll Dice!</button>
               </form>
               {% if total %}

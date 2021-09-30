@@ -6,22 +6,21 @@
       <div class="row">
         <div class="col-xs-12">
               <h4>NPC Facts</h4>
-              <form action="generate_npc_facts" method="post" class="reveal-content">
+              <form action="npcfacts" method="post" class="reveal-content">
               <button type="submit" class="btn btn-danger btn-lg">Generate NPC Facts</button>
               </form>
 
 
               {% if alignment %}
               <b><u>NPC Facts</u></b> &nbsp; <cite style="font-size: 9px;"> generated <span id="datetime"></span></cite><br>
-              <b>Alignment</b> {{ alignment }} &nbsp; <b>Possessions (or wealth)</b> {{ possessions }}
-              <hr>
-              <i>Appearance</i><br>
+              <b>Alignment</b> {{ alignment }}<br>
+              <b>Possessions (or wealth)</b> {{ possessions }} <br>
+               &nbsp; <i>Appearance</i><br>
               <b>Age</b> {{ age }}<br>
               <b>General</b> {{ appearance }}
               <b>Sanity</b> {{ sanity }}<br>
-              <hr>
               <table>
-                <tr><td colspan="2"><i>Traits</i></td></tr>
+                <tr><td colspan="2"> &nbsp; <i>Traits</i></td></tr>
                 <tr><td colspan="2"><b>General Tendencies</b> {{ tendencies }}</td></tr>
                 <tr><td colspan="2"><b>Personality</b> {{ personality }}</td></tr>
                 <tr><td style="padding-right: 10px;"><b>Disposition</b> {{ disposition }} </td><td><b> Intellect</b>  {{ intellect }}</td></tr>
