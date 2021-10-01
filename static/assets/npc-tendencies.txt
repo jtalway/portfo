@@ -12,7 +12,7 @@
 12, 12, suspicous/cautious
 13, 13, precise/exacting
 14, 14, perceptive
-15, 15, opinionated/contraty
+15, 15, opinionated/contrary
 16, 16, violent/warlike
 17, 17, studious
 18, 18, foul/barbaric

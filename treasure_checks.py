@@ -2,6 +2,7 @@ import re
 from random import randint
 from openfile import * 
 from array_result import *
+import math
 
 # ring of spell storing
 # bag of beans
@@ -338,12 +339,217 @@ def check_if_wand(magic_item):
 def check_if_sword(magic_item):
 	is_sword = re.findall(r'^\bsword\b', magic_item)
 	if is_sword:
+		alignment = ''
 		array = openfile('sword-type')
 		sword_type = array_result(array).replace('\n', '')
-		#
 		# CHECK FOR SPECIAL SWORD, I.E. INTELLIGENCE
-		#
-		complete_sword = sword_type + " " + magic_item
+		special_array = openfile('sword-intelligence')
+		intelligence = array_result(special_array).replace('\n', '')
+		extra_ability = ''
+		num_primary = 0
+		num_extraordinary = 0
+		communication = 0
+		languages_list = []
+		ego_int = 0
+		if intelligence == '0':
+			pass
+		elif intelligence == '12':
+			num_primary = 1
+			communication = 'semi-empathy'
+		elif intelligence == '13':
+			num_primary = 2
+			communication = 'empathy'
+		elif intelligence == '14':
+			num_primary = 2
+			communication = 'speech'
+			languages_list = determine_languages()
+		elif intelligence == '15':
+			num_primary = 3
+			communication = 'speech'
+			languages_list = determine_languages()
+		elif intelligence == '16':
+			num_primary = 3
+			communication = 'speech'
+			languages_list = determine_languages()
+			extra_ability = ' - read non-magical languages and maps'
+			ego_int = 1
+		elif intelligence == '17':
+			num_primary = 3
+			num_extraordinary = 1
+			communication = 'speech and telepathy'
+			languages_list = determine_languages()
+			extra_ability = ' - read languages and magical writings'
+			ego_int = 5
+		else:
+			print("[-] ERROR > treasure_checks.py > magic_item > checking if special sword")
+
+		if intelligence != '0':
+			# get alignment
+			cursed_swords = {'sword +1 (cursed)', 'sword -2 (cursed)', 'sword (cursed berserking)'}
+			if magic_item in cursed_swords:
+				alignment = 'N'
+			elif magic_item == 'sword +5 (holy avenger)':
+				alignment = 'LG'
+			elif magic_item == 'sword of sharpness':
+				rNum = randint(1, 3)
+				if rNum == 1:
+					alignment = 'CG'
+				elif rNum == 2:
+					alignment = 'CE'
+				else:
+					alignment = 'CN'
+			elif magic_item == 'sword (vorpal weapon)':
+				rNum = randint(1, 3)
+				if rNum == 1:
+					alignment = 'LG'
+				elif rNum == 2:
+					alignment = 'LE'
+				else:
+					alignment = 'LN'
+			else:
+				array = openfile('sword-alignment')
+				alignment = array_result(array).replace('\n', '')
+			primary_ability_list = []
+			extraordinary_ability_list = []
+			special_purpose = ''
+			languages_known = ", ".join(languages_list)
+			if communication == 'speech' or communication == 'speech and telepathy':
+				communication = f"{communication} - languages: {alignment}, {languages_known}"
+			else:
+				pass
+			# get primary abilities
+			# for each primary ability roll on table
+			i = 0
+			while i < num_primary:
+				pNum = randint(1, 100)
+				# roll on extraordinary powers instead
+				if pNum < 3:
+					num_primary = num_primary - 1
+					num_extraordinary = num_extraordinary + 1
+				# roll twice on table ignoring this result
+				elif pNum < 9:
+					first_primary = determine_primary_abilities()
+					primary_ability_list.append(first_primary)
+					second_primary = determine_primary_abilities()
+					primary_ability_list.append(second_primary)
+				else:
+					primary_power = determine_primary_abilities()
+					primary_ability_list.append(primary_power)
+				i += 1
+			i = 0
+			while i < num_extraordinary:
+				eNum = randint(1, 100)
+				if eNum < 2:
+					extraordinary_ability_list.append("character may choose one extraordinary power DMG 167")
+					special_purpose = determine_special_purpose()
+				elif eNum < 4:
+					extraordinary_ability_list.append("character may choose one extraordinary power DMG 167")
+				elif eNum < 7:
+					first_extraordinary = determine_extraordinary_abilities()
+					extraordinary_ability_list.append(first_extraordinary)
+					second_extraordinary = determine_extraordinary_abilities()
+					extraordinary_ability_list.append(second_extraordinary)
+				else:
+					extraordinary_power = determine_extraordinary_abilities()
+					extraordinary_ability_list.append(extraordinary_power)
+				i += 1
+			formatted_primary_ability_list = ", ".join(primary_ability_list)
+			formatted_extraordinary_ability_list = ", ".join(extraordinary_ability_list)
+			ego_plus = find_ego_plus(magic_item)
+			ego_primaries =  len(primary_ability_list)
+			ego_extraordinaries = 2 * len(extraordinary_ability_list)
+			if languages_list != []:
+				ego_languages = math.ceil((len(languages_list) + 1) / 2)
+				#print(f"Languages known: {languages_list}, Ego: {ego_languages}")
+			else: 
+				ego_languages = 0
+			if special_purpose != '':
+				ego_specialpurpose = 5
+			else:
+				ego_specialpurpose = 0
+
+			total_ego = ego_plus + ego_primaries + ego_extraordinaries + ego_specialpurpose + ego_languages + ego_int
+
+			if special_purpose != '':
+				complete_sword = f"{sword_type} {magic_item} [AL: {alignment}, Int: {intelligence}, Ego: {total_ego}, Communication: {communication + extra_ability}; {formatted_primary_ability_list}, {formatted_extraordinary_ability_list}, {special_purpose}]"
+			elif formatted_extraordinary_ability_list != '':
+				complete_sword = f"{sword_type} {magic_item} [AL: {alignment}, Int: {intelligence}, Ego: {total_ego}, Communication: {communication + extra_ability}; {formatted_primary_ability_list}, {formatted_extraordinary_ability_list}]"
+			else:
+				complete_sword = f"{sword_type} {magic_item} [AL: {alignment}, Int: {intelligence}, Ego: {total_ego}, Communication: {communication + extra_ability}; {formatted_primary_ability_list}]"
+		else:
+			complete_sword = f"{sword_type} {magic_item}"
 		return(complete_sword)
 	else:
 		return(magic_item)
+
+def determine_primary_abilities():
+	array = openfile('sword-primary')
+	primary_ability = array_result(array).replace('\n', '')
+	return primary_ability
+
+def determine_extraordinary_abilities():
+	array = openfile('sword-extraordinary')
+	extraordinary_ability = array_result(array).replace('\n', '')
+	return extraordinary_ability
+
+def determine_special_purpose():
+	array = openfile('sword-purpose')
+	special_purpose = array_result(array).replace('\n', '')
+	pp_array = openfile('sword-purpose-power')
+	special_purpose_power = array_result(pp_array).replace('\n', '')
+	sword_special_purpose = f"Special Purpose: {special_purpose}, Special Purpose Power: {special_purpose_power}"
+	return sword_special_purpose
+
+def determine_languages():
+	languages_list = []
+	array = openfile('sword-languages')
+	num_languages = array_result(array).replace('\n', '')
+	i = 0
+	#print(f"[+] START with {num_languages}")
+	while i < int(num_languages):
+		lang_array = openfile('languages')
+		language = array_result(lang_array).replace('\n', '')
+		#print(language)
+		if language in languages_list:
+			#print("!!! DUPLICATE LANGUAGE !!!")
+			continue
+		else:
+			languages_list.append(language)
+			i += 1
+	#print(languages_list)
+	return languages_list
+
+def find_ego_plus(magic_item):
+	plus_zero = {'sword -2 (cursed)'}
+	plus_one = {'sword +1'}
+	plus_two = {'sword +1 (luck blade)', 'sword +2', 'sword of wounding', 'sword of sharpness', 'sword +1 (cursed)'}
+	plus_three = {'sword +1 (+2 vs magic-using and enchanted creatures)', 'sword +3', 'sword (cursed berserking)'}
+	plus_four = {'sword +1 (+3 vs lycanthropes and shape changers)', 'sword +1 (+3 vs regenerating creatures)', 'sword +2 (nine lives stealer)', 'sword +4', 'sword of life stealing'}
+	plus_five = {'sword +1 (+4 vs reptiles)', 'sword +1 (flame tongue)', 'sword +2 (giant slayer)', 'sword +5', 'sword of dancing'}
+	plus_six = {'sword +2 (dragon slayer)', 'sword (vorpal weapon)'}
+	plus_eight = {'sword +4 (defender)'}
+	plus_nine = {'sword +3 (frost brand)'}
+	plus_ten = {'sword +5 (defender)', 'sword +5 (holy avenger)'}
+	if magic_item in plus_one:
+		ego_plus = 1
+	elif magic_item in plus_two:
+		ego_plus = 2
+	elif magic_item in plus_three:
+		ego_plus = 3
+	elif magic_item in plus_four:
+		ego_plus = 4
+	elif magic_item in plus_five:
+		ego_plus = 5
+	elif magic_item in plus_six:
+		ego_plus = 6
+	elif magic_item in plus_eight:
+		ego_plus = 8
+	elif magic_item in plus_nine:
+		ego_plus = 9
+	elif magic_item in plus_ten:
+		ego_plus = 10
+	else:
+		ego_plus = 0
+
+	return ego_plus
+

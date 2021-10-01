@@ -12,4 +12,3 @@
 76, 81, telepathy 6" range (2/day)
 82, 88, teleportation (1/day - 6000gp wt - 2 seg activation)
 89, 94, x-ray vision 4" range (2/day - 1 turn use)
-95, 97, character may choose 1 extraordinary power (DMG 167)

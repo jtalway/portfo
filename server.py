@@ -20,7 +20,7 @@ app = Flask(__name__)
 @app.route('/home')
 @app.route('/index')
 @app.route('/index.html')
-def my_home():
+def index():
 	return render_template('index.html')
 
 
@@ -225,7 +225,6 @@ def magicitem():
         magic_item_quantity = request.form['quantity']
         magic_items = determine_magic_items(magic_item_quantity, magic_item_type)
         treasure_hoard = magic_items
-
         return render_template('magicitem.html', treasure_hoard = treasure_hoard)
     else:
         return render_template('magicitem.html')
@@ -382,6 +381,7 @@ def server_error():
 @app.route('/<string:page_name>')
 def html_page(page_name):
     return render_template(page_name)
+
 
 if __name__=="__main__":
     app.run(debug=True)
