@@ -43,37 +43,54 @@
               </script>
               <button type="submit" class="btn btn-danger btn-lg">Generate Treasure</button>
               </form>
-              {% if coin_hoard or gem_hoard or jewelry_hoard or treasure_hoard %}
+              {% if coppers or silvers or electrums or golds or platinums or gem_hoard or jewelry_hoard or treasure_hoard %}
               <b><u>Treasure Result</u></b> &nbsp; <cite style="font-size: 9px;"> generated <span id="datetime"></span></cite><br>
               {% endif %}
-              {% if coin_hoard %}
+              {% if coppers or silvers or electrums or golds or platinums %}
               <b>Coins</b>
-              {% for coin in coin_hoard %}
-                {{ coin }} &nbsp;
-              {% endfor %}
+              {% if coppers %}
+                {{ coppers }} cp
+              {% endif %}
+              {% if silvers %}
+                {{ silvers }} sp
+              {% endif %}
+              {% if electrums %}
+                {{ electrums }} ep
+              {% endif %}
+              {% if golds %}
+                {{ golds }} gp
+              {% endif %}
+              {% if platinums %}
+                {{ platinums }} pp
+              {% endif %}
               <br>
               {% endif %}
                {% if treasure_hoard %}
               <b>Magic Items</b>
+              <div style="line-height:125%;">
               {% for treasure_element in treasure_hoard %}
                 {{ treasure_element }}
+                <hr style="height:15px; visibility:hidden; margin-bottom: 0px; margin:0px; border:0" />
               {% endfor %}
-              <br>
+              </div>
               {% endif %}
               {% if gem_hoard %}
               <b>Gems</b>
               {{ gem_count }} gems ({{ gem_value }} gp total value) <br>
+              <div style="line-height:125%;">
               {% for gem in gem_hoard %}
                 {{ gem  }} 
               {% endfor %}
-              <br>
+              </div>
               {% endif %}
               {% if jewelry_hoard %}
               <b>Jewelry</b>
               {{ jewelry_count }} pieces ({{ jewelry_value }} gp total value) <br>
+              <div style="line-height:125%;">
               {% for jewelry in jewelry_hoard %}
                 {{ jewelry }} 
               {% endfor %}
+              </div>
               {% endif %}
              
               <script>

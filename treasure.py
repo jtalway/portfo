@@ -134,9 +134,7 @@ def determine_magic_items(quantity, magic_item_type):
 			magic_item_result = key
 		# add finished item to hoard
 		final_magic_item_hoard.append(magic_item_result)
-		# add comma to each entry except the last
-		formatted_magic_items = [x + ', ' if x != final_magic_item_hoard[-1] else x for x in final_magic_item_hoard]
-	return(formatted_magic_items)
+	return(final_magic_item_hoard)
 
 # JEWELRY MATERIAL
 def check_material(data):

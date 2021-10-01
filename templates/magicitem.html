@@ -29,7 +29,10 @@
               {% endif %}
                {% if treasure_hoard %}
               {% for treasure_element in treasure_hoard %}
-                {{ treasure_element }}<br>
+              <div style="line-height:125%;">
+                {{ treasure_element }}
+                <hr style="height:15px; visibility:hidden; margin-bottom: 0px; margin:0px; border:0" />
+              </div>
               {% endfor %}
               {% endif %}         
               <script>

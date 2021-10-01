@@ -178,15 +178,30 @@ def treasuretype():
         treasure_result = []
         # COINS
         copper_result = calculate_chance(treasure_dict['Copper'], treasure_quantity)
-        coppers = str(copper_result[0]) + ' cp'
+        if copper_result[0] > 0:
+            coppers = str(copper_result[0])
+        else:
+            coppers = ''
         silver_result = calculate_chance(treasure_dict['Silver'], treasure_quantity)
-        silvers = str(silver_result[0]) + ' sp'
+        if silver_result[0] > 0:
+            silvers = str(silver_result[0])
+        else:
+            silvers = ''
         electrum_result = calculate_chance(treasure_dict['Electrum'], treasure_quantity)
-        electrums = str(electrum_result[0]) + ' ep'
+        if electrum_result[0] > 0:
+            electrums = str(electrum_result[0])
+        else:
+            electrums = ''
         gold_result = calculate_chance(treasure_dict['Gold'], treasure_quantity)
-        golds = str(gold_result[0]) + ' gp'
+        if gold_result[0] > 0:
+            golds = str(gold_result[0])
+        else:
+            golds = ''
         platinum_result = calculate_chance(treasure_dict['Platinum'], treasure_quantity)
-        platinums = str(platinum_result[0]) + ' pp'
+        if platinum_result[0] > 0:
+            platinums = str(platinum_result[0])
+        else:
+            platinums = ''
         # GEMS
         gem_result = calculate_chance(treasure_dict['Gems'], treasure_quantity)
         gems, gem_value, gem_count = determine_gems(str(gem_result[0]))
@@ -196,8 +211,10 @@ def treasuretype():
         # MAGIC ITEMS
         magic_item_result, magic_item_type = calculate_chance(treasure_dict['Magic Items or maps'], treasure_quantity)
         magic_items = determine_magic_items(magic_item_result[0], magic_item_type)
+        # add comma to each entry except the last
+        #formatted_magic_items = [x + ', ' if x != magic_items[-1] else x for x in magic_items]
         # HOARDS
-        coin_hoard = [coppers, silvers, electrums, golds, platinums]
+        # coin_hoard = [coppers, silvers, electrums, golds, platinums]
         gem_hoard = gems
         jewelry_hoard = jewelry
         treasure_hoard = magic_items
@@ -207,7 +224,11 @@ def treasuretype():
         # print('[-] ...... END TREASURE HOARD ......')
         return render_template('treasuretype.html', 
             treasure_hoard = treasure_hoard, 
-            coin_hoard = coin_hoard, 
+            coppers = coppers,
+            silvers = silvers,
+            electrums = electrums,
+            golds = golds,
+            platinums = platinums,
             gem_hoard = gem_hoard, 
             jewelry_hoard = jewelry_hoard, 
             jewelry_value = jewelry_value, 
@@ -225,6 +246,7 @@ def magicitem():
         magic_item_quantity = request.form['quantity']
         magic_items = determine_magic_items(magic_item_quantity, magic_item_type)
         treasure_hoard = magic_items
+
         return render_template('magicitem.html', treasure_hoard = treasure_hoard)
     else:
         return render_template('magicitem.html')
