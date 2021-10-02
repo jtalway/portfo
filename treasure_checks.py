@@ -88,6 +88,43 @@ def check_special_item(magic_item):
 		final_magic_item = f"beaker of plentiful potions [{final_potions_list}]"
 		return(final_magic_item)
 
+	elif magic_item == 'book of infinite spells':
+		pNum = randint(23, 30)
+		spell_list = []
+		i = 0
+		while i < pNum:
+			page_num = f"Page {i+1}: "
+			array = openfile('misc-book-infinitespells')
+			spellcasting_class = array_result(array)
+			if spellcasting_class == 'magic-user':
+				abbr = 'MU'
+			elif spellcasting_class == 'cleric':
+				abbr = 'Clr'
+			elif spellcasting_class == 'druid':
+				abbr = 'Drd'
+			elif spellcasting_class == 'illusionist':
+				abbr = 'Ill'
+			else:
+				pass
+			if spellcasting_class == 'blank page':
+				spell_list.append(page_num + 'blank page')
+			elif spellcasting_class == 'magic-user':
+				sNum = randint(1, 9)
+				page = 'spells-' + spellcasting_class + '-' + str(sNum)
+				f_array = openfile(page)
+				randomly_rolled_spell = array_result(f_array)
+				spell_list.append(f"{page_num} ({abbr}) {randomly_rolled_spell}")
+			else:
+				sNum = randint(1, 7)
+				page = 'spells-' + spellcasting_class + '-' + str(sNum)
+				f_array = openfile(page)
+				randomly_rolled_spell = array_result(f_array)
+				spell_list.append(f"{page_num} ({abbr}) {randomly_rolled_spell}")
+			i += 1
+		final_spell_list = ", ".join(spell_list)
+		final_magic_item = f"book of infinite spells [{final_spell_list}]"
+		return(final_magic_item)
+
 	elif magic_item == 'bracers of defense':
 		item_array = openfile('misc-bracers-defense')
 		final_magic_item = array_result(item_array)

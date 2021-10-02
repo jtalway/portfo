@@ -1,0 +1,5 @@
+1, 30, blank page
+31, 50, cleric
+51, 60, druid
+61, 95, magic-user
+96, 100, illusionist
