@@ -10,8 +10,8 @@
 10, 10, prayer
 11, 11, remove curse
 12, 12, speak with dead
-13, 13, continual darkness (r. continual light)
-14, 14, cause blindness (r. cure blindness)
-15, 15, cause disease (r. cure disease)
+13, 13, continual darkness
+14, 14, cause blindness
+15, 15, cause disease
 16, 16, obscure object (r. locate object)
 17, 17, bestow curse (r. remove curse)

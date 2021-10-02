@@ -12,9 +12,9 @@
 12, 12, sanctuary
 13, 13, curse (r. bless)
 14, 14, destroy water (r. create water)
-15, 15, cause light wounds (r. cure light wounds)
-16, 16, detect good (r. detect evil)
+15, 15, cause light wounds
+16, 16, detect good
 17, 17, darkness (r. light)
-18, 18, protection from good (r. protection from evil)
-19, 19, putrify food and drink (r. purify food and drink)
+18, 18, protection from good
+19, 19, putrify food and drink
 20, 20, cause fear (r. remove fear)

@@ -44,24 +44,23 @@
               <button type="submit" class="btn btn-danger btn-lg">Generate Treasure</button>
               </form>
               {% if coppers or silvers or electrums or golds or platinums or gem_hoard or jewelry_hoard or treasure_hoard %}
-              <b><u>Treasure Result</u></b> &nbsp; <cite style="font-size: 9px;"> generated <span id="datetime"></span></cite><br>
+              <b><u>Treasure Type {{treasure_type}} (x{{treasure_quantity}}) Result</u></b> &nbsp; <cite style="font-size: 9px;"> generated <span id="datetime"></span></cite><br>
               {% endif %}
               {% if coppers or silvers or electrums or golds or platinums %}
-              <b>Coins</b>
               {% if coppers %}
-                {{ coppers }} cp
+                {{ coppers }}<b>cp</b>
               {% endif %}
               {% if silvers %}
-                {{ silvers }} sp
+                {{ silvers }}<b>sp</b>
               {% endif %}
               {% if electrums %}
-                {{ electrums }} ep
+                {{ electrums }}<b>ep</b>
               {% endif %}
               {% if golds %}
-                {{ golds }} gp
+                {{ golds }}<b>gp</b>
               {% endif %}
               {% if platinums %}
-                {{ platinums }} pp
+                {{ platinums }}<b>pp</b>
               {% endif %}
               <br>
               {% endif %}

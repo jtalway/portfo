@@ -23,4 +23,4 @@
 23, 23, stone to flesh
 24, 24, Tenser's transformation
 25, 25, raise water (r. lower water)
-26, 26, flesh to stone (r. stone to flesh)
+26, 26, flesh to stone

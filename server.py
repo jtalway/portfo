@@ -179,27 +179,28 @@ def treasuretype():
         # COINS
         copper_result = calculate_chance(treasure_dict['Copper'], treasure_quantity)
         if copper_result[0] > 0:
-            coppers = str(copper_result[0])
+            # commas for thousands ("{:,}".format(num))
+            coppers = str("{:,}".format(copper_result[0]))
         else:
             coppers = ''
         silver_result = calculate_chance(treasure_dict['Silver'], treasure_quantity)
         if silver_result[0] > 0:
-            silvers = str(silver_result[0])
+            silvers = str("{:,}".format(silver_result[0]))
         else:
             silvers = ''
         electrum_result = calculate_chance(treasure_dict['Electrum'], treasure_quantity)
         if electrum_result[0] > 0:
-            electrums = str(electrum_result[0])
+            electrums = str("{:,}".format(electrum_result[0]))
         else:
             electrums = ''
         gold_result = calculate_chance(treasure_dict['Gold'], treasure_quantity)
         if gold_result[0] > 0:
-            golds = str(gold_result[0])
+            golds = str("{:,}".format(gold_result[0]))
         else:
             golds = ''
         platinum_result = calculate_chance(treasure_dict['Platinum'], treasure_quantity)
         if platinum_result[0] > 0:
-            platinums = str(platinum_result[0])
+            platinums = str("{:,}".format(platinum_result[0]))
         else:
             platinums = ''
         # GEMS
@@ -214,9 +215,12 @@ def treasuretype():
         # add comma to each entry except the last
         #formatted_magic_items = [x + ', ' if x != magic_items[-1] else x for x in magic_items]
         # HOARDS
-        # coin_hoard = [coppers, silvers, electrums, golds, platinums]
-        gem_hoard = gems
-        jewelry_hoard = jewelry
+        
+        # add comma to each entry except the last
+        formatted_gem_hoard = [x + ', ' if x != gems[-1] else x for x in gems]
+        formatted_jewelry_hoard = [x + ', ' if x != jewelry[-1] else x for x in jewelry]
+        gem_hoard = formatted_gem_hoard
+        jewelry_hoard = formatted_jewelry_hoard
         treasure_hoard = magic_items
         # print('[+] ...... NEW TREASURE HOARD GENERATED ......')
         # print(f' CP: {copper_result}, SP: {silver_result}, EP: {electrum_result}, GP: {gold_result}, PP: {platinum_result}')
@@ -234,7 +238,9 @@ def treasuretype():
             jewelry_value = jewelry_value, 
             jewelry_count = jewelry_count, 
             gem_value = gem_value, 
-            gem_count = gem_count)
+            gem_count = gem_count,
+            treasure_type = treasure_type,
+            treasure_quantity = treasure_quantity)
     else:
         return render_template('treasuretype.html')
 
@@ -246,8 +252,21 @@ def magicitem():
         magic_item_quantity = request.form['quantity']
         magic_items = determine_magic_items(magic_item_quantity, magic_item_type)
         treasure_hoard = magic_items
+        if magic_item_type == "rodstaffwand":
+            magic_item_type = "Rod, Staff, or Wand"
+        elif magic_item_type == "miscX":
+            magic_item_type = "Miscellaneous Magic Item"
+        elif magic_item_type == "armorshield":
+            magic_item_type = "Armor or Shield"
+        elif magic_item_type == "weapon":
+            magic_item_type = "Miscellaneous Weapon"
+        else:
+            pass
 
-        return render_template('magicitem.html', treasure_hoard = treasure_hoard)
+        return render_template('magicitem.html', 
+            treasure_hoard = treasure_hoard,
+            magic_item_type = magic_item_type,
+            magic_item_quantity = magic_item_quantity)
     else:
         return render_template('magicitem.html')
 
@@ -341,7 +360,8 @@ def dungeonencounter():
         monster_list, dl_num = dungeon_generator_monster_by_level(level, q)
         return render_template('dungeonencounter.html', 
             monster_list = monster_list, 
-            dl_num = dl_num)
+            dl_num = dl_num,
+            q = q)
     else:
         return render_template('dungeonencounter.html')
 

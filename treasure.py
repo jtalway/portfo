@@ -32,6 +32,7 @@ def determine_gems(gem_quantity):
 	# FIND TOTAL GP VALUE
 	# list comprehension 
 	gem_total_gp_value = sum([int(word) for item in gem_collection for word in item.split() if word.isnumeric()])
+	gem_total_thousands = ("{:,}".format(gem_total_gp_value))
 	# GET TOTAL COUNT
 	gem_total_count = len(gem_collection)
 	# get duplicates
@@ -46,10 +47,8 @@ def determine_gems(gem_quantity):
 		else:
 			gem_result = key
 		# add finished gem to hoard
-		final_gem_hoard.append(gem_result)
-		# add comma to each entry except the last
-		formatted_gem_hoard = [x + ', ' if x != final_gem_hoard[-1] else x for x in final_gem_hoard]
-	return formatted_gem_hoard, gem_total_gp_value, gem_total_count
+		final_gem_hoard.append(gem_result)		
+	return final_gem_hoard, gem_total_thousands, gem_total_count
 
 # JEWELRY
 def determine_jewelry(jewelry_quantity):
@@ -82,6 +81,8 @@ def determine_jewelry(jewelry_quantity):
 	# 			numlist.append(int(word))
 	# list comprehension 
 	jewelry_total_gp_value = sum([int(word) for item in jewelry_collection for word in item.split() if word.isnumeric()])
+	print(jewelry_total_gp_value)
+	jewelry_total_thousands = ("{:,}".format(jewelry_total_gp_value))
 	# GET TOTAL COUNT
 	jewelry_total_count = len(jewelry_collection)
 	# get duplicates
@@ -97,9 +98,7 @@ def determine_jewelry(jewelry_quantity):
 			jewelry_result = key
 		# add finished jewelry to hoard
 		final_jewelry_hoard.append(jewelry_result)
-		# add comma to each entry except the last
-		formatted_jewelry_hoard = [x + ', ' if x != final_jewelry_hoard[-1] else x for x in final_jewelry_hoard]
-	return formatted_jewelry_hoard, jewelry_total_gp_value, jewelry_total_count
+	return final_jewelry_hoard, jewelry_total_thousands, jewelry_total_count
 
 # MAGIC ITEMS
 def determine_magic_items(quantity, magic_item_type):

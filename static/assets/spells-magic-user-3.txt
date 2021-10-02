@@ -22,6 +22,6 @@
 22, 22, suggestion
 23, 23, tongues
 24, 24, water breathing
-25, 25, protection from good 10'r (r. protection from evil 10'r)
+25, 25, protection from good 10'r
 26, 26, babble (r. tongues)
 27, 27, air breathing (r. water breathing)

@@ -10,6 +10,6 @@
 10, 10, summon insects
 11, 11, tree
 12, 12, water breathing
-13, 13, cause disease (r. cure disease)
+13, 13, cause disease
 14, 14, poison (r. neutralize poison)
 15, 15, air breathing (r. water breathing)

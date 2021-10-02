@@ -11,7 +11,6 @@ import math
 # book of infinite spells
 # ioun stones
 # necklace of prayer beads
-# <sword>
 
 def check_special_item(magic_item):
 	#
@@ -292,8 +291,8 @@ def check_if_scroll(magic_item):
 			randomly_rolled_spell = array_result(f_array).replace('\n', '')
 			scroll_list.append(randomly_rolled_spell)
 			i += 1
-		scroll_header = spellcasting_class + " scroll ("
-		scroll_footer = ")"
+		scroll_header = spellcasting_class + " scroll ["
+		scroll_footer = "]"
 		generated_spells = ", ".join(scroll_list)
 		complete_scroll = scroll_header + generated_spells + scroll_footer
 		return(complete_scroll)
@@ -419,29 +418,37 @@ def check_if_sword(magic_item):
 				pass
 			# get primary abilities
 			# for each primary ability roll on table
-			i = 0
-			while i < num_primary:
+			#print("------------------------------")
+			#print(f"Prim: {num_primary}, Extra: {num_extraordinary}")
+			p = 0
+			while p < num_primary:
 				pNum = randint(1, 100)
 				# roll on extraordinary powers instead
-				if pNum < 3:
-					num_primary = num_primary - 1
+				if pNum < 3:  # 3
 					num_extraordinary = num_extraordinary + 1
+					#print("[+] Primary resulted in Extraordinary")
+					#print(f"Prim: {num_primary}, Extra: {num_extraordinary}")
 				# roll twice on table ignoring this result
 				elif pNum < 9:
 					first_primary = determine_primary_abilities()
 					primary_ability_list.append(first_primary)
 					second_primary = determine_primary_abilities()
 					primary_ability_list.append(second_primary)
+					#print("[+] Double primary!")
 				else:
 					primary_power = determine_primary_abilities()
 					primary_ability_list.append(primary_power)
-				i += 1
-			i = 0
-			while i < num_extraordinary:
+				#print(f'Loop: {p}, NumPrimary: {num_primary}, random: {pNum}')
+				p += 1
+			#print(f"Primaries: {len(primary_ability_list)} {primary_ability_list}")
+			e = 0
+			while e < num_extraordinary:
 				eNum = randint(1, 100)
-				if eNum < 2:
+				if eNum < 2:  # 2
 					extraordinary_ability_list.append("character may choose one extraordinary power DMG 167")
 					special_purpose = determine_special_purpose()
+					#print("[+] Special Purpose and choose an extraordinary")
+					#print(f"Prim: {num_primary}, Extra: {num_extraordinary}")
 				elif eNum < 4:
 					extraordinary_ability_list.append("character may choose one extraordinary power DMG 167")
 				elif eNum < 7:
@@ -449,10 +456,14 @@ def check_if_sword(magic_item):
 					extraordinary_ability_list.append(first_extraordinary)
 					second_extraordinary = determine_extraordinary_abilities()
 					extraordinary_ability_list.append(second_extraordinary)
+					#print("[+] Double extraordinary!")
 				else:
 					extraordinary_power = determine_extraordinary_abilities()
 					extraordinary_ability_list.append(extraordinary_power)
-				i += 1
+				#print(f'Loop: {p}, NumExtraordinary: {num_extraordinary}, random: {eNum}')
+				e += 1
+			#print(f"Extraordinaries: {extraordinary_ability_list}")
+			#print("------------------------------")
 			formatted_primary_ability_list = ", ".join(primary_ability_list)
 			formatted_extraordinary_ability_list = ", ".join(extraordinary_ability_list)
 			ego_plus = find_ego_plus(magic_item)
@@ -472,7 +483,9 @@ def check_if_sword(magic_item):
 
 			if special_purpose != '':
 				complete_sword = f"{sword_type} {magic_item} [AL: {alignment}, Int: {intelligence}, Ego: {total_ego}, Communication: {communication + extra_ability}; {formatted_primary_ability_list}, {formatted_extraordinary_ability_list}, {special_purpose}]"
-			elif formatted_extraordinary_ability_list != '':
+			elif formatted_extraordinary_ability_list != '' and formatted_primary_ability_list == '':
+				complete_sword = f"{sword_type} {magic_item} [AL: {alignment}, Int: {intelligence}, Ego: {total_ego}, Communication: {communication + extra_ability}; {formatted_extraordinary_ability_list}]"
+			elif formatted_extraordinary_ability_list != '' and formatted_primary_ability_list != '':
 				complete_sword = f"{sword_type} {magic_item} [AL: {alignment}, Int: {intelligence}, Ego: {total_ego}, Communication: {communication + extra_ability}; {formatted_primary_ability_list}, {formatted_extraordinary_ability_list}]"
 			else:
 				complete_sword = f"{sword_type} {magic_item} [AL: {alignment}, Int: {intelligence}, Ego: {total_ego}, Communication: {communication + extra_ability}; {formatted_primary_ability_list}]"

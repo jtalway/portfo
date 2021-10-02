@@ -18,7 +18,7 @@
               <b><u>Gem Result</u></b> &nbsp; <cite style="font-size: 9px;"> generated <span id="datetime"></span></cite><br>
               {% endif %}
               {% if treasure_hoard|length > 1 %}
-              {{ gem_count }} gems ({{ gem_value }} gp total value) <br>
+              <b>{{ gem_count }} gems ({{ gem_value }} gp total value)</b> <br>
               {% endif %}
               {% if treasure_hoard %}
               {% for treasure_element in treasure_hoard %}

@@ -9,5 +9,5 @@
 9, 9, transmute rock to mud
 10, 10, wall of fire
 11, 11, shrink animal (r. animal growth)
-12, 12, snakes to sticks (r.sticks to snakes)
-13, 13, transmute mud to rock (r. transmute rock to mud)
+12, 12, snakes to sticks
+13, 13, transmute mud to rock

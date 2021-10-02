@@ -23,4 +23,4 @@
 23, 23, wall of iron
 24, 24, wall of stone
 25, 25, shrink animal (r. animal growth)
-26, 26, transmute mud to rock (r. transmute rock to mud)
+26, 26, transmute mud to rock

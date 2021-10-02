@@ -9,4 +9,4 @@
 9, 9, wall of thorns
 10, 10, weather summoning
 11, 11, dismiss fire elemental (r. conjure fire elemental)
-12, 12, cause critical wounds (r. cure critical wounds)
+12, 12, cause critical wounds

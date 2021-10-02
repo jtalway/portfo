@@ -10,5 +10,5 @@
 10, 10, produce flame
 11, 11, trip
 12, 12, warp wood
-13, 13, cause light wounds (r. cure light wounds)
+13, 13, cause light wounds
 14, 14, chill metal (r. heat metal)

@@ -1,10 +1,10 @@
-1, 11, detect elevator/shifting rooms/walls 1"r
-12, 22, detect sloping passages 1"r
-23, 33, detect traps of large size 1"r
-34, 44, detect evil/good 1"r
-45, 55, detect precious metals (kind and amount) 2"r
-56, 66, detect gems (kind and number) 1/2"r
-67, 77, detect magic 1"r
-78, 82, detect secret doors 1/2"r
-83, 87, detect invisible objects 1"r
-88, 92, locate object 12"r
+1, 11, detect elevator/shifting rooms/walls 10'r
+12, 22, detect sloping passages 10'r
+23, 33, detect traps of large size 10'r
+34, 44, detect evil/good 10'r
+45, 55, detect precious metals (kind and amount) 20'r
+56, 66, detect gems (kind and number) 5'r
+67, 77, detect magic 10'r
+78, 82, detect secret doors 5'r
+83, 87, detect invisible objects 10'r
+88, 92, locate object 120'r

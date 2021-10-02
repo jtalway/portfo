@@ -30,5 +30,5 @@
 30, 30, write
 31, 31, confuse languages (r. comprehend languages)
 32, 32, reduce (r. enlarge)
-33, 33, protection from good (r. protection from evil)
-34, 34, unreadable magic (r. read magic)
+33, 33, protection from good
+34, 34, unreadable magic
