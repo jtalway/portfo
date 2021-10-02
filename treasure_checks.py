@@ -4,12 +4,9 @@ from openfile import *
 from array_result import *
 import math
 
-# ring of spell storing
 # bag of beans
 # bag of tricks
-# beaker of plentiful potions
 # book of infinite spells
-# ioun stones
 # necklace of prayer beads
 
 def check_special_item(magic_item):
@@ -32,6 +29,29 @@ def check_special_item(magic_item):
 		final_magic_item = array_result(item_array)
 		return(final_magic_item)
 
+	elif magic_item == 'ring of spell storing':
+		spells_list = []
+		array = openfile('scroll-type')
+		spellcasting_class = array_result(array)
+		num_spells = randint(2,5)
+		min_range = 1
+		max_range = 7
+		if spellcasting_class != "magic-user":
+			max_range = 5
+		else:
+			pass
+		i = 0
+		while i < num_spells:
+			rNum = randint(min_range, max_range)
+			page = 'spells-' + spellcasting_class + '-' + str(rNum)
+			f_array = openfile(page)
+			randomly_rolled_spell = array_result(f_array)
+			spells_list.append(randomly_rolled_spell)
+			i += 1
+		final_spells_list = ", ".join(spells_list)
+		final_magic_item = f"ring of spell storing [{final_spells_list}]"
+		return(final_magic_item)
+
 	elif magic_item == 'ring of telekinesis':
 		item_array = openfile('ring-telekinesis')
 		final_magic_item = array_result(item_array)
@@ -51,6 +71,21 @@ def check_special_item(magic_item):
 	elif magic_item == 'bag of holding':
 		item_array = openfile('misc-bag-holding')
 		final_magic_item = array_result(item_array)
+		return(final_magic_item)
+
+	elif magic_item == 'beaker of plentiful potions':
+		potions_list = []
+		pNum = randint(2, 5)
+		i = 0
+		while i < pNum:
+			array = openfile('potion')
+			potion_result = array_result(array)
+			dNum = randint(2,5)
+			final_potion_result = f"{potion_result} ({dNum} doses)"
+			potions_list.append(final_potion_result)
+			i += 1
+		final_potions_list = ", ".join(potions_list)
+		final_magic_item = f"beaker of plentiful potions [{final_potions_list}]"
 		return(final_magic_item)
 
 	elif magic_item == 'bracers of defense':
@@ -121,6 +156,25 @@ def check_special_item(magic_item):
 		item_array = openfile('misc-instrument-bards')
 		final_magic_item = array_result(item_array)
 		return(final_magic_item)
+
+	elif magic_item == 'ioun stones':
+		rNum = randint(1,10)
+		stones_list = []
+		i = 0
+		while i < rNum:
+			array = openfile('misc-ioun-stone')
+			stone_result = array_result(array)
+			if stone_result != "dull gray stone (burned out)":
+				if stone_result in stones_list:
+					stones_list.append("dull gray stone (burned out)")
+				else:
+					stones_list.append(stone_result)
+			else:
+				stones_list.append(stone_result)
+			i += 1
+		final_stones_list = ", ".join(stones_list)
+		final_magic_item = f"ioun stones (x{rNum}) [{final_stones_list}]"
+		return final_magic_item
 
 	elif magic_item == 'iron flask':
 		item_array = openfile('misc-iron-flask')
@@ -194,7 +248,7 @@ def check_special_item(magic_item):
 
 	elif magic_item == 'ARTIFACT OR RELIC':
 		item_array = openfile('artifactrelic')
-		final_magic_item = array_result(item_array)
+		final_magic_item = array_result(item_array).upper()
 		return(final_magic_item)
 
 	elif magic_item == 'potion of animal control':
