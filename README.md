@@ -1,1 +1,1 @@
-[RPG Gen](http://jtalway.pythonanywhere.com/)
+[RPG Generators](https://jtalway.pythonanywhere.com/)
