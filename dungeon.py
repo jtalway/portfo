@@ -86,24 +86,28 @@ def special_encounter(monster):
         else:
             array = openfile(special_file)
             result = array_result(array)
-        return(result)
+            monster = result
+        return(monster)
     elif monster == "CHARACTER":
         monster = "group of characters"
         return(monster)
     elif monster in dragons:
         array = openfile(special_file)
         result = array_result(array)
-        return(result)
+        monster = result
+        return(monster)
     elif monster == "DEMON-PRINCE":
         array = openfile(special_file)
         result = array_result(array)
+        monster = result
         # add demon_retinue
-        return(result)
+        return(monster)
     elif monster == "DEVIL-ARCH":
         array = openfile(special_file)
         result = array_result(array)
+        monster = result
         # add devil_retinue
-        return(result)
+        return(monster)
     else:
         return(monster)
 
