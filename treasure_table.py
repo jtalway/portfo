@@ -291,7 +291,7 @@ def treasure_category(treasure_type):
 			'Magic Items or maps': [3, 1, 1, 50, 'any magic']}
 		return(treasure_dict)
 	else:
-		print("[-] Something went wrong")
+		print("[-] ERROR > treasure_table.py > treasure_dict > treasure type out of bounds")
 	
 
 # FIND CATEGORIES OF MAGIC ITEMS TO BE GENERATED

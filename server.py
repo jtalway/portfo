@@ -150,7 +150,7 @@ def fumble():
             x = len(prelim_fumble_effects) - reduce_fumble_effects
             fumble_effects = prelim_fumble_effects[0:x]
         else:
-            return 'something is amiss'
+            return "[-] ERROR > server.py > fumble > reduce_fumble_effects"
 
         # check for duplicate results and add/multiply numeric values
         return render_template('fumble.html', fumble_effects = fumble_effects)
@@ -390,7 +390,7 @@ def submit_form():
         except:
             return '[-] Did not save to database'
     else:
-        return 'something went wrong, try again!'
+        return "[-] ERROR > server.py > submit_form > submit contact form"
 
 
 

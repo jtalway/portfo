@@ -16,7 +16,7 @@ def check_for_modifier(quantity, dice, mod, mod_value, adv):
 	    	mod_result = roll_result - mv
 	    	return(mod_result, quantity, dice, mod, mod_value)
 	    else:
-	    	print('something went wrong')
+	    	print("[-] ERROR > dice_roller.py > check_for_modifier")
 	else:
 	    return(roll_result, quantity, dice, mod, mod_value)
 
