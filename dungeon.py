@@ -65,15 +65,14 @@ def dungeon_generator_monster_by_level(dungeon_level, q):
 def get_monster_level(dungeon_level):
     array = openfile(dungeon_level)
     result = array_result(array)
-    monster_file = "monster-" + result.replace("\n", "")
+    monster_file = "monster-" + result
     return(monster_file)
 
 # Monster Type
 def get_monster_by_level(monster_level):
     array = openfile(monster_level)
     result = array_result(array)
-    monster = result.replace("\n", "")
-    return(monster)
+    return(result)
 
 # Special Monster check?
 def special_encounter(monster):
@@ -87,28 +86,24 @@ def special_encounter(monster):
         else:
             array = openfile(special_file)
             result = array_result(array)
-            monster = result.replace("\n", "")
-        return(monster)
+        return(result)
     elif monster == "CHARACTER":
         monster = "group of characters"
         return(monster)
     elif monster in dragons:
         array = openfile(special_file)
         result = array_result(array)
-        monster = result.replace("\n", "")
-        return(monster)
+        return(result)
     elif monster == "DEMON-PRINCE":
         array = openfile(special_file)
         result = array_result(array)
-        monster = result.replace("\n", "")
         # add demon_retinue
-        return(monster)
+        return(result)
     elif monster == "DEVIL-ARCH":
         array = openfile(special_file)
         result = array_result(array)
-        monster = result.replace("\n", "")
         # add devil_retinue
-        return(monster)
+        return(result)
     else:
         return(monster)
 
@@ -135,7 +130,7 @@ def special_encounter(monster):
 #         final_furnishings = []
 #         while i < rNum:
 #             furnishing_array = openfile('dungeon-furnishings')
-#             furnishing_result = array_result(furnishing_array).replace('\n', '')
+#             furnishing_result = array_result(furnishing_array)
 #             furnishings.append(furnishing_result)
 #             i += 1
 #         # get duplicates

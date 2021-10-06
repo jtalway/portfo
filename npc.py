@@ -66,11 +66,11 @@ def determine_fantasy_name(name_quantity):
     # loop thru generators for each name quantity indicated
     while x < int(name_quantity):
         name1 = openfile('fantasy-name-01')
-        begin_name = array_result(name1).replace('\n', '')
+        begin_name = array_result(name1)
         name2 = openfile('fantasy-name-02')
-        mid_name = array_result(name2).replace('\n', '')
+        mid_name = array_result(name2)
         name3 = openfile('fantasy-name-03')
-        end_name = array_result(name3).replace('\n', '')
+        end_name = array_result(name3)
         full_name = begin_name + mid_name + end_name
         name_list.append(full_name)
         x+=1

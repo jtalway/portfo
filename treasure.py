@@ -21,11 +21,11 @@ def determine_gems(gem_quantity):
 		gem_base_value_array = openfile('gem-base-value')
 		# calculate gem base value
 		base_value = array_result(gem_base_value_array)
-		gem_type_array = openfile('gem' + base_value.replace('\n', ''))
+		gem_type_array = openfile('gem' + base_value)
 		# find gem type
 		gem_type = array_result(gem_type_array)
 		# combine gem type and base value
-		gem = gem_type.replace('\n', '') + ' ' + base_value.replace('\n', '') + ' gp'
+		gem = gem_type + ' ' + base_value + ' gp'
 		# add gem to the collection
 		gem_collection.append(gem)
 		x+=1
@@ -62,11 +62,11 @@ def determine_jewelry(jewelry_quantity):
 		jewelry_base_value_array = openfile('jewelry-base-value')
 		# get jewelry info
 		base_value = array_result(jewelry_base_value_array)
-		jewelry = base_value.replace('\n', '')
+		jewelry = base_value
 		# determine material
 		jewelry_material = check_material(jewelry)
 		# determine jewelry type
-		jewelry_type = find_jewelry_type(jewelry_material).replace('\n', '')
+		jewelry_type = find_jewelry_type(jewelry_material)
 		# calculate gp value
 		final_jewelry_item = calculate_value(jewelry_type)
 		# add jewelry to the collection
@@ -110,12 +110,12 @@ def determine_magic_items(quantity, magic_item_type):
 	# generate individual items
 	for mi in magic_item_collection:
 		magic_item_rolled = roll_magic_items(mi)
-		magic_items_rolled_list.append(magic_item_rolled.replace('\n', ''))
+		magic_items_rolled_list.append(magic_item_rolled)
 	#
 	# CHECK FOR SPECIALTY ITEMS THAT REQUIRE FURTHER ROLLS/DETERMINATIONS
 	for magic_item in magic_items_rolled_list:
 		updated_magic_item = check_special_item(magic_item)
-		final_magic_item_list.append(updated_magic_item.replace('\n', ''))		
+		final_magic_item_list.append(updated_magic_item)		
 
 	# get duplicates
 	magic_item_hoard = Counter(final_magic_item_list)

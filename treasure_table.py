@@ -304,7 +304,7 @@ def find_magic_items(quantity, magic_item_type):
 			m_m = map_or_magic()
 			f_array = openfile(m_m)
 			data = array_result(f_array)
-			calc_magic_item_types.append(data.replace('\n', ''))
+			calc_magic_item_types.append(data)
 			i+=1
 		return(calc_magic_item_types)
 
@@ -314,7 +314,7 @@ def find_magic_items(quantity, magic_item_type):
 		while i < q:
 			f_array = openfile('magic-items')
 			data = array_result(f_array)
-			calc_magic_item_types.append(data.replace('\n', ''))
+			calc_magic_item_types.append(data)
 			i+=1
 		return(calc_magic_item_types)
 		
@@ -324,7 +324,7 @@ def find_magic_items(quantity, magic_item_type):
 		while i < q:
 			f_array = openfile('armor-weapon')
 			data = array_result(f_array)
-			calc_magic_item_types.append(data.replace('\n', ''))
+			calc_magic_item_types.append(data)
 			i+=1
 		return(calc_magic_item_types)
 
@@ -335,7 +335,7 @@ def find_magic_items(quantity, magic_item_type):
 			m_m = map_or_magic()
 			f_array = openfile(m_m)
 			data = array_result(f_array)
-			calc_magic_item_types.append(data.replace('\n', ''))
+			calc_magic_item_types.append(data)
 			i+=1
 		p = 0
 		while p < q/2:
@@ -350,7 +350,7 @@ def find_magic_items(quantity, magic_item_type):
 			m_m = map_or_magic()
 			f_array = openfile(m_m)
 			data = array_result(f_array)
-			calc_magic_item_types.append(data.replace('\n', ''))
+			calc_magic_item_types.append(data)
 			i+=1
 		p = 0
 		while p < q/3:
@@ -365,7 +365,7 @@ def find_magic_items(quantity, magic_item_type):
 			m_m = map_or_magic()
 			f_array = openfile(m_m)
 			data = array_result(f_array)
-			calc_magic_item_types.append(data.replace('\n', ''))
+			calc_magic_item_types.append(data)
 			i+=1
 		p = 0
 		while p < q/4:
@@ -380,7 +380,7 @@ def find_magic_items(quantity, magic_item_type):
 			m_m = map_or_magic()
 			f_array = openfile(m_m)
 			data = array_result(f_array)
-			calc_magic_item_types.append(data.replace('\n', ''))
+			calc_magic_item_types.append(data)
 			i+=1
 		p = 0
 		while p < q/4:
@@ -396,7 +396,7 @@ def find_magic_items(quantity, magic_item_type):
 			m_m = map_or_magic()
 			f_array = openfile(m_m)
 			data = array_result(f_array)
-			calc_magic_item_types.append(data.replace('\n', ''))
+			calc_magic_item_types.append(data)
 			i+=1
 		p = 0
 		while p < q/3:
@@ -432,7 +432,7 @@ def find_magic_items(quantity, magic_item_type):
 			calc_magic_item_types.append('weapon')
 			f_array = openfile('miscX')
 			data = array_result(f_array)
-			calc_magic_item_types.append(data.replace('\n', ''))
+			calc_magic_item_types.append(data)
 			i+=1
 		return(calc_magic_item_types)
 
@@ -442,7 +442,7 @@ def find_magic_items(quantity, magic_item_type):
 		while i < q:
 			f_array = openfile('miscX')
 			data = array_result(f_array)
-			calc_magic_item_types.append(data.replace('\n', ''))
+			calc_magic_item_types.append(data)
 			calc_magic_item_types.append('potion')
 			i+=1
 		return(calc_magic_item_types)
@@ -453,7 +453,7 @@ def find_magic_items(quantity, magic_item_type):
 		while i < q:
 			f_array = openfile('map')
 			data = array_result(f_array)
-			calc_magic_item_types.append(data.replace('\n', ''))
+			calc_magic_item_types.append(data)
 			i+=1
 		return(calc_magic_item_types)
 
@@ -478,7 +478,7 @@ def find_magic_items(quantity, magic_item_type):
 		i = 0
 		while i < q:
 			array = openfile('miscX')
-			result = array_result(array).replace("\n", "")
+			result = array_result(array)
 			calc_magic_item_types.append(result)
 			i+=1
 		return(calc_magic_item_types)
@@ -538,11 +538,11 @@ def generate_treasure_map(map_type):
 	#
 	#find_variable_results = re.findall(r'/{\((?P<q>.[0-9+]?)d(?P<die>.[0-9]?)\)\*(?P<mult>.[0-9]+?)}', dataset)
 	array1 = openfile('map-location')
-	data1 = array_result(array1).replace("\n", "")
+	data1 = array_result(array1)
 	array2 = openfile('map-location2')
-	data2 = array_result(array2).replace("\n", "")
+	data2 = array_result(array2)
 	d_array = openfile('direction')
-	direction = array_result(d_array).replace("\n", "")
+	direction = array_result(d_array)
 	data = map_type
 	data = "treasure map (" + data + ", located: " + data1 + " in " + direction + " direction, " + data2 + ")"
 	return(data)

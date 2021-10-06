@@ -321,7 +321,7 @@ def dungeondressing():
         final_furnishings = []
         while i < rNum:
             furnishing_array = openfile('dungeon-furnishings')
-            furnishing_result = array_result(furnishing_array).replace('\n', '')
+            furnishing_result = array_result(furnishing_array)
             furnishings.append(furnishing_result)
             i += 1
         # get duplicates

@@ -6,7 +6,6 @@ import math
 
 # bag of beans
 # bag of tricks
-# book of infinite spells
 # necklace of prayer beads
 
 def check_special_item(magic_item):
@@ -365,7 +364,7 @@ def check_if_scroll(magic_item):
 		min_range = int(is_scroll[0][2])
 		max_range = int(is_scroll[0][3])
 		f_array = openfile('scroll-type')
-		spellcasting_class = array_result(f_array).replace('\n', '')
+		spellcasting_class = array_result(f_array)
 		if spellcasting_class == "magic-user":
 			pass
 		else:
@@ -379,7 +378,7 @@ def check_if_scroll(magic_item):
 			rNum = randint(min_range, max_range)
 			page = 'spells-' + spellcasting_class + '-' + str(rNum)
 			f_array = openfile(page)
-			randomly_rolled_spell = array_result(f_array).replace('\n', '')
+			randomly_rolled_spell = array_result(f_array)
 			scroll_list.append(randomly_rolled_spell)
 			i += 1
 		scroll_header = spellcasting_class + " scroll ["
@@ -431,10 +430,10 @@ def check_if_sword(magic_item):
 	if is_sword:
 		alignment = ''
 		array = openfile('sword-type')
-		sword_type = array_result(array).replace('\n', '')
+		sword_type = array_result(array)
 		# CHECK FOR SPECIAL SWORD, I.E. INTELLIGENCE
 		special_array = openfile('sword-intelligence')
-		intelligence = array_result(special_array).replace('\n', '')
+		intelligence = array_result(special_array)
 		extra_ability = ''
 		num_primary = 0
 		num_extraordinary = 0
@@ -498,7 +497,7 @@ def check_if_sword(magic_item):
 					alignment = 'LN'
 			else:
 				array = openfile('sword-alignment')
-				alignment = array_result(array).replace('\n', '')
+				alignment = array_result(array)
 			primary_ability_list = []
 			extraordinary_ability_list = []
 			special_purpose = ''
@@ -588,31 +587,31 @@ def check_if_sword(magic_item):
 
 def determine_primary_abilities():
 	array = openfile('sword-primary')
-	primary_ability = array_result(array).replace('\n', '')
+	primary_ability = array_result(array)
 	return primary_ability
 
 def determine_extraordinary_abilities():
 	array = openfile('sword-extraordinary')
-	extraordinary_ability = array_result(array).replace('\n', '')
+	extraordinary_ability = array_result(array)
 	return extraordinary_ability
 
 def determine_special_purpose():
 	array = openfile('sword-purpose')
-	special_purpose = array_result(array).replace('\n', '')
+	special_purpose = array_result(array)
 	pp_array = openfile('sword-purpose-power')
-	special_purpose_power = array_result(pp_array).replace('\n', '')
+	special_purpose_power = array_result(pp_array)
 	sword_special_purpose = f"Special Purpose: {special_purpose}, Special Purpose Power: {special_purpose_power}"
 	return sword_special_purpose
 
 def determine_languages():
 	languages_list = []
 	array = openfile('sword-languages')
-	num_languages = array_result(array).replace('\n', '')
+	num_languages = array_result(array)
 	i = 0
 	#print(f"[+] START with {num_languages}")
 	while i < int(num_languages):
 		lang_array = openfile('languages')
-		language = array_result(lang_array).replace('\n', '')
+		language = array_result(lang_array)
 		#print(language)
 		if language in languages_list:
 			#print("!!! DUPLICATE LANGUAGE !!!")
