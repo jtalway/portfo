@@ -5,14 +5,14 @@
     <div class="container">
       <div class="row">
         <div class="col-xs-12">
-           <h4>Fantasy Name Generator</h4>
-              <form action="fantasyname" method="post" class="reveal-content">
+           <h4>NPC Name Generator</h4>
+              <form action="npcname" method="post" class="reveal-content">
               <label for="quantity">Quantity</label>
               <input type="number" name="quantity" id="quantity" min='1' max='100' size="6" >
               <script type="text/javascript">
               document.getElementById('quantity').value = '1';
               </script>
-              <button type="submit" class="btn btn-danger btn-lg">Generate Fantasy Names</button>
+              <button type="submit" class="btn btn-danger btn-lg">Generate NPC Names</button>
               </form>
               {% if fantasy_names %}
               <b><u>Fantasy Name Result</u></b> &nbsp; <cite style="font-size: 9px;"> generated <span id="datetime"></span></cite><br>

@@ -102,16 +102,16 @@ def npcfacts():
     else:
         return render_template('npcfacts.html')
 
-# FANTASY NAME
-@app.route('/fantasyname', methods=['POST', 'GET'])
-def fantasyname():
+# NPC NAME
+@app.route('/npcname', methods=['POST', 'GET'])
+def npcname():
     if request.method == 'POST':
         name_quantity = request.form['quantity']
         fantasy_names = determine_fantasy_name(name_quantity)
-        return render_template('fantasyname.html', 
+        return render_template('npcname.html', 
             fantasy_names = fantasy_names)
     else:
-        return render_template('fantasyname.html')
+        return render_template('npcname.html')
 
 # CRITICALS
 @app.route('/critical', methods=['POST', 'GET'])
