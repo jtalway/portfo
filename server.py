@@ -21,7 +21,7 @@ app = Flask(__name__)
 @app.route('/index')
 @app.route('/index.html')
 def index():
-	return render_template('index.html')
+	return render_template('generators.html')
 
 
 @app.route('/character')
