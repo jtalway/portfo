@@ -1,0 +1,9 @@
+scat
+feathers/fur/skin/scales
+sounds
+scent
+scratching post
+marking post
+drag marks
+(tracks) broken foliage
+abandoned lair

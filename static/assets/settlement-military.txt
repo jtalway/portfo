@@ -1,0 +1,5 @@
+Outpost
+Barracks
+Keep
+Fort
+Watchtower

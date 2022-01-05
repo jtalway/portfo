@@ -1,0 +1,69 @@
+Cat
+Commoner
+Deer
+Eagle
+Goat
+Hyena
+Jackal
+Vulture
+Blood Hawk
+Flying Snake
+Giant Weasel
+Guard
+Poisonous Snake
+Stirge
+Tribal Warrior
+Axe Beak
+Boar
+Elk
+Giant Poisonous Snake
+Giant Wolf Spider
+Goblin
+Panther
+Pteranodon
+Horse
+Wolf
+Cockatrice
+Giant Goat
+Giant Wasp
+Gnoll
+Hobgoblin
+Jackalwere
+Orc
+Scout
+Swarm of Insects
+Worg
+Bugbear
+Giant Eagle
+Giant Hyena
+Giant Vulture
+Hippogriff
+Lion
+Scarecrow
+Thri-kreen
+Tiger
+Allosaurus
+Ankheg
+Centaur
+Druid
+Giant Boar
+Giant Elk
+Griffon
+Ogre
+Orog
+Pegasus
+Rhinoceros
+Ankylosaurus
+Manticore
+Phase Spider
+Veteran
+Couatl
+Elephant
+Wereboar
+Weretiger
+Bulette
+Gorgon
+Triceratops
+Chimera
+Cyclops
+Tyrannosaurus Rex

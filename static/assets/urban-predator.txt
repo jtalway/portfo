@@ -1,0 +1,37 @@
+Flying Snake
+Giant Rat
+Mastiff
+Stirge
+Giant Centipede
+Giant Poisonous Snake
+Crocodile
+Giant Wasp
+Giant Spider
+Phase Spider
+Invisible Stalker
+Cat
+Commoner
+Goat
+Rat
+Raven
+Bandit
+Cultist
+Giant Rat
+Guard
+Mule
+Noble
+Pony
+Acolyte
+Draft Horse
+Riding Horse
+Swarm of Bats
+Swarm of Rats
+Swarm of Ravens
+Swarm of Insects
+Thug
+Spy
+Priest
+Knight
+Veteran
+Gladiator
+Mage

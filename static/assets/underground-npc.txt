@@ -1,0 +1,41 @@
+Kobold
+Drow
+Goblin
+Grimlock
+Kuo-toa
+Troglodyte
+Hobgoblin
+Magma Mephit
+Orc
+Shadow
+Svirfneblin
+Bugbear
+Duergar
+Ghoul
+Specter
+Gargoyle
+Ghast
+Mimic
+Minotaur Skeleton
+Orog
+Quaggoth
+Doppelganger
+Minotaur
+Water Weird
+Wight
+Bone Naga
+Flameskull
+Ghost
+Beholder Zombie
+Earth Elemental
+Salamander
+Vampire Spawn
+Wraith
+Xorn
+Drider
+Spirit Naga
+Dao
+Death Tyrant
+Mind Flayer
+Beholder
+Aboleth

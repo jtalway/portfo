@@ -1,0 +1,40 @@
+Cat
+Deer
+Eagle
+Goat
+Vulture
+Boar
+Elk
+Riding Horse
+Giant Goat
+Swarm of Insects
+Giant Elk
+Rhinoceros
+Ankylosaurus
+Elephant
+Triceratops
+Prairie Dog
+Chicken
+Ostrich
+Kangaroo
+Zebra
+Buffalo
+Lizard
+Bird
+Armadillo
+Rabbit
+Raven
+Jackal
+Dingo
+Ant
+Hedgehog
+Anteater
+Chipmunk
+Duck
+Squirrel
+Owl
+Coyote
+Wildebeest
+Turkey
+Gazelle
+Woodchuck

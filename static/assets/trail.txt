@@ -1,0 +1,9 @@
+a trail that dead ends
+a path that dead ends
+game trail to water
+game trail to grazing area
+game trail
+marked path to notable location in hex
+path to lair
+path to ruins
+trail to landmark

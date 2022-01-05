@@ -1,0 +1,33 @@
+Commoner
+Bandit
+Cultist
+Guard
+Kobold
+Noble
+Acolyte
+Kenku
+Smoke Mephit
+Thug
+Half-ogre
+Spy
+Yuan-ti
+Cult Fanatic
+Gargoyle
+Priest
+Wererat
+Doppelganger
+Knight
+Veteran
+Water Weird
+Incubus
+Succubus
+Cambion
+Gladiator
+Vampire Spawn
+Mage
+Oni
+Assassin
+Gray Slaad
+Archmage
+Rakshasa
+Vampire

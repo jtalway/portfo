@@ -1,0 +1,16 @@
+a fountain
+a wall
+an obelisk
+a shrine
+a menhir
+a haunted house
+a haunted manor
+a temple
+burial grounds
+a monument
+a statue
+a dolmen
+a mausoleum
+an arch
+gravestones
+a tomb

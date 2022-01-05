@@ -1,0 +1,16 @@
+Kobold
+Aarakocra
+Winged Kobold
+Orc
+Half-ogre
+Ogre
+Orog
+Ettin
+Troll
+Cyclops
+Stone Giant
+Frost Giant
+Cloud Giant
+Fire Giant
+Harpy
+Galeb Duhr

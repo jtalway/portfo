@@ -1,0 +1,53 @@
+Cat
+Commoner
+Hyena
+Jackal
+Scorpion
+Vulture
+Bandit
+Camel
+Flying Snake
+Guard
+Kobold
+Mule
+Poisonous Snake
+Stirge
+Tribal Warrior
+Constrictor Snake
+Giant Lizard
+Giant Poisonous Snake
+Giant Wolf Spider
+Pseudodragon
+Dust Mephit
+Gnoll
+Hobgoblin
+Jackalwere
+Scout
+Swarm of Insects
+Death Dog
+Giant Hyena
+Giant Spider
+Giant Toad
+Giant Vulture
+Half-ogre
+Lion
+Thri-kreen
+Yuan-ti
+Berserker
+Druid
+Giant Constrictor Snake
+Ogre
+Giant Scorpion
+Mummy
+Phase Spider
+Wight
+Couatl
+Lamia
+Weretiger
+Air Elemental
+Fire Elemental
+Cyclops
+Medusa
+Young Brass Dragon
+Yuan-ti Abomination
+Young Blue Dragon

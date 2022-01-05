@@ -1,0 +1,12 @@
+Kobold
+Dust Mephit
+Gnoll
+Hobgoblin
+Jackalwere
+Half-ogre
+Thri-kreen
+Ogre
+Yuan-ti
+Lamia
+Cyclops
+Medusa

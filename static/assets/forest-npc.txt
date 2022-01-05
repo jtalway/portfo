@@ -1,0 +1,28 @@
+Kobold
+Goblin
+Kenku
+Gnoll
+Hobgoblin
+Lizardfolk
+Orc
+Bugbear
+Half-ogre
+Yuan-ti
+Ogre
+Orog
+Wererat
+Werewolf
+Wereboar
+Weretiger
+Troll
+Werebear
+Oni
+Blink Dog
+Pixie
+Sprite
+Satyr
+Dryad
+Centaur
+Green Hag
+Treant
+Harpy

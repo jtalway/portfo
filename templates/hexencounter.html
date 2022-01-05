@@ -1,0 +1,60 @@
+{% include "header-top.html" %}
+<title>Hex Encounters</title> 
+{% include "header-bottom.html" %}
+  <div class="section-container">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+           <h4>Custom Wilderness Encounters</h4>
+
+              <form action="hexencounter" method="post" class="reveal-content">
+              <label for="environment">Environment: </label>
+              <select name="environment" id="environment">
+                <option value="arctic">Arctic</option>
+                <option value="coastal">Coastal</option>
+                <option value="desert">Desert</option>
+                <option value="forest" selected="selected">Forest</option>
+                <option value="grassland">Grassland</option>
+                <option value="hill">Hill</option>
+                <option value="mountain">Mountain</option>
+                <option value="swamp">Swamp</option>
+                <option value="underground">Underground</option>
+                <option value="underwater">Underwater</option>
+                <option value="urban">Urban</option>
+              </select>
+              <label for="quantity">X</label>
+              <input type="number" name="quantity" id="quantity" min='1' max='10' size="6" >
+              <script type="text/javascript">
+              document.getElementById('quantity').value = '1';
+              </script>
+              <button type="submit" class="btn btn-danger btn-lg">Generate Wilderness Encounter</button>
+              </form>
+
+              {% if encounter_list %}
+              <b><u>{{environment}} Encounter (x{{quantity}})</u></b> &nbsp; <cite style="font-size: 9px;">
+              generated <span id="datetime"></span></cite><br>
+              {% endif %}
+               {% if encounter_list %}
+              {% for encounter in encounter_list %}
+                <div style="line-height:125%;">
+                {{ encounter }}<br><br>
+                </div>
+              {% endfor %}
+              {% endif %}
+              <hr>
+              <h4>Notes</h4>
+              *creature* - substitute with the creature that normally lairs in this hex<br>
+              <span title="The creature(s) may or may not have been engaging in these activities"><i>[possibly]</i></span><br>
+              <i>Urban, Underwater, and Underground needs rework</i>
+              <hr>
+              <a href="https://campaignwiki.org/text-mapper" target="_blank">Hex Terrain Generator</a> &nbsp; <a href="https://campaignwiki.org/hex-describe/" target="_blank">Hex Descriptions</a><br>
+              <a href="https://donjon.bin.sh/d20/weather/" target="_blank">Weather</a> &nbsp; <a href="https://donjon.bin.sh/fantasy/calendar/" target="_blank">Calendar</a><br>
+              <script>
+                var dt = new Date();
+                document.getElementById("datetime").innerHTML = dt.toLocaleTimeString();
+              </script>
+        </div>
+      </div>
+    </div>
+  </div>
+{% include "footer.html" %}

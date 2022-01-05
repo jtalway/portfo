@@ -1,0 +1,67 @@
+Cat
+Commoner
+Goat
+Rat
+Raven
+Bandit
+Cultist
+Flying Snake
+Giant Rat
+Guard
+Kobold
+Mastiff
+Mule
+Noble
+Pony
+Stirge
+Acolyte
+Giant Centipede
+Giant Poisonous Snake
+Kenku
+Pseudodragon
+Horse
+Skeleton
+Smoke Mephit
+Swarm of Bats
+Swarm of Rats
+Swarm of Ravens
+Zombie
+Crocodile
+Giant Wasp
+Shadow
+Swarm of Insects
+Thug
+Warhorse
+Ghoul
+Giant Spider
+Half-ogre
+Specter
+Spy
+Yuan-ti
+Cult Fanatic
+Gargoyle
+Ghast
+Mimic
+Priest
+Wererat
+Will-o-wisp
+Doppelganger
+Knight
+Phase Spider
+Veteran
+Water Weird
+Wight
+Couatl
+Ghost
+Incubus
+Succubus
+Cambion
+Gladiator
+Revenant
+Vampire Spawn
+Invisible Stalker
+Mage
+Oni
+Shield Guardian
+Assassin
+Gray Slaad

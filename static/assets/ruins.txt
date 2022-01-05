@@ -1,0 +1,10 @@
+ghost town
+ruined wooden tower
+ruined stone tower
+ruined metal tower
+ruined church
+ruined temple
+ruined village
+ruined keep
+ruined castle
+ruined dungeon entrance

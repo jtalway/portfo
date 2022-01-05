@@ -1,0 +1,29 @@
+Commoner
+Owl
+Bandit
+Blood Hawk
+Kobold
+Tribal Warrior
+Giant Owl
+Ice Mephit
+Orc
+Scout
+Brown Bear
+Half-Ogre
+Berserker
+Druid
+Griffon
+Ogre
+Orog
+Polar Bear
+Saber-Toothed Tiger
+Manticore
+Veteran
+Winter Wolf
+Yeti
+Troll
+Werebear
+Young Remorhaz
+Mammoth
+Frost Giant
+Abominable Yeti

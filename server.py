@@ -9,6 +9,7 @@ from treasure import *
 from dungeon import *
 from npc import *
 from calculations import *
+from hex import *
 import random
 import re
 from collections import Counter
@@ -39,6 +40,10 @@ def adventure():
 @app.route('/treasure')
 def treasure():
     return render_template('generator-treasure.html')
+
+@app.route('/resources')
+def resources():
+    return render_template('resources.html')
 
 
 # DICE ROLLER
@@ -364,6 +369,25 @@ def dungeonencounter():
             q = q)
     else:
         return render_template('dungeonencounter.html')
+
+
+# HEX ENCOUNTER
+@app.route('/hexencounter', methods=['POST', 'GET'])
+def hexencounter():
+    if request.method == 'POST':
+        environment = request.form['environment']
+        quantity = request.form['quantity']
+        encounter_list, environment = encounter_generation(quantity, environment)
+        return render_template('hexencounter.html', 
+            encounter_list = encounter_list, 
+            quantity = quantity,
+            environment = environment)
+    else:
+        return render_template('hexencounter.html')
+
+        
+
+
 
 def write_to_file(data):
     with open('database.txt', mode='a') as database:

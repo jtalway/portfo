@@ -1,0 +1,40 @@
+Rat
+Raven
+Giant Rat
+Kobold
+Poisonous Snake
+Stirge
+Tribal Warrior
+Bullywug
+Constrictor Snake
+Giant Frog
+Giant Lizard
+Giant Poisonous Snake
+Mud Mephit
+Swarm of Rats
+Swarm of Ravens
+Crocodile
+Lizardfolk
+Orc
+Scout
+Swarm of Insects
+Ghoul
+Giant Spider
+Giant Toad
+Yuan-ti
+Druid
+Ghast
+Giant Constrictor Snake
+Ogre
+Swarm of Poisonous Snakes
+Will-o-wisp
+Green Hag
+Wight
+Giant Crocodile
+Revenant
+Shambling Mound
+Troll
+Water Elemental
+Young Black Dragon
+Yuan-ti Abomination
+Hydra

@@ -1,0 +1,9 @@
+Kobold
+Orc
+Half-ogre
+Ogre
+Orog
+Troll
+Werebear
+Frost Giant
+Ice Mephit

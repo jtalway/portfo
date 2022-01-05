@@ -1,0 +1,46 @@
+Eagle
+Goat
+Blood Hawk
+Guard
+Kobold
+Stirge
+Tribal Warrior
+Aarakocra
+Pseudodragon
+Pteranodon
+Swarm of Bats
+Winged Kobold
+Giant Goat
+Orc
+Scout
+Giant Eagle
+Half-ogre
+Harpy
+Hippogriff
+Lion
+Berserker
+Druid
+Giant Elk
+Griffon
+Ogre
+Orog
+Peryton
+Saber-toothed Tiger
+Basilisk
+Hell Hound
+Manticore
+Veteran
+Ettin
+Air Elemental
+Bulette
+Troll
+Chimera
+Cyclops
+Galeb Duhr
+Wyvern
+Stone Giant
+Frost Giant
+Cloud Giant
+Fire Giant
+Young Silver Dragon
+Young Red Dragon

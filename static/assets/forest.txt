@@ -1,0 +1,102 @@
+Awakened Shrub
+Baboon
+Badger
+Cat
+Commoner
+Deer
+Hyena
+Owl
+Bandit
+Blood Hawk
+Flying Snake
+Giant Rat
+Giant Weasel
+Guard
+Kobold
+Mastiff
+Poisonous Snake
+Stirge
+Tribal Warrior
+Twig Blight
+Blink Dog
+Boar
+Constrictor Snake
+Elk
+Giant Badger
+Giant Bat
+Giant Frog
+Giant Lizard
+Giant Owl
+Giant Poisonous Snake
+Giant Wolf Spider
+Goblin
+Kenku
+Needle Blight
+Panther
+Pixie
+Pseudodragon
+Sprite
+Swarm of Ravens
+Wolf
+Ape
+Black Bear
+Giant Wasp
+Gnoll
+Hobgoblin
+Lizardfolk
+Orc
+Satyr
+Scout
+Swarm of Insects
+Vine Blight
+Worg
+Brown Bear
+Bugbear
+Dire Wolf
+Dryad
+Giant Hyena
+Giant Spider
+Giant Toad
+Goblin Boss
+Half-ogre
+Harpy
+Tiger
+Young Faerie Dragon
+Yuan-ti
+Adult Faerie Dragon
+Ankheg
+Awakened Tree
+Berserker
+Centaur
+Druid
+Ettercap
+Giant Boar
+Giant Constrictor Snake
+Giant Elk
+Grick
+Ogre
+Orog
+Pegasus
+Swarm of Poisonous Snakes
+Wererat
+Will-o-wisp
+Displacer Beast
+Green Hag
+Owlbear
+Phase Spider
+Veteran
+Werewolf
+Banshee
+Couatl
+Wereboar
+Weretiger
+Gorgon
+Shambling Mound
+Troll
+Unicorn
+Werebear
+Giant Ape
+Oni
+Yuan-ti Abomination
+Young Green Dragon
+Treant

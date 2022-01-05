@@ -1,0 +1,13 @@
+Goblin
+Gnoll
+Hobgoblin
+Jackalwere
+Orc
+Bugbear
+Thri-kreen
+Centaur
+Ogre
+Orog
+Wereboar
+Weretiger
+Cyclops

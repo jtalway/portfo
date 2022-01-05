@@ -1,0 +1,9 @@
+a house
+a monument
+a shrine
+a temple
+a tower
+a fort
+a crude shelter
+an outpost
+a watchtower

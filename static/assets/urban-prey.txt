@@ -1,0 +1,26 @@
+Cat
+Commoner
+Goat
+Rat
+Raven
+Bandit
+Cultist
+Giant Rat
+Guard
+Mule
+Noble
+Pony
+Acolyte
+Draft Horse
+Riding Horse
+Swarm of Bats
+Swarm of Rats
+Swarm of Ravens
+Swarm of Insects
+Thug
+Spy
+Priest
+Knight
+Veteran
+Gladiator
+Mage

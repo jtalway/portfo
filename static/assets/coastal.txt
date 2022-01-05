@@ -1,0 +1,35 @@
+Commoner
+Crab
+Eagle
+Bandit
+Blood Hawk
+Giant Crab
+Guard
+Kobold
+Merfolk
+Poisonous Snake
+Stirge
+Tribal Warrior
+Giant Lizard
+Giant Wolf Spider
+Pseudodragon
+Pteranodon
+Sahuagin
+Scout
+Giant Eagle
+Giant Toad
+Harpy
+Berserker
+Druid
+Griffon
+Merrow
+Ogre
+Plesiosaurus
+Sea Hag
+Manticore
+Veteran
+Banshee
+Water Elemental
+Cyclops
+Young Bronze Dragon
+Young Blue Dragon

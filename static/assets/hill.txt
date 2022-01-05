@@ -1,0 +1,73 @@
+Baboon
+Commoner
+Eagle
+Goat
+Hyena
+Raven
+Vulture
+Bandit
+Blood Hawk
+Giant Weasel
+Guard
+Kobold
+Mastiff
+Mule
+Poisonous Snake
+Stirge
+Tribal Warrior
+Axe Beak
+Boar
+Elk
+Giant Owl
+Giant Wolf Spider
+Goblin
+Panther
+Pseudodragon
+Swarm of Bats
+Swarm of Ravens
+Wolf
+Giant Goat
+Gnoll
+Hobgoblin
+Orc
+Scout
+Swarm of Insects
+Worg
+Brown Bear
+Dire Wolf
+Giant Eagle
+Giant Hyena
+Goblin Boss
+Half-ogre
+Harpy
+Hippogriff
+Lion
+Berserker
+Druid
+Giant Boar
+Giant Elk
+Griffon
+Ogre
+Orog
+Pegasus
+Peryton
+Green Hag
+Manticore
+Phase Spider
+Veteran
+Werewolf
+Ettin
+Wereboar
+Bulette
+Gorgon
+Hill Giant
+Revenant
+Troll
+Werebear
+Chimera
+Cyclops
+Galeb Duhr
+Wyvern
+Stone Giant
+Young Copper Dragon
+Young Red Dragon
