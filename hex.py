@@ -7,17 +7,21 @@ def encounter_generation(quantity, environment):
     q = int(quantity)
     i = 0
     encounter = []
-    filepath = './static/assets/'
+    # local filepath
+    # filepath = './static/assets/'
+    
+    # remote filepath
+    filepath = "/home/jtalway/portfo/static/assets/"
     
     while i < q:
-        # rNum1 = randint(1, 6)
-        # rNum2 = randint(1, 6)
+        rNum1 = randint(1, 6)
+        rNum2 = randint(1, 6)
         rNum3 = randint(1, 6)
         rNum4 = randint(1, 6)
-        # priNum = rNum1 + rNum2
+        priNum = rNum1 + rNum2
         secNum = rNum3 + rNum4
         # TEST RESULTS
-        priNum = 7
+        # priNum = 7
 
 
         number = ""
