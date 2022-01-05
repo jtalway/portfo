@@ -94,7 +94,7 @@ def encounter_generation(quantity, environment):
 
         elif priNum == 4:
             category = "Roamer (surrounding countryside)"
-            number = number_appearing()
+            number = number_appearing(filepath)
             monster = "monster that travel this area"
             # patrols
             if secNum == 2:
@@ -123,13 +123,13 @@ def encounter_generation(quantity, environment):
                 res = "ERROR"
 
             if res == "Spoor":
-                spoor_res = spoor_result()
+                spoor_res = spoor_result(filepath)
 
             env = random_environment()
             mc = random_monster_classification()
             monster_wander = random.choice(list(open(filepath + env + mc + '.txt')))
 
-            behavior = unintelligent_behavior()
+            behavior = unintelligent_behavior(filepath)
             if res == "Encounter":
                 result = f"[{priNum}, {secNum}] {number} {monster_wander} [{behavior}]"
             elif res == "Ambush":
@@ -144,7 +144,7 @@ def encounter_generation(quantity, environment):
 
         elif priNum == 5:
             category = "Lair Monster"
-            number = number_appearing()
+            number = number_appearing(filepath)
             monster = "*Lair*"
             monster_default = random.choice(list(open(filepath + environment + '.txt'))).rstrip()
             prey = random.choice(list(open(filepath + environment + '-prey.txt'))).rstrip()
@@ -156,7 +156,7 @@ def encounter_generation(quantity, environment):
                 res = "Ambush"
             elif secNum == 5:
                 res = "Chase"
-                number2 = number_appearing()      
+                number2 = number_appearing(filepath)      
             elif secNum == 6:
                 res = "Spoor"
             elif secNum == 7:
@@ -175,12 +175,12 @@ def encounter_generation(quantity, environment):
                 res = "ERROR"
 
             if res == "Spoor":
-                spoor_res = spoor_result()
+                spoor_res = spoor_result(filepath)
 
             if res == "Special":
                 res = random_character_class()
 
-            behavior = unintelligent_behavior()
+            behavior = unintelligent_behavior(filepath)
             if res == "Encounter":
                 result = f"[{priNum}, {secNum}] {number} *{monster_default}* [{behavior}]"
             elif res == "Chase":
@@ -199,7 +199,7 @@ def encounter_generation(quantity, environment):
 
         elif priNum == 6:
             category = "Predator (environment)"
-            number = number_appearing()
+            number = number_appearing(filepath)
             monster = random.choice(list(open(filepath + environment + '-predator.txt')))
             if secNum == 2:
                 res = "rare species"
@@ -209,7 +209,7 @@ def encounter_generation(quantity, environment):
                 res = "Ambush"
             elif secNum == 5:
                 res = "fighting"
-                number2 = number_appearing()
+                number2 = number_appearing(filepath)
                 monster2 = random.choice(list(open(filepath + environment + '-predator.txt')))
             elif secNum == 6:
                 res = "Spoor"
@@ -229,11 +229,11 @@ def encounter_generation(quantity, environment):
                 res = "ERROR"
 
             if res == "Spoor":
-                spoor_res = spoor_result()
+                spoor_res = spoor_result(filepath)
             if res == "Special":
                 res = random_character_class()
 
-            behavior = unintelligent_behavior()
+            behavior = unintelligent_behavior(filepath)
             if res == "Encounter":
                 result = f"[{priNum}, {secNum}] {number} {monster} [{behavior}]"
             elif res == "Lair":
@@ -259,7 +259,7 @@ def encounter_generation(quantity, environment):
                 res = "New Construction"
                 constructor = random.choice(list(open(filepath + environment + '-npc.txt'))).rstrip()
                 construction_type = random.choice(list(open(filepath + 'construction.txt'))).rstrip()
-                number = number_appearing()
+                number = number_appearing(filepath)
             elif secNum == 4:
                 # Military Settlements
                 res = random.choice(list(open(filepath + 'settlement-military.txt'))).rstrip()
@@ -310,7 +310,7 @@ def encounter_generation(quantity, environment):
 
         elif priNum == 8:
             category = "Prey (environment)"
-            number = number_appearing()
+            number = number_appearing(filepath)
             monster = random.choice(list(open(filepath + environment + '-prey.txt'))).rstrip()
             if secNum == 2:
                 res = "rare species"
@@ -338,9 +338,9 @@ def encounter_generation(quantity, environment):
                 res = "ERROR"
 
             if res == "Spoor":
-                spoor_res = spoor_result()
+                spoor_res = spoor_result(filepath)
 
-            behavior = unintelligent_behavior()
+            behavior = unintelligent_behavior(filepath)
             if res == "Encounter":
                 result = f"[{priNum}, {secNum}] {number} {monster} [{behavior}]"
             elif res == "Lair":
@@ -357,7 +357,7 @@ def encounter_generation(quantity, environment):
 
         elif priNum == 9:
             category = "Lair Monster"
-            number = number_appearing()
+            number = number_appearing(filepath)
             monster = "*Lair*"
             monster_default = random.choice(list(open(filepath + environment + '.txt'))).rstrip()
             prey = random.choice(list(open(filepath + environment + '-prey.txt'))).rstrip()
@@ -369,7 +369,7 @@ def encounter_generation(quantity, environment):
                 res = "Ambush"
             elif secNum == 5:
                 res = "Chase"
-                number2 = number_appearing()      
+                number2 = number_appearing(filepath)      
             elif secNum == 6:
                 res = "Spoor"
             elif secNum == 7:
@@ -388,12 +388,12 @@ def encounter_generation(quantity, environment):
                 res = "ERROR"
 
             if res == "Spoor":
-                spoor_res = spoor_result()
+                spoor_res = spoor_result(filepath)
 
             if res == "Special":
                 res = random_character_class()
 
-            behavior = intelligent_behavior()
+            behavior = intelligent_behavior(filepath)
             if res == "Encounter":
                 result = f"[{priNum}, {secNum}] {number} *{monster_default}* [{behavior}]"
             elif res == "Chase":
@@ -412,7 +412,7 @@ def encounter_generation(quantity, environment):
 
         elif priNum == 10:
             category = "Humanoids"
-            number = number_appearing()
+            number = number_appearing(filepath)
             monster = random.choice(list(open(filepath + environment + '-npc.txt')))
             
             if secNum == 2:
@@ -441,12 +441,12 @@ def encounter_generation(quantity, environment):
                 res = "ERROR"
 
             if res == "Spoor":
-                spoor_res = spoor_result()
+                spoor_res = spoor_result(filepath)
 
             if res == "Special":
                 res = random_character_class()
 
-            behavior = intelligent_behavior()
+            behavior = intelligent_behavior(filepath)
             if res == "Encounter":
                 result = f"[{priNum}, {secNum}] {number} {monster} [{behavior}]"
             elif res == "Lair":
@@ -488,7 +488,7 @@ def encounter_generation(quantity, environment):
             else:
                 race = random.choice(list(open(filepath + 'specificrace.txt')))
             
-            behavior = intelligent_behavior()
+            behavior = intelligent_behavior(filepath)
             result = f"[{priNum}, {secNum}] {race} {monster} [{behavior}]"
             encounter.append(result)
 
@@ -552,23 +552,19 @@ def encounter_generation(quantity, environment):
     return(encounter, environment)
 
 
-def intelligent_behavior():
-    filepath = '/home/jtalway/Documents/Python/portfo/static/assets/'
+def intelligent_behavior(filepath):
     smart = random.choice(list(open(filepath + 'behavior-intelligent.txt'))).rstrip()
     return(smart)
 
-def unintelligent_behavior():
-    filepath = '/home/jtalway/Documents/Python/portfo/static/assets/'
+def unintelligent_behavior(filepath):
     dumb = random.choice(list(open(filepath + 'behavior-unintelligent.txt'))).rstrip()
     return(dumb)
 
-def number_appearing():
-    filepath = '/home/jtalway/Documents/Python/portfo/static/assets/'
+def number_appearing(filepath):
     number = random.choice(list(open(filepath + 'number-appearing.txt'))).rstrip()
     return(number)
 
-def spoor_result():
-    filepath = '/home/jtalway/Documents/Python/portfo/static/assets/'
+def spoor_result(filepath):
     spoor = random.choice(list(open(filepath + 'spoor.txt'))).rstrip()
     return(spoor)
 
@@ -579,14 +575,14 @@ def check_if_occupied(filepath, environment):
         occupant_result = "no occupant"
     elif oNum >=11 and oNum <=15:
         # find spoor
-        spoor_res = spoor_result()
+        spoor_res = spoor_result(filepath)
         monster = random.choice(list(open(filepath + environment + '.txt')))
-        number = number_appearing()
+        number = number_appearing(filepath)
         occupant_result = f"{spoor_res} of {number} {monster}"
     elif oNum >=16 and oNum <=19:
         # find inhabitant
         monster = random.choice(list(open(filepath + environment + '.txt')))
-        number = number_appearing()
+        number = number_appearing(filepath)
         occupant_result = f"{number} {monster}"
     else:
         # find lair inhabitant
@@ -601,7 +597,7 @@ def check_if_visitor_resource(filepath, environment):
     elif vrNum == 4:
         visitor_result = "songbirds"
     else:
-        number = number_appearing()
+        number = number_appearing(filepath)
         visitor = random.choice(list(open(filepath + environment + '-prey.txt')))
         visitor_result = f"{number} {visitor}"
     return(visitor_result)
