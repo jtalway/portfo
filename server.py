@@ -385,8 +385,35 @@ def hexencounter():
     else:
         return render_template('hexencounter.html')
 
-        
 
+@app.route('/random_bird', methods=['POST', 'GET'])
+def random_bird():
+    if request.method == 'POST':
+        bird = random_bird_generator()
+        return render_template('random-bird.html', 
+            bird = bird)
+    else:
+        return render_template('random-bird.html')
+   
+
+@app.route('/random_tree', methods=['POST', 'GET'])
+def random_tree():
+    if request.method == 'POST':
+        tree = random_tree_generator()
+        return render_template('random-tree.html', 
+            tree = tree)
+    else:
+        return render_template('random-tree.html')
+        
+@app.route('/random_herb', methods=['POST', 'GET'])
+def random_herb():
+    if request.method == 'POST':
+        herb = random_herb_generator()
+        return render_template('random-herb.html', 
+            herb = herb)
+    else:
+        return render_template('random-herb.html')
+  
 
 
 def write_to_file(data):

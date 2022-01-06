@@ -1,0 +1,30 @@
+{% include "header-top.html" %}
+<title>Random Bird</title> 
+{% include "header-bottom.html" %}
+  <div class="section-container">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+           <h4>Random Bird</h4>
+
+              <form action="random_bird" method="post" class="reveal-content">
+              <button type="submit" class="btn btn-danger btn-lg">Generate Bird</button>
+              </form>
+
+              
+              <b><u>Bird</u></b> &nbsp; <cite style="font-size: 9px;">
+              generated <span id="datetime"></span></cite><br>
+                <div style="line-height:125%;">
+                {{ bird }}<br><br>
+                </div>
+              <hr>
+              <a href="/hexencounter.html">Wilderness Encounters</a>
+              <script>
+                var dt = new Date();
+                document.getElementById("datetime").innerHTML = dt.toLocaleTimeString();
+              </script>
+        </div>
+      </div>
+    </div>
+  </div>
+{% include "footer.html" %}
