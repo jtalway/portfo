@@ -14,3 +14,7 @@ a mausoleum
 an arch
 gravestones
 a tomb
+fairy ring
+a garden
+site of a skirmish
+battleground

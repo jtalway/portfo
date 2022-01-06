@@ -1,8 +1,9 @@
-Thorp (<100)
-Hamlet (<400)
-Homestead
-Farm
-Manor House
-Church
-Cabin
+a thorp (<100 pop)
+a hamlet (<400 pop)
+a homestead
+a farm
+a gated manor house
+a church
+a cabin
+a hut
 a temple

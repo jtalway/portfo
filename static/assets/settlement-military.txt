@@ -1,5 +1,6 @@
-Outpost
-Barracks
-Keep
-Fort
-Watchtower
+outpost
+barracks
+keep
+fort
+watchtower
+encampment
