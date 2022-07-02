@@ -1,0 +1,37 @@
+{% include "header-top.html" %}
+<title>Road Encounters</title> 
+{% include "header-bottom.html" %}
+  <div class="section-container">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+           <h4>Custom Road Encounters [ALPHA version]</h4>
+
+              <form action="roadencounter" method="post" class="reveal-content">
+              <input type="number" name="quantity" id="quantity" min='1' max='10' size="6" >
+              <script type="text/javascript">
+              document.getElementById('quantity').value = '1';
+              </script>
+              <button type="submit" class="btn btn-danger btn-lg">Generate Road Encounter</button>
+              </form>
+
+              {% if encounter_list %}
+              <b><u>Encounter (x{{quantity}})</u></b> &nbsp; <cite style="font-size: 9px;">
+              generated <span id="datetime"></span></cite><br>
+              {% endif %}
+               {% if encounter_list %}
+              {% for encounter in encounter_list %}
+                <div style="line-height:125%;">
+                {{ encounter }}<br><br>
+                </div>
+              {% endfor %}
+              {% endif %}
+              <script>
+                var dt = new Date();
+                document.getElementById("datetime").innerHTML = dt.toLocaleTimeString();
+              </script>
+        </div>
+      </div>
+    </div>
+  </div>
+{% include "footer.html" %}

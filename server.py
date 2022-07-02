@@ -10,6 +10,7 @@ from dungeon import *
 from npc import *
 from calculations import *
 from hex import *
+from encounter_road import *
 import random
 import re
 from collections import Counter
@@ -395,6 +396,18 @@ def hexencounter():
             environment = environment)
     else:
         return render_template('hexencounter.html')
+
+# ROAD ENCOUNTER
+@app.route('/roadencounter', methods=['POST', 'GET'])
+def roadencounter():
+    if request.method == 'POST':
+        quantity = request.form['quantity']
+        encounter_list = road_encounter_generation(quantity)
+        return render_template('roadencounter.html', 
+            encounter_list = encounter_list, 
+            quantity = quantity)
+    else:
+        return render_template('roadencounter.html')
 
 
 @app.route('/random_bird', methods=['POST', 'GET'])

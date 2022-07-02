@@ -2,12 +2,6 @@ import random
 from openfile import * 
 from array_result import *
 
-# local filepath
-#filepath = './static/assets/'
-
-# remote filepath
-filepath = "/home/jtalway/portfo/static/assets/"
-
 def npc_fact_generation():
     npc_alignment = openfile('npc-alignment')
     alignment = array_result(npc_alignment)
@@ -91,7 +85,7 @@ def helper_monkey_action(action_quantity):
     x = 0
     action_list = []
     while x < int(action_quantity):
-        action = random.choice(list(open(filepath + 'helper-monkey.txt'))).rstrip()
+        action = randomchoice('helper-monkey')
         action_list.append(action)
         x+=1
     return action_list

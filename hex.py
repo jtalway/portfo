@@ -21,8 +21,8 @@ def encounter_generation(quantity, environment):
         priNum = rNum1 + rNum2
         secNum = rNum3 + rNum4
         # TEST RESULTS
-        # priNum = 5
-        # secNum = 2
+        #priNum = 6
+        #secNum = 2
 
         number = ""
 
@@ -157,7 +157,7 @@ def encounter_generation(quantity, environment):
             elif res == "Lair":
                 result = f"[{priNum}, {secNum}] {number} {monster_wander} are looking for or in the process of constructing a new lair"
             elif res == "Rare":
-                result = f"[{priNum}, {secNum}] {number} {rare_species_modification} {monster_wander}"
+                result = f"[{priNum}, {secNum}] {number} (rare species) {rare_species_modification} {monster_wander}"
             elif res == "Alpha":
                 result = f"[{priNum}, {secNum}] {monster_wander} Alpha (x2 HP, +2 AC/attack) [{behavior}]"
             elif res == "Champion":
@@ -230,7 +230,8 @@ def encounter_generation(quantity, environment):
             number = number_appearing()
             monster = random.choice(list(open(filepath + environment + '-predator.txt'))).rstrip()
             if secNum == 2:
-                res = "rare species"
+                res = "Rare"
+                rare_species_modification = random.choice(list(open(filepath + 'rare-species.txt'))).rstrip()
             elif secNum == 3:
                 res = "Lair"
             elif secNum == 4:
@@ -270,8 +271,8 @@ def encounter_generation(quantity, environment):
                 result = f"[{priNum}, {secNum}] ambushed by {number} {monster}"
             elif res == "Spoor":
                 result = f"[{priNum}, {secNum}] {spoor_res} of {number} {monster} [{behavior}]"
-            elif res == "rare species":
-                result = f"[{priNum}, {secNum}] {number} {res} of {monster}"
+            elif res == "Rare":
+                result = f"[{priNum}, {secNum}] {number} (rare species) {rare_species_modification} {monster}"
             elif res == "fighting":
                 result = f"[{priNum}, {secNum}] {number} {monster} {res} {number2} {monster2}"
             else:
@@ -362,7 +363,8 @@ def encounter_generation(quantity, environment):
             number = number_appearing()
             monster = random.choice(list(open(filepath + environment + '-prey.txt'))).rstrip()
             if secNum == 2:
-                res = "rare species"
+                res = "Rare"
+                rare_species_modification = random.choice(list(open(filepath + 'rare-species.txt'))).rstrip()
             elif secNum == 3:
                 res = "Lair"
             elif secNum == 4:
@@ -398,8 +400,8 @@ def encounter_generation(quantity, environment):
                 result = f"[{priNum}, {secNum}] ambushed by {number} {monster}"
             elif res == "Spoor":
                 result = f"[{priNum}, {secNum}] {spoor_res} of {number} {monster} [{behavior}]"
-            elif res == "rare species":
-                result = f"[{priNum}, {secNum}] {number} {res} of {monster}"
+            elif res == "Rare":
+                result = f"[{priNum}, {secNum}] {number} (rare species) {rare_species_modification} {monster}"
             else:
                 result = f"[{priNum}, {secNum}] {number} {monster} with {res} [{behavior}]"
             encounter.append(result)

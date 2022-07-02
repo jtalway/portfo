@@ -81,7 +81,6 @@ def determine_jewelry(jewelry_quantity):
 	# 			numlist.append(int(word))
 	# list comprehension 
 	jewelry_total_gp_value = sum([int(word) for item in jewelry_collection for word in item.split() if word.isnumeric()])
-	print(jewelry_total_gp_value)
 	jewelry_total_thousands = ("{:,}".format(jewelry_total_gp_value))
 	# GET TOTAL COUNT
 	jewelry_total_count = len(jewelry_collection)
