@@ -1,0 +1,33 @@
+{% include "header-top.html" %}
+<title>Helper Monkey</title> 
+{% include "header-bottom.html" %}
+  <div class="section-container">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+           <h4>What does your helper monkey do?</h4>
+              <form action="helpermonkey" method="post" class="reveal-content">
+              <label for="quantity">Quantity</label>
+              <input type="number" name="quantity" id="quantity" min='1' max='10' size="6" >
+              <script type="text/javascript">
+              document.getElementById('quantity').value = '1';
+              </script>
+              <button type="submit" class="btn btn-danger btn-lg">Generate Helper Monkey Action</button>
+              </form>
+              {% if monkey_actions %}
+              <b><u>Helper Monkey Action Result</u></b> &nbsp; <cite style="font-size: 9px;"> generated <span id="datetime"></span></cite><br>
+              {% endif %}
+              {% if monkey_actions %}
+              {% for action in monkey_actions %}
+                {{ action }}<br>
+              {% endfor %}
+              {% endif %}         
+              <script>
+                var dt = new Date();
+                document.getElementById("datetime").innerHTML = dt.toLocaleTimeString();
+              </script>
+        </div>
+      </div>
+    </div>
+  </div>
+{% include "footer.html" %}

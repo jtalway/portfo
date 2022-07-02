@@ -118,6 +118,17 @@ def npcname():
     else:
         return render_template('npcname.html')
 
+# NPC NAME
+@app.route('/helpermonkey', methods=['POST', 'GET'])
+def helpermonkey():
+    if request.method == 'POST':
+        action_quantity = request.form['quantity']
+        monkey_actions = helper_monkey_action(action_quantity)
+        return render_template('helpermonkey.html', 
+            monkey_actions = monkey_actions)
+    else:
+        return render_template('helpermonkey.html')
+
 # CRITICALS
 @app.route('/critical', methods=['POST', 'GET'])
 def critical():

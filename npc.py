@@ -1,5 +1,12 @@
+import random
 from openfile import * 
 from array_result import *
+
+# local filepath
+#filepath = './static/assets/'
+
+# remote filepath
+filepath = "/home/jtalway/portfo/static/assets/"
 
 def npc_fact_generation():
     npc_alignment = openfile('npc-alignment')
@@ -77,3 +84,14 @@ def determine_fantasy_name(name_quantity):
     # capitalize
     capitalized_names = [x.capitalize() for x in name_list]
     return capitalized_names
+
+# HELPER MONKEY
+
+def helper_monkey_action(action_quantity):
+    x = 0
+    action_list = []
+    while x < int(action_quantity):
+        action = random.choice(list(open(filepath + 'helper-monkey.txt'))).rstrip()
+        action_list.append(action)
+        x+=1
+    return action_list

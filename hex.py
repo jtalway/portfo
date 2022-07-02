@@ -3,7 +3,7 @@ from openfile import *
 from array_result import *
 
 # local filepath
-# filepath = './static/assets/'
+#filepath = './static/assets/'
 
 # remote filepath
 filepath = "/home/jtalway/portfo/static/assets/"
