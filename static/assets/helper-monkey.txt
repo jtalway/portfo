@@ -1,31 +1,48 @@
-Attack
-Dodge
-Use Object
-Search
-Grapple
-Dash
-Ready (roll again)
-Shove
-Help
-Hide
-Climb
-Acrobatics
-Ride a creature
-Fling poo 
-Pilfer
-Hoot
-Groom
-Feed
-Hang upside down
-Leap
-Rampage
+Attacks <random creature>
+Nimbly dodges everything coming his way
+Uses <whatever object the GM sees fit>
+Searches the immediate area intently
+Grapples the head of <random creature> effectively blinding them
+Readies an action to do something stupendous
+Shoves <random small creature> or bounces off <random non-small creature>
+Helps <random PC with next action>
+Hides behind <random creature>, clinging to their back
+Climbs every object climbable
+Engages in an awesome display of monkey acrobatics
+Attempts to mount and ride <random creature>
+Flings poo at <random creature>
+Attempts to pilfer a tiny object from <random creature>
+Hoots and hollers a bit then looks confused
+Grooms <nearest creature or the one most in need of grooming>
+Rifles through a pack for food and then feeds it to <random creature>
+Grabs <random PCs> waterskin and takes a long swig
+Hangs upside down looking rather proud of himself
+Leaps onto <random creature>
+Goes on a RAMPAGE - full fists of fury!
 Nap time
-Make faces
-Stick out tongue
-Taunt
-Howl
-Bite
-Scout ahead
-Take off
-Hump something
-Whispers
+Makes faces at <random creature>
+Sticks out tongue at <random creature>
+Taunts <random creature> with rude gestures and noises
+Howls his entire turn
+Cacaw cacaws and tookie tookies like a madman
+Bites <the nearest creature or object>
+Decides it is a great time to scout ahead
+Dashes off at top speed
+Humps <random creature or object>
+High fives <random creature>
+Whispers something unintelligible
+Tries to wrestle away whatever <random creature> is using in their hands
+Celebrates some random "win" in his head
+Engages <random creature> in a staring contest
+Uses an object from his batman belt
+Contemplates monkey stuff
+Charges <random creature> but breaks off before engaged in combat
+Jumps up and down in place
+Watches <random creature> intently, trying to learn something
+Returns to his current "owner" and gives them a heartfelt hug
+Imitates <random creature>, mocking their actions
+Makes a timely and intelligent point
+Monkey slaps <random creature>
+Goes into a leaping frenzy, leaping from creature to creature
+Rolls around like a ball
+Investigates <random object> thoroughly then nods in satisfaction
